@@ -1,0 +1,256 @@
+/* CyberRisk DSS — Оцінювання ризиків. Стиль узгоджено зі сторінкою Загрози. */
+.stApp [data-testid="stMain"] {background-color:#fff;background-image:linear-gradient(rgba(50,108,182,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(50,108,182,.045) 1px,transparent 1px);background-size:52px 52px;}
+[data-testid="stMainBlockContainer"],[data-testid="stMain"] .block-container,.block-container{max-width:95% !important;width:95% !important;padding-left:1.5rem !important;padding-right:1.5rem !important;padding-top:2rem !important;margin-left:auto !important;margin-right:auto !important;}
+.ri-hero{background:linear-gradient(115deg,#10264a,#20529b);border-radius:16px;padding:28px 36px;color:#fff;display:flex;align-items:center;justify-content:space-between;min-height:166px;margin:0 0 24px;}
+.ri-eyebrow{font-size:10px;font-weight:750;letter-spacing:1.4px;color:#a9d2ff;}
+.ri-hero h1{font-size:clamp(26px,3vw,35px);line-height:1.2;margin:12px 0 10px;color:white;font-weight:750;}
+.ri-hero p{font-size:14px;color:#e2eeff;margin:0;}
+.ri-hero-icon{width:112px;height:112px;flex-shrink:0;color:#9bcaff;opacity:.85;}
+.ri-hero-icon svg{width:100%;height:100%;}
+.ri-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-bottom:28px;}
+.ri-stat{background:#fff;border:1px solid #dce8f8;border-radius:13px;display:flex;align-items:center;gap:15px;padding:21px;box-shadow:0 3px 14px rgba(25,70,132,.035);}
+.ri-stat-icon{width:48px;height:48px;flex-shrink:0;border-radius:12px;background:#eaf2ff;color:#2673e5;display:grid;place-items:center;font-size:24px;}
+.ri-stat span,.ri-stat small{display:block;color:#7287a4;font-size:12px;}
+.ri-stat strong{display:block;color:#16396f;font-size:29px;margin:5px 0;}
+.ri-stat small{font-size:10px;}
+.ri-register-heading{display:flex;align-items:center;gap:16px;margin:34px 0 22px;}
+.ri-register-accent{width:4px;height:48px;flex-shrink:0;background:#2463b8;border-radius:8px;}
+.ri-register-heading h2{margin:0 0 7px;color:#173b73;font-size:23px;font-weight:750;line-height:1.3;letter-spacing:-.35px;}
+.ri-register-heading p{margin:0;color:#7185a2;font-size:13px;line-height:1.5;}
+.ri-table-wrap{border:1px solid #d7e3f4;border-radius:11px;overflow-x:auto;background:#fff;}
+.ri-table{width:100%;border-collapse:collapse;font-size:12px;color:#24466f;}
+.ri-table th{background:#f2f6fc;text-align:left;color:#6781a2;font-weight:700;padding:15px 12px;white-space:nowrap;}
+.ri-table td{padding:16px 12px;border-top:1px solid #e8eef7;vertical-align:middle;color:#24466f;}
+.ri-table tbody tr{transition:background-color .18s ease;}
+.ri-table tbody tr:hover td{background:#f0f6ff;}
+.ri-name{font-weight:700;color:#173b73 !important;}
+.ri-score{color:#2867c8;font-weight:750;margin-right:7px;}
+.ri-level{font-weight:700;font-size:12px;}
+.ri-level.very-low{color:#15803d}.ri-level.low{color:#2563eb}.ri-level.medium{color:#a67c00}.ri-level.high{color:#ea580c}.ri-level.critical{color:#dc2626}.ri-level.unknown{color:#64748b}
+.ri-rule,.ri-bottom-rule{height:1px;background:#dbe7f7;margin:28px 0 22px;}
+.ri-bottom-rule{margin:38px 0 12px;}
+.st-key-risk_action_add button,.st-key-risk_action_edit button,.st-key-risk_action_delete button{background:#173b75 !important;border:1px solid #173b75 !important;color:#fff !important;border-radius:12px !important;min-height:60px !important;font-size:15px !important;font-weight:600 !important;box-shadow:0 4px 12px rgba(23,59,117,.12) !important;transition:background .2s,box-shadow .2s !important;}
+.st-key-risk_action_add button *,.st-key-risk_action_edit button *,.st-key-risk_action_delete button *{color:#fff !important;}
+.st-key-risk_action_add button:hover:not(:disabled),.st-key-risk_action_edit button:hover:not(:disabled),.st-key-risk_action_delete button:hover:not(:disabled){background:#24549b !important;border-color:#24549b !important;box-shadow:0 6px 16px rgba(23,59,117,.2) !important;}
+.st-key-risk_action_add button[kind="primary"],.st-key-risk_action_edit button[kind="primary"],.st-key-risk_action_delete button[kind="primary"]{background:#2053a0 !important;border-color:#2053a0 !important;}
+.st-key-risk_action_add button:disabled,.st-key-risk_action_edit button:disabled,.st-key-risk_action_delete button:disabled{background:#aab9cf !important;border-color:#aab9cf !important;color:#fff !important;opacity:.65;}
+[data-testid="stForm"]{background:#fff;border:1px solid #dce8f8;border-radius:15px;padding:22px;}
+.stFormSubmitButton button[kind="primary"]{width:auto !important;min-width:150px !important;min-height:38px !important;padding:8px 18px !important;background:#1b3f78 !important;color:white !important;border:1px solid #1b3f78 !important;border-radius:8px !important;font-weight:600 !important;}
+.stFormSubmitButton button[kind="primary"]:hover{background:#24569a !important;border-color:#24569a !important;color:white !important;}
+.ri-delete-heading{display:flex;flex-direction:column;gap:5px;margin:18px 0 16px;}
+.ri-delete-heading strong{color:#173b73;font-size:18px;font-weight:700;}
+.ri-delete-heading span{color:#7185a2;font-size:13px;}
+.st-key-ri_confirm_delete button{background:#c62828 !important;color:#fff !important;border:1px solid #c62828 !important;border-radius:8px !important;padding:9px 20px !important;font-weight:600 !important;}
+.st-key-ri_confirm_delete button:hover:not(:disabled){background:#a91f1f !important;border-color:#a91f1f !important;}
+.st-key-ri_confirm_delete button:disabled{background:#e5eaf1 !important;color:#8a98ac !important;border-color:#e5eaf1 !important;opacity:1 !important;}
+div[data-testid="stToast"]{background-color:#e8f7ee !important;border:1px solid #a7e3bb !important;border-left:4px solid #16a34a !important;border-radius:10px !important;color:#166534 !important;box-shadow:0 4px 16px rgba(22,163,74,.10) !important;}
+div[data-testid="stToast"] *{color:#166534 !important;}
+@media(max-width:900px){.ri-stats{grid-template-columns:1fr}.ri-hero{padding:23px}.ri-hero h1{font-size:24px}.ri-hero-icon{width:64px;height:64px}}
+@media(max-width:768px){[data-testid="stMainBlockContainer"],[data-testid="stMain"] .block-container,.block-container{width:100% !important;max-width:100% !important;padding-left:1rem !important;padding-right:1rem !important}.st-key-risk_action_add button,.st-key-risk_action_edit button,.st-key-risk_action_delete button{min-height:56px !important;font-size:12px !important;}}
+
+/* Калькулятор у верхньому банері. Замінює старий фон зі щитом. */
+.ri-hero-icon {
+    display: block !important;
+    width: 112px !important;
+    height: 112px !important;
+    min-width: 112px !important;
+    flex-shrink: 0 !important;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='%239bcaff' stroke-width='2.7' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='15' y='6' width='34' height='52' rx='6'/%3E%3Crect x='21' y='13' width='22' height='12' rx='2'/%3E%3Cpath d='M23 34h5M25.5 31.5v5M36 34h6M23 44h6M36 41l6 6M42 41l-6 6'/%3E%3C/svg%3E") !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: contain !important;
+    opacity: 1 !important;
+}
+/* Старий SVG з Python приховуємо, щоб не було двох іконок. */
+.ri-hero-icon svg { display: none !important; }
+@media (max-width:900px) {
+    .ri-hero-icon {width:64px !important;height:64px !important;min-width:64px !important;}
+}
+
+
+/* ==========================================
+   Оцінювання ризиків — узгоджено з «Інформаційними активами»
+   Банер .ri-hero та іконка калькулятора НЕ змінюються.
+   ========================================== */
+
+/* Картки статистики */
+.ri-stats { gap:12px; margin-bottom:8px; }
+.ri-stat {
+    min-height:92px; padding:16px 18px;
+    background:linear-gradient(120deg, #FFFFFF 0%, #F1F7FF 100%) !important;
+    border:1px solid #C6DAFA !important;
+    border-radius:12px !important;
+    box-shadow:0 4px 13px rgba(25,70,132,.045) !important;
+}
+.ri-stat-icon {
+    width:44px; height:44px; border-radius:11px;
+    background:#E5F0FF !important; display:flex; align-items:center; justify-content:center;
+}
+.ri-stat-icon::before {
+    content:""; display:block; width:25px; height:25px; background:#2468CD;
+    -webkit-mask-size:contain; mask-size:contain;
+    -webkit-mask-position:center; mask-position:center;
+    -webkit-mask-repeat:no-repeat; mask-repeat:no-repeat;
+}
+.ri-icon-all::before { -webkit-mask-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.8%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Crect%20x%3D%225%22%20y%3D%223%22%20width%3D%2214%22%20height%3D%2218%22%20rx%3D%222%22%2F%3E%3Cpath%20d%3D%22M9%207h6M9%2011h6M9%2015h3%22%2F%3E%3C%2Fsvg%3E");mask-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.8%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Crect%20x%3D%225%22%20y%3D%223%22%20width%3D%2214%22%20height%3D%2218%22%20rx%3D%222%22%2F%3E%3Cpath%20d%3D%22M9%207h6M9%2011h6M9%2015h3%22%2F%3E%3C%2Fsvg%3E");}
+.ri-icon-warning::before { -webkit-mask-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.8%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M10.3%203.7%201.9%2018.3a1.8%201.8%200%200%200%201.6%202.7h17a1.8%201.8%200%200%200%201.6-2.7L13.7%203.7a2%202%200%200%200-3.4%200Z%22%2F%3E%3Cpath%20d%3D%22M12%209v5M12%2018h.01%22%2F%3E%3C%2Fsvg%3E");mask-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.8%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M10.3%203.7%201.9%2018.3a1.8%201.8%200%200%200%201.6%202.7h17a1.8%201.8%200%200%200%201.6-2.7L13.7%203.7a2%202%200%200%200-3.4%200Z%22%2F%3E%3Cpath%20d%3D%22M12%209v5M12%2018h.01%22%2F%3E%3C%2Fsvg%3E");}
+.ri-icon-critical::before { -webkit-mask-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.8%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M12%202%203%206v6c0%205%203.5%208%209%2010%205.5-2%209-5%209-10V6l-9-4Z%22%2F%3E%3Cpath%20d%3D%22M12%207v6M12%2017h.01%22%2F%3E%3C%2Fsvg%3E");mask-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.8%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M12%202%203%206v6c0%205%203.5%208%209%2010%205.5-2%209-5%209-10V6l-9-4Z%22%2F%3E%3Cpath%20d%3D%22M12%207v6M12%2017h.01%22%2F%3E%3C%2Fsvg%3E");}
+.ri-stat span { color:#244D82; font-size:12px; font-weight:700; }
+.ri-stat strong { color:#143A75; font-size:28px; margin:3px 0; }
+.ri-stat small { color:#8498B4; font-size:11px; }
+
+/* Заголовок реєстру без синьої вертикальної смуги, як у «Активах». */
+.ri-register-heading {display:block; margin:8px 0 12px;}
+.ri-register-heading h2 {margin:0 !important; font-size:20px; font-weight:750; color:#173B73;}
+
+/* Рамка текстового пошуку: задається BaseWeb-контейнеру,
+   щоб нижня лінія не зникала через вкладений input. */
+.st-key-ri_registry_search [data-baseweb="input"] {
+    box-sizing:border-box !important;
+    min-height:42px !important;
+    background:#F5F9FF !important;
+    border:1px solid #C9DDFC !important;
+    border-radius:10px !important;
+    box-shadow:none !important;
+    overflow:visible !important;
+}
+.st-key-ri_registry_search [data-baseweb="input"] > div {
+    border:0 !important;
+    box-shadow:none !important;
+    background:transparent !important;
+    min-height:40px !important;
+}
+.st-key-ri_registry_search [data-baseweb="input"] input {
+    height:40px !important;
+    background:transparent !important;
+    border:0 !important;
+    box-shadow:none !important;
+    outline:none !important;
+    color:#173B73 !important;
+}
+.st-key-ri_registry_search [data-baseweb="input"]:focus-within {
+    border-color:#3979CF !important;
+    box-shadow:0 0 0 2px rgba(57,121,207,.10) !important;
+}
+.st-key-ri_registry_level [data-baseweb="select"] > div,
+.st-key-ri_registry_sort [data-baseweb="select"] > div {
+    min-height:42px !important;
+    background:#F5F9FF !important;
+    border:1px solid #C9DDFC !important;
+    border-radius:10px !important;
+    color:#173B73 !important;
+}
+.st-key-ri_registry_level [data-baseweb="select"] > div:focus-within,
+.st-key-ri_registry_sort [data-baseweb="select"] > div:focus-within {
+    border-color:#3979CF !important;
+    box-shadow:0 0 0 2px rgba(57,121,207,.10) !important;
+}
+
+/* Компактна таблиця, блакитний заголовок, кольорові бейджі. */
+.ri-table-wrap {
+    width:100%; margin-top:2px;
+    border:1px solid #C8DCFA !important;
+    border-radius:13px !important;
+    background:#fff !important;
+    box-shadow:0 5px 18px rgba(20,71,133,.055) !important;
+    overflow-x:auto;
+}
+.ri-table { width:100%; min-width:1030px; font-size:12px !important; color:#173B70; }
+.ri-table thead th {
+    background:#E6F0FE !important;
+    border-bottom:1px solid #BDD7FA !important;
+    color:#173B73 !important;
+    font-weight:750 !important;
+    text-align:left !important;
+    padding:12px !important;
+}
+.ri-table tbody td {
+    background:#FFFFFF !important;
+    border-bottom:1px solid #E5ECF6 !important;
+    border-top:0 !important;
+    padding:12px !important;
+    vertical-align:middle;
+}
+.ri-table tbody tr:nth-child(even) td {background:#F7FAFF !important;}
+.ri-table tbody tr:hover td {background:#EAF4FF !important;}
+.ri-table tbody tr:last-child td {border-bottom:0 !important;}
+.ri-table th:first-child, .ri-table .ri-id {width:44px; text-align:center !important;}
+.ri-table th:nth-child(5),.ri-table th:nth-child(6),.ri-table th:nth-child(7),
+.ri-table .ri-num {text-align:center !important;}
+.ri-table .ri-name {color:#164477 !important; font-weight:700;}
+.ri-table .ri-score {font-weight:800; color:#1653A5; white-space:nowrap; margin-right:7px;}
+.ri-risk-cell {min-width:150px; white-space:nowrap;}
+.ri-level-badge {
+    display:inline-flex; align-items:center; gap:6px;
+    padding:5px 9px; border:1px solid transparent; border-radius:999px;
+    font-weight:750; font-size:11px; line-height:1.2; white-space:nowrap;
+}
+.ri-level-badge i {height:6px; width:6px; background:currentColor; border-radius:50%; display:block; flex-shrink:0;}
+.ri-level-badge.critical {color:#BF2F43; border-color:#F7C9D0; background:#FEEAEC;}
+.ri-level-badge.high {color:#A45815; border-color:#FFD9A9; background:#FFF0DC;}
+.ri-level-badge.medium {color:#936900; border-color:#F1DEA5; background:#FFF8E2;}
+.ri-level-badge.low {color:#215DB5; border-color:#C4D9FA; background:#EAF2FF;}
+.ri-level-badge.very-low {color:#147C44; border-color:#B9E2C9; background:#E9F8EF;}
+
+/* Три кнопки керування — такі ж компактні, як на сторінці активів. */
+.st-key-risk_action_add button,
+.st-key-risk_action_edit button,
+.st-key-risk_action_delete button {
+    min-height:48px !important;
+    border-radius:10px !important;
+    font-size:14px !important;
+    font-weight:700 !important;
+    background:#173B75 !important;
+    color:#FFFFFF !important;
+    box-shadow:0 3px 9px rgba(23,59,117,.09) !important;
+}
+.st-key-risk_action_add button:hover:not(:disabled),
+.st-key-risk_action_edit button:hover:not(:disabled),
+.st-key-risk_action_delete button:hover:not(:disabled) {
+    background:#24549B !important;
+    box-shadow:0 5px 14px rgba(23,59,117,.16) !important;
+    transform:translateY(-1px);
+}
+.ri-rule {margin:19px 0 12px !important;}
+.ri-bottom-rule {margin:22px 0 10px !important;}
+
+/* Однакові зелені toast-повідомлення після успішного запису в SQLite. */
+[data-testid="stToast"] {
+    background:#EAF9EF !important;
+    border:1px solid #99DCB2 !important;
+    border-left:4px solid #22A35B !important;
+    border-radius:12px !important;
+    box-shadow:0 7px 24px rgba(26,113,67,.14) !important;
+}
+[data-testid="stToast"] p, [data-testid="stToast"] span {
+    color:#155C36 !important; font-weight:650 !important;
+}
+
+/* Футер унизу на короткій сторінці, а на довгій — після всіх форм. */
+[data-testid="stMainBlockContainer"] {
+    min-height:calc(100dvh - 4.5rem) !important;
+    display:flex !important; flex-direction:column !important;
+}
+[data-testid="stMainBlockContainer"] > [data-testid="stVerticalBlock"] {
+    display:flex !important; flex-direction:column !important; flex:1 0 auto !important;
+}
+[data-testid="stMainBlockContainer"] > [data-testid="stVerticalBlock"] > div:has(.cr-footer),
+[data-testid="stMainBlockContainer"] [data-testid="stVerticalBlock"] > [data-testid="stElementContainer"]:has(.cr-footer) {
+    margin-top:auto !important;
+}
+[data-testid="stMainBlockContainer"] .cr-footer {
+    margin-top:0 !important;
+    padding:22px 12px 18px !important;
+    text-align:center !important;
+}
+.cr-footer-brand {justify-content:center !important;}
+.cr-footer-description, .cr-footer-copy {text-align:center !important;}
+
+@media (max-width:900px) {
+    .ri-stats {grid-template-columns:1fr;}
+    .ri-stat {min-height:88px; padding:15px;}
+}
+@media (max-width:768px) {
+    .ri-table {min-width:900px;}
+    [data-testid="stMainBlockContainer"] {min-height:calc(100dvh - 3rem) !important;}
+}

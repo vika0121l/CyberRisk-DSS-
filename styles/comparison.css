@@ -1,0 +1,406 @@
+/* CyberRisk DSS — Порівняння заходів. Локальний стиль сторінки. */
+[data-testid="stMainBlockContainer"] {padding-top:1.5rem!important;max-width:1600px!important}
+[data-testid="stAppViewContainer"]{background-color:#fff!important;background-image:linear-gradient(rgba(38,98,165,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(38,98,165,.035) 1px,transparent 1px)!important;background-size:38px 38px!important}
+.cmp-hero{position:relative;overflow:hidden;background:linear-gradient(115deg,#102b55 0%,#1c477f 65%,#2868b9 100%);border-radius:12px;padding:27px 30px;min-height:125px;display:flex;align-items:center;justify-content:space-between;color:white;box-shadow:0 7px 17px rgba(12,40,83,.12);margin-bottom:22px}
+.cmp-hero:before{content:"";position:absolute;inset:0 0 0 47%;opacity:.23;background-image:linear-gradient(30deg,transparent 48%,#75b4ff 49%,transparent 50%),linear-gradient(150deg,transparent 48%,#75b4ff 49%,transparent 50%);background-size:110px 90px;pointer-events:none}
+.cmp-hero>div{position:relative;z-index:1}.cmp-eyebrow{font-size:10px;font-weight:800;letter-spacing:1.3px;color:#c0d8fa;margin-bottom:10px}.cmp-hero h1{font-size:28px;font-weight:800;color:white;margin:0 0 7px}.cmp-hero p{font-size:12px;line-height:1.7;color:#e4edfc;margin:0;max-width:850px}.cmp-hero-icon{width:72px;height:72px;border-radius:17px;display:grid;place-items:center;background:#ffffff15;border:1px solid #ffffff35;flex-shrink:0;margin-left:20px}
+.cmp-field-title{font-size:13px;color:#173b73;font-weight:800;margin:3px 0 10px}
+.cmp-risk-context{background:linear-gradient(110deg,#f6faff,#fff);border:1px solid #cfe0fa;border-radius:12px;min-height:92px;padding:12px 15px;display:flex;align-items:center;gap:12px;box-shadow:0 3px 10px #153b7210}.cmp-risk-name{display:flex;align-items:center;gap:9px;margin-right:auto;min-width:145px;color:#14386e;font-size:13px}.cmp-risk-icon{background:#e2efff;border-radius:10px;color:#2463b3;padding:11px;font-size:20px}.cmp-metric{display:flex;flex-direction:column;align-items:center;gap:5px;min-width:66px}.cmp-metric small{font-size:10px;color:#4b6894;white-space:nowrap}.cmp-metric b{font-size:20px;color:#133d7d;background:#eaf3ff;border-radius:8px;padding:3px 9px;line-height:1.5}.cmp-metric .cmp-score{color:#a95805;background:#fff0d5}.cmp-metric .cmp-level{font-size:12px}
+.cmp-heading{border-left:4px solid #2873d3;padding-left:13px;margin:25px 0 15px}.cmp-heading h2{color:#173b73;font-size:19px;font-weight:800;margin:0 0 4px}.cmp-heading p{color:#8294ad;font-size:11px;margin:0}.cmp-heading-charts{margin-top:27px}
+.cmp-table-wrap{overflow-x:auto;border:1px solid #cbdff8;border-radius:11px;background:#fff;box-shadow:0 3px 11px #153b7210}.cmp-table{width:100%;border-collapse:collapse;min-width:1050px;font-size:11px}.cmp-table th{background:#e8f1fe;color:#234b7c;text-align:center;padding:10px 8px;white-space:nowrap;font-weight:800;border-right:1px solid #fff}.cmp-table th:nth-child(2){text-align:left}.cmp-table td{padding:13px 9px;border-top:1px solid #e8eef7;color:#3b557a;text-align:center}.cmp-table tr:hover td{background:#f8fbff}.cmp-table .cmp-name{font-weight:750;color:#174b94;text-align:left;min-width:200px}.cmp-number{font-variant-numeric:tabular-nums}.cmp-r-score{background:#d9eaff;color:#103c7d;padding:5px 10px;border-radius:6px;font-weight:800}.cmp-level{border-radius:7px;padding:6px 9px;white-space:nowrap;font-size:11px;font-weight:800;display:inline-block}.cmp-level.very-low{background:#d5f5e6;color:#086d47}.cmp-level.low{background:#d7f4e7;color:#086d47}.cmp-level.medium{background:#fff0bc;color:#8a5c00}.cmp-level.high{background:#ffe0b8;color:#a64c00}.cmp-level.critical{background:#ffd9df;color:#b42d48}
+.cmp-panel-heading{font-size:15px;font-weight:800;color:#173b73;margin-bottom:10px}.cmp-panel{background:#fff;border:1px solid #cbdff8;border-radius:13px;min-height:265px;padding:19px 16px;box-shadow:0 3px 10px #153b7210}.cmp-chart-panel{display:flex;flex-direction:column;justify-content:center}.cmp-bars{display:flex;flex-direction:column;gap:22px}.cmp-bar-item{display:grid;grid-template-columns:100px minmax(0,1fr) 28px;align-items:center;gap:9px;font-size:11px;color:#32537f}.cmp-bar-label{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.cmp-bar-track{height:23px;background:repeating-linear-gradient(90deg,#f1f6ff 0,#f1f6ff calc(20% - 1px),#dce9fb 20%);border-radius:5px;overflow:hidden}.cmp-bar-fill{height:100%;border-radius:5px}.cmp-bar-fill.initial{background:linear-gradient(90deg,#f9a33a,#ed7518)}.cmp-bar-fill.predicted{background:linear-gradient(90deg,#2e8af4,#1e5db3)}.cmp-bar-item b{color:#173b73}.cmp-axis-note{text-align:center;color:#8aa0bb;font-size:10px;margin-top:18px}
+.cmp-donut-panel{display:flex;align-items:center;justify-content:center;gap:17px}.cmp-donut{width:155px;height:155px;flex:0 0 155px;border-radius:50%;background:conic-gradient(#398ef1 0 var(--pct),#183f7d var(--pct) 100%);display:grid;place-items:center}.cmp-donut-center{width:112px;height:112px;background:white;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center}.cmp-donut-center strong{font-size:24px;color:#113b7a}.cmp-donut-center span{font-size:11px;color:#54729a}.cmp-donut-details{display:flex;flex-direction:column;gap:14px;color:#36577e;font-size:11px}.cmp-donut-details span{display:flex;align-items:center;gap:5px;flex-wrap:wrap}.cmp-donut-details small{color:#8294ad;font-size:10px}.cmp-dot{width:11px;height:11px;border-radius:3px;display:inline-block}.cmp-dot.original{background:#183f7d}.cmp-dot.forecast{background:#398ef1}
+.cmp-recommend{min-height:309px;background:linear-gradient(120deg,#12366d,#1761b5);border-radius:13px;padding:18px 18px;color:white;box-shadow:0 4px 12px #153b7220}.cmp-rec-head{font-size:17px;font-weight:800;margin-bottom:16px}.cmp-rec-selected{background:#e5f0ff;border-radius:10px;padding:13px;display:flex;align-items:center;gap:11px;color:#123a78}.cmp-rec-selected>span{background:#c5f3df;border-radius:50%;font-size:20px;font-weight:800;color:#07875c;width:33px;height:33px;display:grid;place-items:center;flex-shrink:0}.cmp-rec-selected small{display:block;font-size:10px;margin-bottom:4px}.cmp-rec-selected strong{font-size:14px;line-height:1.4}.cmp-rec-facts{display:grid;grid-template-columns:repeat(3,1fr);gap:5px;text-align:center;margin:17px 0}.cmp-rec-facts>div{border-right:1px solid #ffffff25}.cmp-rec-facts>div:last-child{border:0}.cmp-rec-facts small{display:block;font-size:10px;color:#d0e3fc;margin-bottom:7px}.cmp-rec-facts strong{font-size:15px}.cmp-recommend p{font-size:11px;color:#dcecff;line-height:1.55;margin:8px 0 0}
+.cmp-method{margin:26px 0 14px;padding:17px 18px;background:linear-gradient(90deg,#f6faff,#fff);border:1px solid #cbdff8;border-radius:12px;display:flex;align-items:center;gap:15px;box-shadow:0 3px 10px #153b7210}.cmp-method-title{font-weight:800;color:#143b75;white-space:nowrap;font-size:14px;border-right:1px solid #cbdff8;padding-right:14px}.cmp-method-step{display:flex;align-items:center;gap:9px;flex:1;min-width:0}.cmp-method-step b{background:#cce3ff;color:#165cb0;width:28px;height:28px;flex:0 0 28px;border-radius:50%;display:grid;place-items:center}.cmp-method-step span{font-size:11px;color:#244f8b;font-weight:700}.cmp-method-step small{display:block;color:#8294ad;font-size:9px;font-weight:400;margin-top:4px}.cmp-method-arrow{color:#80b3f7;font-size:25px}
+@media(max-width:1200px){.cmp-risk-context{flex-wrap:wrap}.cmp-risk-name{width:100%}.cmp-donut-panel{flex-direction:column}.cmp-method{flex-wrap:wrap}.cmp-method-title{width:100%;border-right:0;border-bottom:1px solid #cbdff8;padding-bottom:10px}}
+@media(max-width:700px){.cmp-hero{padding:22px}.cmp-hero-icon{display:none}.cmp-hero h1{font-size:23px}.cmp-method-arrow{display:none}.cmp-method-step{flex-basis:45%}.cmp-risk-context{justify-content:center}.cmp-metric{min-width:75px}}
+
+/* Full-width desktop layout — override Streamlit's centered default */
+[data-testid="stMainBlockContainer"],
+section.main .block-container,
+.main .block-container,
+[data-testid="stMain"] .block-container,
+[data-testid="stMain"] [data-testid="stMainBlockContainer"] {
+  width: 100% !important;
+  max-width: none !important;
+  padding-left: clamp(18px, 2.2vw, 40px) !important;
+  padding-right: clamp(18px, 2.2vw, 40px) !important;
+  padding-top: 1.5rem !important;
+  box-sizing: border-box !important;
+}
+[data-testid="stMain"] [data-testid="stVerticalBlock"] {width:100%;}
+.cmp-hero{min-height:140px;padding:28px 32px;margin-bottom:24px}
+.cmp-hero:before{opacity:.18;background-size:140px 110px}
+.cmp-hero h1{font-size:30px}
+.cmp-field-title{margin:3px 0 12px}
+/* Give the selector a proper visual card instead of a floating label */
+[data-testid="stHorizontalBlock"]:has(.cmp-field-title) > [data-testid="stColumn"]:first-child {
+  background:linear-gradient(110deg,#f8fbff,#fff);
+  border:1px solid #cfe0fa;
+  border-radius:12px;
+  padding:13px 17px 10px;
+  box-shadow:0 3px 10px #153b7210;
+}
+[data-testid="stHorizontalBlock"]:has(.cmp-field-title) > [data-testid="stColumn"]:first-child [data-testid="stSelectbox"] {margin-bottom:0}
+.cmp-risk-context{min-height:98px;padding:15px 18px}
+.cmp-heading{margin:25px 0 17px}
+.cmp-table{min-width:1160px;font-size:12px}
+.cmp-table th{padding:13px 9px}
+.cmp-table td{padding:16px 10px}
+.cmp-panel{min-height:300px;padding:22px 18px}
+.cmp-chart-panel{justify-content:center}
+.cmp-bars{gap:25px}
+.cmp-bar-item{grid-template-columns:minmax(95px,125px) minmax(0,1fr) 28px}
+.cmp-bar-track{height:29px}
+.cmp-recommend{min-height:345px;padding:23px 22px}
+.cmp-rec-head{font-size:18px}
+.cmp-rec-selected{padding:18px 15px}
+.cmp-rec-selected strong{font-size:16px}
+.cmp-rec-facts{margin:23px 0}
+.cmp-method{padding:22px 22px;margin-top:30px}
+@media(max-width:1100px){.cmp-risk-context{gap:8px}.cmp-metric{min-width:55px}.cmp-recommend{padding:17px 14px}.cmp-donut{width:128px;height:128px;flex-basis:128px}.cmp-donut-center{width:94px;height:94px}}
+@media(max-width:700px){[data-testid="stMainBlockContainer"],section.main .block-container,.main .block-container{padding-left:14px!important;padding-right:14px!important}.cmp-hero{min-height:110px;padding:20px}.cmp-hero h1{font-size:24px}.cmp-table{min-width:1000px}}
+
+/* === REF MOCKUP ALIGNMENT — unified visual hierarchy === */
+[data-testid="stMainBlockContainer"]{padding-top:1.55rem!important;padding-left:clamp(18px,1.35vw,28px)!important;padding-right:clamp(18px,1.35vw,28px)!important;max-width:none!important;width:100%!important}
+.cmp-hero{min-height:142px;padding:25px 31px;margin-bottom:18px;background:linear-gradient(110deg,#0d2855 0%,#0e438b 59%,#104b96 100%)}
+.cmp-hero:before{background-image:radial-gradient(circle at 30% 40%,#6ec8ff 0 2px,transparent 3px),linear-gradient(25deg,transparent 49.3%,#56aaff 49.8%,transparent 50.3%),linear-gradient(155deg,transparent 49.3%,#56aaff 49.8%,transparent 50.3%);background-size:92px 76px;opacity:.25}
+.cmp-hero h1{font-size:30px;letter-spacing:-.35px}
+.cmp-hero-icon{width:70px;height:70px}
+.cmp-field-title{margin:0 0 8px;font-size:14px}
+[data-testid="stHorizontalBlock"]:has(.cmp-field-title){align-items:stretch;gap:14px}
+[data-testid="stHorizontalBlock"]:has(.cmp-field-title)>[data-testid="stColumn"]:first-child{padding:15px 17px 12px!important;display:flex;flex-direction:column;justify-content:center}
+[data-testid="stHorizontalBlock"]:has(.cmp-field-title)>[data-testid="stColumn"]:first-child [data-testid="stSelectbox"]{margin-top:0}
+.cmp-risk-context{height:100%;min-height:104px;padding:15px 18px;gap:10px}
+.cmp-risk-name{font-size:14px;min-width:190px}
+.cmp-metric{min-width:67px}
+.cmp-metric b{font-size:22px}
+.cmp-heading{margin:20px 0 15px}
+.cmp-heading h2{font-size:21px}
+.cmp-heading p{font-size:12px}
+.cmp-table{font-size:12px;min-width:1100px}
+.cmp-table th{padding:13px 8px;background:#e6f0ff}
+.cmp-table td{padding:15px 9px}
+.cmp-table .cmp-name{min-width:260px;font-size:13px}
+/* The three cards are the same height and their headings live inside */
+[data-testid="stHorizontalBlock"]:has(.cmp-chart-panel){align-items:stretch!important;gap:14px!important;margin-top:22px}
+[data-testid="stHorizontalBlock"]:has(.cmp-chart-panel)>[data-testid="stColumn"]{display:flex;flex-direction:column;min-width:0}
+[data-testid="stHorizontalBlock"]:has(.cmp-chart-panel)>[data-testid="stColumn"]>div{height:100%}
+.cmp-panel,.cmp-recommend{height:100%;min-height:310px;box-sizing:border-box;border-radius:13px}
+.cmp-panel{padding:19px 19px 18px}
+.cmp-panel-heading{font-size:17px;line-height:1.35;font-weight:800;color:#123b78;margin:0 0 21px;display:flex;align-items:center;gap:8px}
+.cmp-panel-icon{font-size:22px;line-height:1;color:#236ed1}
+.cmp-chart-panel{display:flex;flex-direction:column;justify-content:flex-start}
+.cmp-bars{margin:auto 0;gap:19px}
+.cmp-bar-item{grid-template-columns:minmax(100px,125px) minmax(0,1fr) 23px;font-size:12px;gap:8px}
+.cmp-bar-track{height:29px;background:repeating-linear-gradient(90deg,#f0f5fc 0,#f0f5fc calc(20% - 1px),#d7e5f8 20%)}
+.cmp-axis-note{margin:14px 0 0}
+.cmp-donut-panel{display:flex;flex-direction:column;justify-content:flex-start;gap:0}
+.cmp-donut-body{display:flex;align-items:center;justify-content:center;gap:18px;flex:1;min-height:205px}
+.cmp-donut{width:155px;height:155px;flex:0 0 155px}
+.cmp-donut-details{gap:13px;font-size:11px}
+.cmp-recommend{padding:20px 21px;display:flex;flex-direction:column;justify-content:flex-start;background:linear-gradient(130deg,#103b7b,#1260b4)}
+.cmp-rec-head{font-size:18px;margin-bottom:17px}
+.cmp-rec-award{font-size:24px;vertical-align:middle}
+.cmp-rec-selected{padding:15px;min-height:67px}
+.cmp-rec-selected strong{font-size:16px}
+.cmp-rec-facts{margin:22px 0 15px;gap:0}
+.cmp-rec-facts>div{display:flex;align-items:center;flex-direction:column;gap:5px;padding:0 6px}
+.cmp-fact-icon{font-size:25px;color:#fff;line-height:1.2}
+.cmp-rec-facts small{font-size:11px;margin:0}
+.cmp-rec-facts strong{font-size:13px}
+.cmp-recommend p{font-size:11px;margin:0}
+.cmp-method{margin:20px 0 12px;min-height:75px;padding:16px 19px}
+.cmp-method-title{font-size:15px}
+.cmp-method-step span{font-size:11px}
+.cmp-method-step small{font-size:10px}
+@media(max-width:1300px){.cmp-risk-context{flex-wrap:wrap}.cmp-risk-name{min-width:100%;margin-bottom:4px}.cmp-donut-body{gap:9px}.cmp-donut{width:120px;height:120px;flex-basis:120px}.cmp-donut-center{width:88px;height:88px}.cmp-bar-item{grid-template-columns:90px minmax(0,1fr) 20px}}
+@media(max-width:1050px){[data-testid="stHorizontalBlock"]:has(.cmp-chart-panel){flex-wrap:wrap}.cmp-panel,.cmp-recommend{min-height:285px}.cmp-donut-body{min-height:190px}.cmp-method{flex-wrap:wrap}}
+@media(max-width:700px){.cmp-hero{min-height:105px}.cmp-hero h1{font-size:23px}.cmp-risk-context{height:auto}.cmp-table{min-width:1000px}.cmp-method-step{flex-basis:45%}}
+
+
+/* 2026-11-07: Reference mockup alignment, final priority layer. */
+[data-testid="stMainBlockContainer"] {max-width:none!important;width:100%!important;padding:1.25rem 20px 2rem!important;}
+.cmp-hero {min-height:128px!important;margin-bottom:16px!important;padding:22px 26px!important;}
+/* The two selector cards have identical heights; the selector stays fully inside its card. */
+[data-testid="stHorizontalBlock"]:has(.cmp-field-title) {align-items:stretch!important;gap:12px!important;margin-bottom:8px!important;}
+[data-testid="stHorizontalBlock"]:has(.cmp-field-title) > [data-testid="stColumn"] {min-width:0!important;display:flex!important;flex-direction:column!important;justify-content:stretch!important;}
+[data-testid="stHorizontalBlock"]:has(.cmp-field-title) > [data-testid="stColumn"]:first-child {background:linear-gradient(110deg,#f7faff,#fff)!important;border:1px solid #cfe0fa!important;border-radius:12px!important;padding:14px 16px!important;box-shadow:0 3px 10px #153b7210!important;}
+[data-testid="stHorizontalBlock"]:has(.cmp-field-title) > [data-testid="stColumn"]:first-child > [data-testid="stVerticalBlock"] {height:100%!important;justify-content:space-between!important;gap:8px!important;}
+[data-testid="stHorizontalBlock"]:has(.cmp-field-title) > [data-testid="stColumn"]:first-child [data-testid="stSelectbox"] {margin:0!important;}
+[data-testid="stHorizontalBlock"]:has(.cmp-field-title) > [data-testid="stColumn"]:first-child [data-baseweb="select"] > div {min-height:43px!important;border:1px solid #d7e5f9!important;background:#f4f8fe!important;border-radius:8px!important;}
+.cmp-field-title {font-size:14px!important;margin:0!important;line-height:1.4!important;}
+.cmp-risk-context {box-sizing:border-box!important;min-height:104px!important;height:100%!important;display:flex!important;flex-wrap:nowrap!important;align-items:center!important;justify-content:space-between!important;gap:8px!important;padding:14px!important;}
+.cmp-risk-name {min-width:0!important;width:auto!important;flex:1 1 165px!important;margin:0!important;font-size:13px!important;white-space:nowrap!important;}
+.cmp-metric {min-width:0!important;flex:0 0 auto!important;gap:5px!important;}
+.cmp-metric small {font-size:10px!important;}
+.cmp-metric b {font-size:20px!important;padding:4px 9px!important;}
+.cmp-heading {margin:18px 0 13px!important;}
+.cmp-heading h2 {font-size:19px!important;}
+/* Match the compact reference table, with deliberate column proportions. */
+.cmp-table-wrap {width:100%!important;overflow-x:auto!important;}
+.cmp-table {width:100%!important;min-width:1040px!important;table-layout:fixed!important;border-collapse:separate!important;border-spacing:0!important;font-size:12px!important;}
+.cmp-table th,.cmp-table td {box-sizing:border-box!important;border-right:1px solid #fff!important;text-align:center!important;vertical-align:middle!important;}
+.cmp-table th {background:#e3efff!important;padding:10px 6px!important;font-size:11px!important;line-height:1.35!important;white-space:normal!important;}
+.cmp-table td {padding:12px 6px!important;font-size:11px!important;line-height:1.4!important;}
+.cmp-table th:nth-child(1) {width:4%!important;}
+.cmp-table th:nth-child(2) {width:25%!important;text-align:left!important;padding-left:14px!important;}
+.cmp-table th:nth-child(3) {width:8%!important;}
+.cmp-table th:nth-child(4),.cmp-table th:nth-child(5) {width:5%!important;}
+.cmp-table th:nth-child(6) {width:9%!important;}
+.cmp-table th:nth-child(7) {width:17%!important;}
+.cmp-table th:nth-child(8) {width:15%!important;}
+.cmp-table th:nth-child(9) {width:12%!important;}
+.cmp-table .cmp-name {min-width:0!important;text-align:left!important;padding-left:14px!important;font-size:12px!important;white-space:normal!important;overflow-wrap:anywhere!important;}
+.cmp-r-score {padding:4px 9px!important;}
+/* One continuous row of three equal-height cards, titles within cards. */
+[data-testid="stHorizontalBlock"]:has(.cmp-chart-panel) {align-items:stretch!important;gap:12px!important;margin-top:20px!important;}
+[data-testid="stHorizontalBlock"]:has(.cmp-chart-panel) > [data-testid="stColumn"] {display:flex!important;flex-direction:column!important;min-width:0!important;}
+[data-testid="stHorizontalBlock"]:has(.cmp-chart-panel) > [data-testid="stColumn"] > [data-testid="stVerticalBlock"] {height:100%!important;}
+.cmp-panel,.cmp-recommend {height:100%!important;min-height:292px!important;box-sizing:border-box!important;border-radius:12px!important;}
+.cmp-panel {padding:16px!important;}
+.cmp-panel-heading {font-size:15px!important;margin:0 0 16px!important;}
+.cmp-chart-panel {justify-content:flex-start!important;}
+.cmp-bars {margin:auto 0!important;gap:14px!important;}
+.cmp-bar-item {grid-template-columns:minmax(80px,100px) minmax(0,1fr) 22px!important;font-size:11px!important;}
+.cmp-bar-track {height:23px!important;}
+.cmp-donut-panel {display:flex!important;flex-direction:column!important;align-items:stretch!important;justify-content:flex-start!important;}
+.cmp-donut-body {flex:1!important;min-height:0!important;gap:12px!important;}
+.cmp-donut {width:135px!important;height:135px!important;flex:0 0 135px!important;}
+.cmp-donut-center {width:98px!important;height:98px!important;}
+.cmp-donut-center strong {font-size:21px!important;}
+.cmp-donut-details {font-size:10px!important;gap:10px!important;}
+.cmp-recommend {padding:16px!important;}
+.cmp-rec-head {font-size:16px!important;margin-bottom:12px!important;}
+.cmp-rec-selected {min-height:57px!important;padding:12px!important;}
+.cmp-rec-selected strong {font-size:14px!important;}
+.cmp-rec-facts {margin:16px 0 12px!important;}
+.cmp-recommend p {font-size:11px!important;}
+.cmp-method {margin-top:18px!important;min-height:70px!important;padding:12px 15px!important;}
+@media(max-width:1350px) {
+ .cmp-risk-context {flex-wrap:wrap!important;justify-content:center!important;}
+ .cmp-risk-name {flex-basis:100%!important;justify-content:center!important;}
+ .cmp-donut {width:112px!important;height:112px!important;flex-basis:112px!important;}
+ .cmp-donut-center {width:82px!important;height:82px!important;}
+}
+@media(max-width:1050px) {
+ [data-testid="stHorizontalBlock"]:has(.cmp-chart-panel) {flex-wrap:wrap!important;}
+ .cmp-panel,.cmp-recommend {min-height:260px!important;}
+}
+
+
+/* Reference screenshot: compact, two-tier, proportionate comparison table. */
+.cmp-table-wrap { border:1px solid #d1e2f9!important; border-radius:11px!important; overflow-x:auto!important; box-shadow:0 2px 7px rgba(17,58,112,.09)!important; }
+.cmp-table {width:100%!important; min-width:1020px!important; table-layout:fixed!important; border-collapse:collapse!important; font-size:12px!important;}
+.cmp-table th,.cmp-table td {border-right:1px solid #f3f7ff!important; box-sizing:border-box!important; vertical-align:middle!important; text-align:center!important;}
+.cmp-table thead th {background:#e4efff!important; color:#143c78!important; font-weight:800!important; font-size:11px!important; padding:6px 5px!important; line-height:1.22!important; white-space:normal!important;}
+.cmp-table thead tr:first-child {height:27px!important;}
+.cmp-table thead tr:last-child {height:24px!important;}
+.cmp-table th small {display:block!important;font-size:9px!important;color:#56739d!important;font-weight:500!important;margin-top:2px!important;}
+.cmp-table tbody tr {height:36px!important;}
+.cmp-table tbody td {padding:7px 7px!important; font-size:11px!important; line-height:1.25!important; border-top:1px solid #e8f0fb!important; color:#173c75!important;}
+.cmp-table th:nth-child(1),.cmp-table th:nth-child(2),.cmp-table th:nth-child(3),.cmp-table th:nth-child(4),.cmp-table th:nth-child(5),.cmp-table th:nth-child(6),.cmp-table th:nth-child(7),.cmp-table th:nth-child(8),.cmp-table th:nth-child(9) {width:auto!important;}
+.cmp-table th:nth-child(2) {padding-left:12px!important;text-align:left!important;}
+.cmp-table .cmp-name {min-width:0!important; text-align:left!important; padding-left:12px!important; font-size:11px!important; font-weight:800!important; white-space:nowrap!important; overflow:hidden!important; text-overflow:ellipsis!important;}
+.cmp-measure-icon {display:inline-block; font-size:17px; font-weight:900; color:#2372dc; margin-right:10px; vertical-align:middle;}
+.cmp-r-score {background:#d6e8ff!important; color:#123e82!important; padding:3px 12px!important; border-radius:5px!important; font-weight:800!important;}
+.cmp-table .cmp-level {padding:4px 11px!important; font-size:11px!important;}
+
+
+/* 2026-11-07 — precise alignment of comparison table and risk context */
+.cmp-table {table-layout:fixed!important; min-width:1040px!important; border-collapse:collapse!important;}
+.cmp-table thead tr:first-child {height:29px!important;}
+.cmp-table thead tr:last-child {height:25px!important;}
+.cmp-table thead th {height:auto!important; padding:5px 5px!important; line-height:1.25!important; text-align:center!important; vertical-align:middle!important; font-size:11px!important; white-space:normal!important;}
+.cmp-table thead th:nth-child(2) {text-align:center!important; padding-left:5px!important;}
+.cmp-table thead th[rowspan="2"] {vertical-align:middle!important;}
+.cmp-table tbody tr {height:55px!important;}
+.cmp-table tbody td {height:55px!important; padding:12px 7px!important; vertical-align:middle!important; line-height:1.35!important; font-size:11px!important;}
+.cmp-table .cmp-name {text-align:left!important; padding-left:13px!important; white-space:normal!important; overflow:visible!important; text-overflow:clip!important; font-size:11.5px!important;}
+.cmp-measure-icon {display:none!important;}
+/* Keep all five context metrics beside the title, with wider readable values. */
+.cmp-risk-context {display:flex!important; align-items:center!important; justify-content:flex-start!important; flex-wrap:nowrap!important; gap:10px!important; padding:13px 16px!important; min-height:95px!important;}
+.cmp-risk-name {flex:0 0 auto!important; width:auto!important; min-width:165px!important; margin:0 12px 0 0!important; justify-content:flex-start!important; font-size:13px!important;}
+.cmp-risk-icon {flex:0 0 auto!important;}
+.cmp-metric {flex:0 0 auto!important; min-width:65px!important; gap:5px!important;}
+.cmp-metric b {font-size:21px!important; min-width:39px!important; text-align:center!important; box-sizing:border-box!important;}
+.cmp-metric .cmp-score {min-width:72px!important;}
+.cmp-metric .cmp-level {font-size:12px!important;}
+@media(max-width:1450px) {
+  .cmp-risk-context {gap:7px!important; padding:11px!important;}
+  .cmp-risk-name {min-width:135px!important; margin-right:4px!important; font-size:12px!important;}
+  .cmp-metric {min-width:55px!important;}
+  .cmp-metric small {font-size:9px!important;}
+}
+@media(max-width:1100px) {
+  .cmp-risk-context {flex-wrap:wrap!important;}
+  .cmp-risk-name {flex-basis:100%!important; justify-content:flex-start!important; margin-bottom:4px!important;}
+}
+
+/* Final table repair: one valid 11-column colgroup, full width */
+.cmp-table-wrap{width:100%!important;max-width:100%!important;overflow-x:auto!important;box-sizing:border-box!important}
+.cmp-table{width:100%!important;min-width:1030px!important;table-layout:fixed!important;border-collapse:collapse!important}
+.cmp-table th,.cmp-table td{box-sizing:border-box!important;text-align:center!important;vertical-align:middle!important;min-width:0!important}
+.cmp-table thead th{height:auto!important;padding:9px 6px!important;line-height:1.25!important;font-size:11px!important;white-space:normal!important;word-break:normal!important}
+.cmp-table thead tr:first-child{height:32px!important}
+.cmp-table thead tr:last-child{height:27px!important}
+.cmp-table thead th:nth-child(2){text-align:center!important}
+.cmp-table tbody tr,.cmp-table tbody td{height:57px!important}
+.cmp-table tbody td{padding:13px 8px!important;font-size:12px!important;line-height:1.35!important}
+.cmp-table tbody .cmp-name{text-align:left!important;padding-left:18px!important;font-size:12px!important;white-space:normal!important;overflow:visible!important}
+/* Identical metric rectangles, all values visually centered and readable */
+.cmp-risk-context{display:flex!important;align-items:center!important;justify-content:flex-start!important;flex-wrap:nowrap!important;gap:9px!important;padding:14px 16px!important;min-height:104px!important;box-sizing:border-box!important}
+.cmp-risk-name{flex:1 1 auto!important;min-width:145px!important;width:auto!important;margin:0 5px 0 0!important;justify-content:flex-start!important;white-space:nowrap!important}
+.cmp-metric{display:flex!important;flex:0 0 76px!important;width:76px!important;min-width:76px!important;align-items:center!important;gap:7px!important}
+.cmp-metric small{font-size:10px!important;white-space:nowrap!important;line-height:1.2!important}
+.cmp-metric b,.cmp-metric .cmp-score,.cmp-metric .cmp-level{display:flex!important;align-items:center!important;justify-content:center!important;width:76px!important;min-width:76px!important;height:40px!important;min-height:40px!important;padding:0 5px!important;margin:0!important;border-radius:9px!important;box-sizing:border-box!important;font-size:20px!important;font-weight:800!important;line-height:1!important;white-space:nowrap!important}
+.cmp-metric .cmp-level{font-size:18px!important}
+@media(max-width:1200px){.cmp-risk-context{flex-wrap:wrap!important}.cmp-risk-name{flex-basis:100%!important}.cmp-metric{flex-basis:76px!important}}
+
+/* ===============================================================
+   CyberRisk DSS — final visual refinement (07.11.2026)
+   Preserves the approved layout and calculations. At browser zoom
+   50%, the CSS viewport is large; do not globally scale typography.
+   =============================================================== */
+
+/* Table: shorter header, more comfortable data rows. */
+.cmp-table-wrap { width:100%!important; border-radius:12px!important; }
+.cmp-table { width:100%!important; table-layout:fixed!important; }
+.cmp-table thead tr:first-child { height:29px!important; }
+.cmp-table thead tr:last-child { height:23px!important; }
+.cmp-table thead th {
+  padding:5px 7px!important; font-size:11px!important;
+  line-height:1.22!important; vertical-align:middle!important;
+  text-align:center!important;
+}
+.cmp-table thead th small { font-size:9px!important; margin-top:2px!important; }
+.cmp-table tbody tr, .cmp-table tbody td { height:70px!important; }
+.cmp-table tbody td {
+  padding:17px 10px!important; font-size:12px!important;
+  line-height:1.4!important; vertical-align:middle!important;
+}
+.cmp-table tbody .cmp-name {
+  padding-left:18px!important; font-size:12.5px!important;
+  font-weight:800!important; line-height:1.45!important;
+}
+.cmp-table .cmp-level { font-size:11px!important; padding:6px 13px!important; }
+.cmp-r-score { padding:5px 13px!important; }
+
+/* Four consistent, readable score badges with labels above. */
+.cmp-risk-context {
+  min-height:112px!important; padding:15px 17px!important;
+  gap:10px!important; align-items:center!important;
+}
+.cmp-risk-name {
+  min-width:140px!important; margin-right:6px!important;
+  font-size:13px!important;
+}
+.cmp-metric {
+  flex:0 0 86px!important; width:86px!important;
+  min-width:86px!important; gap:7px!important;
+  align-items:center!important;
+}
+.cmp-metric small {
+  font-size:10px!important; line-height:1.25!important;
+  white-space:nowrap!important; text-align:center!important;
+}
+.cmp-metric b,
+.cmp-metric .cmp-score,
+.cmp-metric .cmp-level {
+  display:flex!important; align-items:center!important;
+  justify-content:center!important; width:86px!important;
+  min-width:86px!important; height:47px!important;
+  min-height:47px!important; padding:0 5px!important;
+  box-sizing:border-box!important; border-radius:9px!important;
+  font-size:22px!important; font-weight:800!important;
+  line-height:1!important; text-align:center!important;
+}
+.cmp-metric .cmp-level { font-size:18px!important; }
+
+/* The charts should occupy their cards instead of leaving empty space. */
+.cmp-panel, .cmp-recommend {
+  min-height:308px!important; height:100%!important;
+  box-sizing:border-box!important;
+}
+.cmp-panel { padding:18px 19px!important; }
+.cmp-panel-heading { font-size:16px!important; margin-bottom:14px!important; }
+.cmp-chart-panel { display:flex!important; flex-direction:column!important; }
+.cmp-bars { display:flex!important; flex-direction:column!important;
+  justify-content:center!important; flex:1!important;
+  gap:17px!important; margin:10px 0!important;
+}
+.cmp-bar-item {
+  grid-template-columns:minmax(100px,122px) minmax(0,1fr) 26px!important;
+  gap:10px!important; font-size:12px!important;
+}
+.cmp-bar-track { height:29px!important; }
+.cmp-bar-item b { font-size:13px!important; }
+.cmp-axis-note { margin-top:10px!important; font-size:10px!important; }
+.cmp-donut-body { min-height:210px!important; gap:17px!important; }
+.cmp-donut { width:155px!important; height:155px!important; flex:0 0 155px!important; }
+.cmp-donut-center { width:111px!important; height:111px!important; }
+.cmp-donut-center strong { font-size:24px!important; }
+.cmp-donut-details { gap:13px!important; font-size:11px!important; }
+
+/* Recommendation: clear visual hierarchy for the proposed measure. */
+.cmp-recommend { padding:19px 21px!important; }
+.cmp-rec-head { font-size:17px!important; margin-bottom:15px!important; }
+.cmp-rec-selected { min-height:73px!important; padding:14px 15px!important; }
+.cmp-rec-selected strong {
+  display:block!important; font-size:17px!important;
+  line-height:1.35!important; font-weight:800!important;
+}
+.cmp-rec-selected small { font-size:11px!important; }
+.cmp-rec-facts { margin:20px 0 16px!important; }
+.cmp-rec-facts strong { font-size:14px!important; }
+
+/* Compact viewport fallback: prevent badges from overlapping. */
+@media(max-width:1350px) {
+  .cmp-risk-context { flex-wrap:wrap!important; }
+  .cmp-risk-name { flex:1 0 100%!important; margin-bottom:3px!important; }
+  .cmp-metric { flex:0 0 86px!important; }
+  .cmp-donut { width:126px!important; height:126px!important; flex-basis:126px!important; }
+  .cmp-donut-center { width:92px!important; height:92px!important; }
+}
+@media(max-width:700px) {
+  .cmp-table { min-width:1030px!important; }
+  .cmp-panel,.cmp-recommend { min-height:285px!important; }
+  .cmp-bar-item { grid-template-columns:90px minmax(0,1fr) 23px!important; }
+}
+
+/* Final polish: legible chart labels at 90–100% without changing global typography. */
+.cmp-chart-panel .cmp-bar-label {
+  white-space:nowrap!important; overflow:hidden!important; text-overflow:ellipsis!important;
+  font-size:12px!important; font-weight:650!important; color:#284d80!important;
+}
+.cmp-chart-panel .cmp-bar-item { grid-template-columns:minmax(112px,128px) minmax(0,1fr) 26px!important; }
+.cmp-chart-panel .cmp-bar-track { min-width:0!important; }
+.cmp-rec-selected strong { overflow-wrap:anywhere!important; }
+.cmp-table tbody tr:hover { background:#f7faff!important; }
+@media(max-width:1100px) {
+  .cmp-chart-panel .cmp-bar-item {grid-template-columns:95px minmax(0,1fr) 22px!important;}
+  .cmp-chart-panel .cmp-bar-label {font-size:11px!important;}
+}
+
+/* CyberRisk DSS — пропорції верхнього банера */
+.cmp-hero {
+    min-height: 148px !important;
+    padding: 32px 30px !important;
+    box-sizing: border-box !important;
+}
+
+.cmp-hero h1 {
+    margin-bottom: 10px !important;
+}
+
+@media (max-width: 768px) {
+    .cmp-hero {
+        min-height: 125px !important;
+        padding: 24px !important;
+    }
+}
+
+/* Менший шрифт лише для верхньої плашки «Критичний». */
+.cmp-risk-context .cmp-metric > .cmp-level.critical {
+  font-size: 12px !important;
+}

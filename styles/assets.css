@@ -1,0 +1,591 @@
+/* CyberRisk Professional — сторінка «Інформаційні активи» */
+:root { --cr-blue: #1769e8; --cr-dark: #10264b; --cr-text: #172b4d; --cr-border: #e2eaf5; }
+.stApp { background: #ffffff !important; color: var(--cr-text); }
+[data-testid="stAppViewContainer"] { color: var(--cr-text); }
+.block-container { max-width: 1350px; padding-top: 2rem; padding-bottom: 3rem; }
+section[data-testid="stSidebar"] { background: #ffffff !important; border-right: 1px solid var(--cr-border); }
+h1, h2, h3 { color: var(--cr-dark); letter-spacing: -.4px; font-weight: 700; }
+hr { border-color: var(--cr-border) !important; }
+
+/* Банер */
+.cr-hero { display:flex; align-items:center; justify-content:space-between; gap:24px; min-height:166px; padding:28px 36px; margin-bottom:24px; background:linear-gradient(115deg,#10264a,#20529b); border-radius:16px; overflow:hidden; }
+.cr-eyebrow { font-size:11px; font-weight:700; letter-spacing:1.5px; color:#a9c9f5; margin-bottom:12px; }
+.cr-hero h1 { color:#ffffff !important; font-size:clamp(26px,3vw,35px); line-height:1.2; margin:0 0 10px; font-weight:750; }
+.cr-hero p { color:#dceaff; font-size:14px; margin:0; }
+.cr-server { width:155px; min-width:155px; margin-left:22px; }
+
+/* Статистика */
+.cr-stats { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px; margin-bottom:28px; }
+.cr-stat-card { display:flex; align-items:center; gap:16px; padding:21px; background:#fff; border:1px solid var(--cr-border); border-radius:13px; box-shadow:0 4px 16px rgba(17,49,91,.045); }
+.cr-stat-icon { width:48px; height:48px; display:flex; align-items:center; justify-content:center; flex-shrink:0; border-radius:12px; background:#eaf2ff; color:#1769e8; font-size:25px; }
+.cr-stat-icon.red {
+    background: #EAF2FF;
+    color: #1769E8;
+}
+.cr-stat-label { color:#61728c; font-size:13px; font-weight:600; }
+.cr-stat-value { color:#122b4f; font-size:29px; line-height:1.25; font-weight:750; }
+.cr-stat-note { color:#8795a8; font-size:11px; }
+.cr-section-title { font-size:21px; font-weight:750; color:#142d52; margin:14px 0; }
+
+/* Таблиця та форми */
+[data-testid="stDataFrame"] { border:1px solid var(--cr-border); border-radius:12px; overflow:hidden; }
+[data-testid="stForm"] { background:#ffffff; border:1px solid var(--cr-border); border-radius:15px; padding:22px; }
+div[data-baseweb="input"] > div, div[data-baseweb="select"] > div, textarea { border-radius:9px !important; }
+.stFormSubmitButton button[kind="primary"] { background:#1769e8 !important; border-color:#1769e8 !important; border-radius:10px !important; color:white !important; }
+.stFormSubmitButton button[kind="primary"]:hover { background:#1057c8 !important; }
+
+/* Три великі кнопки керування активами */
+.st-key-assets_action_add button,
+.st-key-assets_action_edit button,
+.st-key-assets_action_delete button {
+    min-height:62px !important;
+    border-radius:13px !important;
+    border:1px solid #dbe6f6 !important;
+    background:#f5f9ff !important;
+    color:#1a477e !important;
+    font-size:15px !important;
+    font-weight:700 !important;
+    box-shadow:0 3px 10px rgba(23,65,120,.035) !important;
+    transition:background .15s ease, border-color .15s ease !important;
+}
+.st-key-assets_action_add button:hover,
+.st-key-assets_action_edit button:hover,
+.st-key-assets_action_delete button:hover {
+    background:#e8f2ff !important;
+    border-color:#9ec3fa !important;
+    color:#1359b9 !important;
+}
+.st-key-assets_action_add button[kind="primary"],
+.st-key-assets_action_edit button[kind="primary"],
+.st-key-assets_action_delete button[kind="primary"] {
+    background:#1769e8 !important;
+    border-color:#1769e8 !important;
+    color:#ffffff !important;
+    box-shadow:0 5px 15px rgba(23,105,232,.17) !important;
+}
+.st-key-assets_action_add button[kind="primary"]:hover,
+.st-key-assets_action_edit button[kind="primary"]:hover,
+.st-key-assets_action_delete button[kind="primary"]:hover {
+    background:#105bd2 !important;
+    color:#ffffff !important;
+}
+.cr-action-separator { height:20px; }
+@media(max-width:800px) {
+    .cr-hero { padding:23px; min-height:140px; }
+    .cr-server { width:95px; min-width:95px; }
+    .cr-stats { grid-template-columns:1fr; }
+    .cr-stat-card { padding:16px; }
+    .st-key-assets_action_add button, .st-key-assets_action_edit button, .st-key-assets_action_delete button { font-size:12px !important; min-height:56px !important; }
+}
+/* =========================================
+   CYBERRISK DSS — ЄДИНІ СИНІ АКЦЕНТИ
+   ========================================= */
+
+/* Кнопки збереження */
+[data-testid="stFormSubmitButton"] button[kind="primary"],
+button[data-testid="stBaseButton-primary"] {
+    background: #1769E8 !important;
+    border-color: #1769E8 !important;
+    color: #FFFFFF !important;
+    border-radius: 10px !important;
+}
+
+[data-testid="stFormSubmitButton"] button[kind="primary"]:hover,
+button[data-testid="stBaseButton-primary"]:hover {
+    background: #1056C6 !important;
+    border-color: #1056C6 !important;
+    color: #FFFFFF !important;
+}
+
+/* Синій повзунок критичності */
+[data-testid="stSlider"] [role="slider"] {
+    background-color: #1769E8 !important;
+    border-color: #1769E8 !important;
+}
+
+/* Активні прапорці */
+[data-testid="stCheckbox"] input {
+    accent-color: #1769E8;
+}
+/* Ширша робоча область сторінки активів */
+.block-container {
+    max-width: 1600px !important;
+    width: 100% !important;
+    padding-left: 2.5rem !important;
+    padding-right: 2.5rem !important;
+}
+/* ==========================================
+   CYBERRISK DSS — ШИРИНА ТА КОЛЬОРИ КНОПОК
+   ========================================== */
+
+/* 1. Розширюємо основну робочу область */
+[data-testid="stMainBlockContainer"],
+[data-testid="stMain"] .block-container,
+.block-container {
+    max-width: 95% !important;
+    width: 95% !important;
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+/* 2. Усі три кнопки темно-сині, як банер */
+.st-key-assets_action_add button,
+.st-key-assets_action_edit button,
+.st-key-assets_action_delete button {
+    background: #173B75 !important;
+    border: 1px solid #173B75 !important;
+    color: #FFFFFF !important;
+
+    border-radius: 12px !important;
+    min-height: 60px !important;
+    font-size: 15px !important;
+    font-weight: 600 !important;
+
+    box-shadow: 0 4px 12px rgba(23, 59, 117, 0.12) !important;
+    transition: all 0.2s ease !important;
+}
+
+/* 3. Текст кнопок завжди білий */
+.st-key-assets_action_add button *,
+.st-key-assets_action_edit button *,
+.st-key-assets_action_delete button * {
+    color: #FFFFFF !important;
+}
+
+/* 4. Ефект наведення */
+.st-key-assets_action_add button:hover,
+.st-key-assets_action_edit button:hover,
+.st-key-assets_action_delete button:hover {
+    background: #24549B !important;
+    border-color: #24549B !important;
+    color: #FFFFFF !important;
+    box-shadow: 0 6px 16px rgba(23, 59, 117, 0.20) !important;
+}
+
+/* 5. Відкрита кнопка трохи яскравіша */
+.st-key-assets_action_add button[kind="primary"],
+.st-key-assets_action_edit button[kind="primary"],
+.st-key-assets_action_delete button[kind="primary"] {
+    background: #2053A0 !important;
+    border-color: #2053A0 !important;
+    color: #FFFFFF !important;
+}
+
+/* 6. Адаптація для невеликих екранів */
+@media (max-width: 768px) {
+    [data-testid="stMainBlockContainer"],
+    [data-testid="stMain"] .block-container,
+    .block-container {
+        max-width: 100% !important;
+        width: 100% !important;
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+}
+/* ==========================================
+   CYBERRISK DSS — АНІМОВАНИЙ ФОН
+   ========================================== */
+
+/* Основна біла поверхня */
+.stApp {
+    background: #FFFFFF !important;
+}
+
+/* Ледь помітна технологічна сітка */
+[data-testid="stAppViewContainer"]::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    pointer-events: none;
+    z-index: 0;
+
+    background-image:
+    linear-gradient(
+        rgba(31, 91, 170, 0.045) 1px,
+        transparent 1px
+    ),
+    linear-gradient(
+        90deg,
+        rgba(31, 91, 170, 0.045) 1px,
+        transparent 1px
+    ),
+    radial-gradient(
+        circle at 80% 25%,
+        rgba(42, 111, 207, 0.025),
+        transparent 40%
+    );
+
+    background-size:
+        60px 60px,
+        60px 60px,
+        100% 100%;
+
+    animation: cyberGridMove 35s linear infinite;
+}
+
+/* Дуже повільний рух сітки */
+@keyframes cyberGridMove {
+    0% {
+        background-position:
+            0 0,
+            0 0,
+            center;
+    }
+
+    100% {
+        background-position:
+            0 120px,
+            120px 0,
+            center;
+    }
+}
+
+/* Контент залишається поверх декоративного фону */
+[data-testid="stMain"] {
+    position: relative;
+    z-index: 1;
+    background: transparent !important;
+}
+
+/* Зменшення анімації за системними налаштуваннями */
+@media (prefers-reduced-motion: reduce) {
+    [data-testid="stAppViewContainer"]::before {
+        animation: none !important;
+    }
+}
+/* ==========================================
+   CYBERRISK DSS — FOOTER
+   ========================================== */
+
+.cr-footer {
+    margin-top: 100px;
+    padding: 28px 10px 24px;
+    border-top: 1px solid #DFE8F4;
+    background: transparent;
+}
+
+.cr-footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.cr-footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    color: #173B75;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.cr-footer-icon {
+    font-size: 26px;
+    color: #1769E8;
+}
+
+.cr-footer-copy {
+    color: #7B8BA3;
+    font-size: 12px;
+}
+
+.cr-footer-description {
+    text-align: center;
+    color: #8290A4;
+    font-size: 12px;
+    line-height: 1.7;
+    margin-top: 20px;
+}
+/* CYBERRISK DSS — ФУТЕР ПО ЦЕНТРУ */
+
+.cr-footer {
+    margin-top: 85px;
+    padding: 30px 20px 35px;
+    border-top: 1px solid #DFE8F4;
+    text-align: center;
+    background: transparent;
+}
+
+.cr-footer-brand {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: #173B75;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.cr-footer-icon {
+    color: #1769E8;
+    font-size: 26px;
+}
+
+.cr-footer-description {
+    margin-top: 12px;
+    color: #71819A;
+    font-size: 13px;
+    line-height: 1.7;
+    text-align: center;
+}
+
+.cr-footer-copy {
+    margin-top: 15px;
+    color: #96A3B5;
+    font-size: 11px;
+    text-align: center;
+}
+
+/* =========================================================
+   ASSETS v2: узгодження з головною панеллю CyberRisk DSS
+   ========================================================= */
+
+/* Компактніший верхній банер — логотип, текст і кольори ті самі. */
+.cr-hero {
+    min-height: 128px;
+    padding: 20px 30px;
+    margin-bottom: 20px;
+    border-radius: 14px;
+    box-shadow: 0 5px 16px rgba(16, 43, 86, .08);
+}
+.cr-eyebrow { margin-bottom: 8px; font-size: 10px; letter-spacing: 1.25px; }
+.cr-hero h1 { font-size: clamp(25px, 2.35vw, 31px); margin: 0 0 7px; }
+.cr-hero p { font-size: 13px; }
+.cr-server { width: 118px; min-width: 118px; height: 99px; margin-left: 16px; }
+
+/* Чіткіші KPI-картки з легким фоном і виразними іконками. */
+.cr-stats { gap: 15px; margin-bottom: 23px; }
+.cr-stat-card {
+    min-height: 104px;
+    padding: 17px 19px;
+    gap: 15px;
+    background: linear-gradient(115deg, #FFFFFF 5%, #F1F7FF 100%);
+    border: 1px solid #C6DDFC;
+    border-radius: 13px;
+    box-shadow: 0 5px 15px rgba(20, 71, 133, .06);
+}
+.cr-stat-icon {
+    width: 48px; height: 48px;
+    border-radius: 11px;
+    background: #E5F0FF;
+    color: #2867C8;
+}
+.cr-stat-icon img { display: block; width: 28px; height: 28px; }
+.cr-stat-label { color: #365779; font-size: 13px; font-weight: 700; }
+.cr-stat-value { color: #153D73; font-size: 31px; font-weight: 800; line-height: 1.1; margin: 4px 0; }
+.cr-stat-note { color: #7A91AC; font-size: 11px; }
+.cr-section-title { font-size: 19px; margin: 13px 0 12px; }
+
+/* Окрема картка реєстру активів — м'яка рамка та синя шапка. */
+.cr-assets-table-wrap {
+    width: 100%;
+    overflow-x: auto;
+    background: #FFFFFF;
+    border: 1px solid #C8DCFA;
+    border-radius: 14px;
+    box-shadow: 0 5px 18px rgba(20, 71, 133, .055);
+}
+.cr-assets-table {
+    width: 100%; min-width: 900px;
+    border-collapse: collapse;
+    font-family: inherit;
+    font-size: 13px;
+    color: #173B70;
+}
+.cr-assets-table th {
+    background: #E6F0FE;
+    color: #173B73;
+    font-weight: 750;
+    text-align: left;
+    padding: 12px;
+    border-bottom: 1px solid #BDD7FA;
+    white-space: nowrap;
+}
+.cr-assets-table td {
+    background: #FFFFFF;
+    text-align: left;
+    padding: 11px 12px;
+    border-bottom: 1px solid #E5ECF6;
+    vertical-align: middle;
+}
+.cr-assets-table tbody tr:nth-child(even) td { background: #F7FAFF; }
+.cr-assets-table tbody tr:hover td { background: #EAF4FF; }
+.cr-assets-table tbody tr:last-child td { border-bottom: none; }
+.cr-assets-table th:first-child,
+.cr-assets-table td:first-child { width: 48px; }
+.cr-assets-table .cr-asset-name { font-weight: 700; color: #164477; }
+.cr-assets-table .cr-level-number { color: #1B467D; font-weight: 750; }
+.cr-assets-table .cr-level-label { font-weight: 750; }
+.cr-assets-table .cr-level-1 { color: #137547; }
+.cr-assets-table .cr-level-2 { color: #185ABC; }
+.cr-assets-table .cr-level-3 { color: #926400; }
+.cr-assets-table .cr-level-4 { color: #B74B0B; }
+.cr-assets-table .cr-level-5 { color: #B91C1C; }
+
+/* Ті самі три кнопки, але компактніші. */
+.st-key-assets_action_add button,
+.st-key-assets_action_edit button,
+.st-key-assets_action_delete button {
+    min-height: 48px !important;
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    border-radius: 10px !important;
+    box-shadow: 0 3px 9px rgba(23, 59, 117, .09) !important;
+    transition: background .18s ease, box-shadow .18s ease, transform .18s ease !important;
+}
+.st-key-assets_action_add button:hover,
+.st-key-assets_action_edit button:hover,
+.st-key-assets_action_delete button:hover {
+    box-shadow: 0 5px 14px rgba(23, 59, 117, .16) !important;
+    transform: translateY(-1px);
+}
+.cr-action-separator { height: 8px; }
+
+/* Зелене СПЛИВАЮЧЕ, а не статичне повідомлення про успіх. */
+[data-testid="stToast"] {
+    background: #EAF9EF !important;
+    border: 1px solid #99DCB2 !important;
+    border-left: 4px solid #22A35B !important;
+    border-radius: 12px !important;
+    color: #155C36 !important;
+    box-shadow: 0 7px 24px rgba(26, 113, 67, .14) !important;
+}
+[data-testid="stToast"] p,
+[data-testid="stToast"] span {
+    color: #155C36 !important;
+    font-weight: 650 !important;
+}
+
+@media (max-width: 800px) {
+    .cr-hero { min-height: 118px; padding: 18px 21px; }
+    .cr-server { width: 88px; min-width: 88px; height: 80px; }
+    .cr-stat-card { min-height: 90px; padding: 15px; }
+}
+
+
+/* ===========================================================
+   ASSETS v3: фільтри, кольорова критичність, футер унизу
+   =========================================================== */
+
+/* Фільтри реєстру — компактні та узгоджені з картками. */
+.st-key-assets_registry_level [data-baseweb="select"] > div,
+.st-key-assets_registry_sort [data-baseweb="select"] > div {
+    background: #F5F9FF !important;
+    border: 1px solid #C9DDFC !important;
+    border-radius: 10px !important;
+    color: #173B73 !important;
+    min-height: 42px;
+}
+
+/* FIX v4: рамка належить ЗОВНІШНЬОМУ контейнеру BaseWeb.
+   Старе правило ставило min-height:42px та border на вкладений input,
+   тоді як Streamlit обмежував висоту його батьківського контейнера.
+   Через це нижній бортик обрізався. */
+.st-key-assets_registry_search [data-baseweb="input"] {
+    width: 100% !important;
+    height: 42px !important;
+    min-height: 42px !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    align-items: center !important;
+    background: #F5F9FF !important;
+    border: 1px solid #C9DDFC !important;
+    border-radius: 10px !important;
+    box-shadow: none !important;
+    overflow: hidden !important;
+}
+.st-key-assets_registry_search [data-baseweb="input"] > div {
+    min-height: 0 !important;
+    max-height: 100% !important;
+    box-sizing: border-box !important;
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+}
+.st-key-assets_registry_search [data-baseweb="input"] input {
+    height: 100% !important;
+    max-height: 100% !important;
+    min-height: 0 !important;
+    box-sizing: border-box !important;
+    background: transparent !important;
+    border: 0 !important;
+    outline: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    padding: 0 12px !important;
+    color: #173B73 !important;
+}
+.st-key-assets_registry_search [data-baseweb="input"]:focus-within {
+    border-color: #3979CF !important;
+    box-shadow: 0 0 0 2px rgba(57, 121, 207, .10) !important;
+    overflow: visible !important;
+}
+/* Зовнішні блоки не мають обрізати нижню рамку. */
+.st-key-assets_registry_search,
+.st-key-assets_registry_search [data-testid="stTextInput"] {
+    overflow: visible !important;
+}
+
+/* Критичність читається як статус, а не лише як кольоровий текст. */
+.cr-level-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 5px 10px;
+    border-radius: 999px;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    font-size: 12px;
+    line-height: 1.4;
+    font-weight: 750;
+}
+.cr-level-dot { width: 7px; height: 7px; border-radius: 50%; background: currentColor; }
+.cr-level-badge-5 { background: #FDE8E8; color: #B42332; border-color: #F6C3C7; }
+.cr-level-badge-4 { background: #FFF0DE; color: #B65B0B; border-color: #F5D8AD; }
+.cr-level-badge-3 { background: #FFF8D8; color: #8A6307; border-color: #EEDF99; }
+.cr-level-badge-2 { background: #E7F1FF; color: #225FB0; border-color: #C3DDFF; }
+.cr-level-badge-1 { background: #E7F8EF; color: #187444; border-color: #B6E7CA; }
+
+.cr-assets-table td { padding-top: 12px; padding-bottom: 12px; }
+.cr-assets-table td:nth-child(6), .cr-assets-table th:nth-child(6) { min-width: 155px; }
+
+/* Укорочені сторінки: футер унизу вікна, довгі: після вмісту.
+   Футер не fixed: він не перекриває таблицю або форми. */
+[data-testid="stMainBlockContainer"] {
+    min-height: calc(100dvh - 4.5rem);
+    display: flex;
+    flex-direction: column;
+}
+[data-testid="stMainBlockContainer"] > [data-testid="stVerticalBlock"] {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 auto;
+}
+[data-testid="stMainBlockContainer"] > [data-testid="stVerticalBlock"] > div:has(.cr-footer) {
+    margin-top: auto !important;
+}
+/* Додатковий сумісний селектор для версій Streamlit з іншою обгорткою. */
+[data-testid="stMainBlockContainer"] [data-testid="stVerticalBlock"] > [data-testid="stElementContainer"]:has(.cr-footer) {
+    margin-top: auto !important;
+}
+.cr-footer {
+    margin-top: 0 !important;
+    padding: 22px 12px 18px !important;
+    text-align: center;
+}
+.cr-footer-brand { justify-content: center; }
+.cr-footer-description, .cr-footer-copy { text-align: center; }
+
+@media (max-width: 750px) {
+    .cr-level-badge { font-size: 11px; }
+    [data-testid="stMainBlockContainer"] { min-height: calc(100dvh - 3rem); }
+}

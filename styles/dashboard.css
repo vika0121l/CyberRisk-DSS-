@@ -1,0 +1,786 @@
+
+/* ==========================================
+   CYBERRISK DSS — ГОЛОВНА ПАНЕЛЬ
+   ========================================== */
+
+:root {
+    --dash-navy: #173B73;
+    --dash-blue: #2867C8;
+    --dash-text: #19365D;
+    --dash-muted: #73849C;
+    --dash-border: #E2EAF5;
+}
+
+/* Головний банер */
+
+.dash-hero {
+    background: linear-gradient(
+        115deg,
+        #122F5E 0%,
+        #194680 58%,
+        #2867B5 100%
+    );
+    border-radius: 18px;
+    padding: 34px 38px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    color: white;
+    margin-bottom: 24px;
+    overflow: hidden;
+    position: relative;
+}
+
+.dash-hero::after {
+    content: "";
+    position: absolute;
+    width: 240px;
+    height: 240px;
+    right: -75px;
+    top: -100px;
+    border: 1px solid rgba(255,255,255,.14);
+    border-radius: 50%;
+    box-shadow:
+        0 0 0 38px rgba(255,255,255,.035),
+        0 0 0 80px rgba(255,255,255,.025);
+}
+
+.dash-hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 700px;
+}
+
+.dash-eyebrow {
+    color: #B9D5F9;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.7px;
+    margin-bottom: 12px;
+}
+
+.dash-hero h1 {
+    color: #FFFFFF !important;
+    font-size: clamp(27px, 2.6vw, 38px);
+    font-weight: 750;
+    margin: 0 0 12px;
+    line-height: 1.2;
+}
+
+.dash-hero p {
+    color: #D9E8FB;
+    font-size: 14px;
+    line-height: 1.7;
+    margin: 0;
+    max-width: 590px;
+}
+
+.dash-hero-symbol {
+    position: relative;
+    z-index: 1;
+    width: 88px;
+    height: 88px;
+    min-width: 88px;
+    border-radius: 22px;
+    background: rgba(255,255,255,.11);
+    border: 1px solid rgba(255,255,255,.22);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.dash-hero-symbol svg {
+    width: 48px;
+    height: 48px;
+}
+
+/* Статистика */
+
+.dash-stats {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+    margin-bottom: 34px;
+}
+
+.dash-stat-card {
+    background: #FFFFFF;
+    border: 1px solid var(--dash-border);
+    border-radius: 14px;
+    padding: 22px;
+    min-width: 0;
+    box-shadow: 0 5px 18px rgba(20, 55, 100, .035);
+}
+
+.dash-stat-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 43px;
+    height: 43px;
+    border-radius: 11px;
+    background: #EAF2FF;
+    color: #2462B8;
+    margin-bottom: 20px;
+}
+
+.dash-stat-value {
+    color: var(--dash-navy);
+    font-size: 31px;
+    font-weight: 750;
+    line-height: 1.2;
+    margin-bottom: 7px;
+}
+
+.dash-stat-label {
+    color: #61758F;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+/* Заголовки розділів */
+
+.dash-section-heading {
+    margin: 32px 0 16px;
+}
+
+.dash-section-kicker {
+    font-size: 10px;
+    letter-spacing: 1.2px;
+    color: #3973B7;
+    font-weight: 750;
+    margin-bottom: 6px;
+}
+
+.dash-section-heading h2 {
+    font-size: 21px;
+    font-weight: 750;
+    color: var(--dash-navy);
+    margin: 0 0 5px;
+}
+
+.dash-section-heading p {
+    font-size: 12px;
+    color: var(--dash-muted);
+    margin: 0;
+}
+
+/* Аналітичні блоки */
+
+.dash-analysis-grid {
+    display: grid;
+    grid-template-columns: 1.65fr 1fr;
+    gap: 16px;
+}
+
+.dash-panel {
+    background: white;
+    border: 1px solid var(--dash-border);
+    border-radius: 14px;
+    padding: 24px;
+    min-width: 0;
+}
+
+.dash-panel-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--dash-navy);
+    margin-bottom: 5px;
+}
+
+.dash-panel-subtitle {
+    font-size: 12px;
+    color: var(--dash-muted);
+}
+
+.dash-distribution {
+    margin-top: 24px;
+}
+
+.dash-risk-row {
+    display: grid;
+    grid-template-columns: 110px minmax(0, 1fr) 28px;
+    gap: 12px;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.dash-risk-name {
+    color: #536A88;
+    font-size: 12px;
+}
+
+.dash-risk-track {
+    height: 10px;
+    border-radius: 20px;
+    background: #EEF3FA;
+    overflow: hidden;
+}
+
+.dash-risk-fill {
+    height: 100%;
+    background: #3B82F6;
+    border-radius: 20px;
+}
+
+/* Кольори смуг за рівнями кіберризику */
+.dash-risk-fill.very-low { background: #22A06B; }
+.dash-risk-fill.low { background: #3B82F6; }
+.dash-risk-fill.medium { background: #EAB308; }
+.dash-risk-fill.high { background: #F97316; }
+.dash-risk-fill.critical { background: #DC3545; }
+
+.dash-risk-count {
+    text-align: right;
+    color: var(--dash-navy);
+    font-size: 13px;
+    font-weight: 700;
+}
+
+/* Компактна картка ризиків, що потребують уваги */
+.dash-summary-panel {
+    background: linear-gradient(145deg, #FFFFFF, #F5F8FE);
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.dash-summary-heading {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.dash-summary-shield {
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #FEECEC;
+    border: 1px solid #FADADA;
+}
+
+.dash-summary-shield img {
+    width: 23px;
+    height: 23px;
+}
+
+.dash-summary-overview {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin: 21px 0 20px;
+}
+
+.dash-summary-number {
+    font-size: 48px;
+    font-weight: 800;
+    color: var(--dash-navy);
+    line-height: 1;
+    font-variant-numeric: tabular-nums;
+}
+
+.dash-summary-overview-text {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    min-width: 0;
+}
+
+.dash-summary-overview-text strong {
+    color: #B91C1C;
+    font-size: 13px;
+    font-weight: 750;
+}
+
+.dash-summary-overview-text span {
+    color: #61758F;
+    font-size: 11px;
+    line-height: 1.45;
+}
+
+.dash-summary-cards {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    margin-top: auto;
+}
+
+.dash-summary-mini {
+    min-width: 0;
+    background: #FFFFFF;
+    border: 1px solid #E2EAF5;
+    border-radius: 12px;
+    padding: 15px 16px;
+}
+
+.dash-summary-mini-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    font-size: 12px;
+    color: #61758F;
+}
+
+.dash-summary-mini-icon {
+    width: 21px;
+    height: 21px;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.dash-summary-mini > strong {
+    display: block;
+    margin-top: 9px;
+    font-size: 27px;
+    line-height: 1.1;
+    font-weight: 800;
+    font-variant-numeric: tabular-nums;
+}
+
+.dash-summary-mini-critical { border-color: #FECACA; }
+.dash-summary-mini-critical > strong { color: #B91C1C; }
+.dash-summary-mini-critical .dash-summary-mini-icon {
+    color: #B91C1C;
+    background: #FEE2E2;
+}
+
+.dash-summary-mini-high { border-color: #FED7AA; }
+.dash-summary-mini-high > strong { color: #C2410C; }
+.dash-summary-mini-high .dash-summary-mini-icon {
+    color: #C2410C;
+    background: #FFEDD5;
+}
+
+@media (max-width: 600px) {
+    .dash-summary-overview { gap: 12px; }
+    .dash-summary-mini { padding: 12px; }
+}
+
+/* Таблиця */
+
+.dash-table-card {
+    background: #FFFFFF;
+    border: 1px solid var(--dash-border);
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+.dash-table-scroll {
+    overflow-x: auto;
+}
+
+.dash-table {
+    border-collapse: collapse;
+    width: 100%;
+    min-width: 760px;
+    font-size: 12px;
+}
+
+.dash-table thead {
+    background: #F1F5FB;
+}
+
+.dash-table th {
+    padding: 16px 17px;
+    color: #536B8D;
+    font-size: 11px;
+    font-weight: 700;
+    text-align: left;
+    white-space: nowrap;
+}
+
+.dash-table td {
+    padding: 16px 17px;
+    border-top: 1px solid #EDF1F7;
+    color: #4B6483;
+}
+
+.dash-table tbody tr:hover {
+    background: #F8FBFF;
+}
+
+.dash-asset-name {
+    color: #173B73 !important;
+    font-weight: 650;
+}
+
+.dash-badge {
+    display: inline-block;
+    border-radius: 20px;
+    padding: 5px 10px;
+    font-size: 11px;
+    font-weight: 650;
+    white-space: nowrap;
+}
+
+.dash-badge.high {
+    background: #E3ECFA;
+    color: #184E95;
+}
+
+.dash-badge.medium {
+    background: #EDF3FA;
+    color: #5174A0;
+}
+
+.dash-badge.low {
+    background: #F2F5F9;
+    color: #74859B;
+}
+
+/* Інформаційний блок */
+
+.dash-note {
+    margin-top: 30px;
+    padding: 22px 24px;
+    background: #F1F6FE;
+    border: 1px solid #E1EAF8;
+    border-radius: 14px;
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.dash-note-icon {
+    width: 28px;
+    height: 28px;
+    min-width: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #DDEAFF;
+    color: #245DAA;
+    border-radius: 9px;
+    font-weight: 800;
+    font-size: 14px;
+}
+
+.dash-note-title {
+    font-size: 14px;
+    color: var(--dash-navy);
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.dash-note p {
+    font-size: 12px;
+    line-height: 1.7;
+    color: #61758F;
+    margin: 0;
+}
+
+/* Футер */
+
+.dash-footer {
+    margin: 42px auto 16px;
+    padding: 22px 12px;
+    text-align: center;
+    border-top: 1px solid #E6ECF4;
+    color: #8494A9;
+    font-size: 11px;
+    line-height: 1.9;
+}
+
+.dash-footer-brand {
+    font-size: 14px;
+    font-weight: 750;
+    color: #245DAA;
+    margin-bottom: 5px;
+}
+
+/* Адаптивність */
+
+@media (max-width: 1050px) {
+    .dash-stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .dash-analysis-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .dash-hero {
+        padding: 26px 22px;
+    }
+
+    .dash-hero-symbol {
+        display: none;
+    }
+
+    .dash-stats {
+        gap: 10px;
+    }
+
+    .dash-stat-card {
+        padding: 16px;
+    }
+
+    .dash-stat-value {
+        font-size: 26px;
+    }
+
+    .dash-panel {
+        padding: 18px;
+    }
+
+    .dash-risk-row {
+        grid-template-columns: 88px minmax(0, 1fr) 22px;
+        gap: 8px;
+    }
+
+    .dash-risk-name {
+        font-size: 11px;
+    }
+}
+
+/* ==========================================
+   CYBERRISK DSS — ЄДИНА ФОНОВА СІТКА
+   ========================================== */
+
+/* Основний білий фон */
+.stApp {
+    background: #FFFFFF !important;
+}
+
+/* Технологічна сітка — як на сторінці активів */
+[data-testid="stAppViewContainer"]::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    pointer-events: none;
+    z-index: 0;
+
+    background-image:
+        linear-gradient(
+            rgba(31, 91, 170, 0.045) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(31, 91, 170, 0.045) 1px,
+            transparent 1px
+        ),
+        radial-gradient(
+            circle at 80% 25%,
+            rgba(42, 111, 207, 0.025),
+            transparent 40%
+        );
+
+    background-size:
+        60px 60px,
+        60px 60px,
+        100% 100%;
+
+    animation: cyberGridMove 35s linear infinite;
+}
+
+/* Плавна анімація */
+@keyframes cyberGridMove {
+    0% {
+        background-position:
+            0 0,
+            0 0,
+            center;
+    }
+
+    100% {
+        background-position:
+            0 120px,
+            120px 0,
+            center;
+    }
+}
+
+/* Контент поверх сітки */
+[data-testid="stMain"] {
+    position: relative;
+    z-index: 1;
+    background: transparent !important;
+}
+
+/* Врахування налаштувань зменшення руху */
+@media (prefers-reduced-motion: reduce) {
+    [data-testid="stAppViewContainer"]::before {
+        animation: none !important;
+    }
+}
+/* Єдиний верхній відступ для головної панелі */
+
+section[data-testid="stMain"]
+.block-container {
+    padding-top: 2.5rem !important;
+}
+
+/* ==========================================
+   КОЛЬОРИ КРИТИЧНОСТІ АКТИВІВ
+   ========================================== */
+
+.dash-badge.critical {
+    background: #FEE2E2;
+    color: #B91C1C;
+    border: 1px solid #FECACA;
+}
+
+.dash-badge.high {
+    background: #FFEDD5;
+    color: #C2410C;
+    border: 1px solid #FED7AA;
+}
+
+.dash-badge.medium {
+    background: #FEF3C7;
+    color: #92400E;
+    border: 1px solid #FDE68A;
+}
+
+.dash-badge.low {
+    background: #DBEAFE;
+    color: #1D4ED8;
+    border: 1px solid #BFDBFE;
+}
+
+.dash-badge.very-low {
+    background: #DCFCE7;
+    color: #15803D;
+    border: 1px solid #BBF7D0;
+}
+
+/* Компактна аналітична картка «Потребують уваги» */
+.dash-summary-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+}
+.dash-summary-shield {
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background: #FEE2E2;
+    color: #B91C1C;
+    font-size: 22px;
+}
+.dash-summary-overview {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin: 24px 0;
+}
+.dash-summary-overview .dash-summary-number {
+    margin: 0;
+    font-size: 44px;
+    line-height: 1;
+}
+.dash-summary-overview-text {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.dash-summary-overview-text strong {
+    color: #B91C1C;
+    font-size: 13px;
+}
+.dash-summary-overview-text span {
+    color: #73849C;
+    font-size: 11px;
+}
+.dash-summary-cards {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+.dash-summary-mini {
+    min-width: 0;
+    background: #FFFFFF;
+    border: 1px solid #E2EAF5;
+    border-radius: 12px;
+    padding: 16px;
+}
+.dash-summary-critical { border-color: #FECACA; }
+.dash-summary-high { border-color: #FED7AA; }
+.dash-summary-mini-label {
+    font-size: 12px;
+    color: #61758F;
+    margin-bottom: 10px;
+}
+.dash-summary-mini-value {
+    font-size: 28px;
+    font-weight: 750;
+    line-height: 1;
+}
+.dash-summary-critical .dash-summary-mini-value { color: #B91C1C; }
+.dash-summary-high .dash-summary-mini-value { color: #C2410C; }
+@media (max-width: 600px) {
+    .dash-summary-cards { gap: 8px; }
+    .dash-summary-mini { padding: 12px; }
+}
+
+
+/* ==========================================
+   Динамічні кольори карток ризиків
+   ========================================== */
+
+/* Верхній щит завжди синій, як у навігації */
+.dash-summary-shield {
+    background: #E8F1FF;
+    border-color: #D4E5FF;
+}
+
+/* За нульового значення — нейтральна картка */
+.dash-summary-mini.is-zero {
+    background: #FFFFFF;
+    border-color: #E2EAF5;
+}
+.dash-summary-mini.is-zero > strong {
+    color: #73849C;
+}
+.dash-summary-mini.is-zero .dash-summary-mini-icon {
+    background: #EEF3FA;
+    color: #8A9AB0;
+}
+
+/* Критичні: червоний тільки за наявності ризиків */
+.dash-summary-mini-critical.is-active {
+    border-color: #FECACA;
+}
+.dash-summary-mini-critical.is-active > strong {
+    color: #B91C1C;
+}
+.dash-summary-mini-critical.is-active .dash-summary-mini-icon {
+    background: #FEE2E2;
+    color: #B91C1C;
+}
+
+/* Високі: помаранчевий тільки за наявності ризиків */
+.dash-summary-mini-high.is-active {
+    border-color: #FED7AA;
+}
+.dash-summary-mini-high.is-active > strong {
+    color: #C2410C;
+}
+.dash-summary-mini-high.is-active .dash-summary-mini-icon {
+    background: #FFEDD5;
+    color: #C2410C;
+}

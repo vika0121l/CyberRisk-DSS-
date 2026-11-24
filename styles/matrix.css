@@ -1,0 +1,400 @@
+/* CyberRisk DSS — матриця ризиків: зрозумілий аналітичний дизайн */
+.stApp [data-testid="stMain"]{background:#fff;background-image:linear-gradient(rgba(50,108,182,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(50,108,182,.045) 1px,transparent 1px);background-size:52px 52px}
+[data-testid="stMainBlockContainer"],[data-testid="stMain"] .block-container,.block-container{max-width:95%!important;width:95%!important;padding:0.5rem 1.5rem 1rem!important;margin:0 auto!important}
+.mx-hero{background:linear-gradient(115deg,#10264a,#20529b);border-radius:16px;padding:28px 36px;color:#fff;display:flex;align-items:center;justify-content:space-between;min-height:155px;margin-bottom:22px}
+.mx-eyebrow{font-size:10px;font-weight:750;letter-spacing:1.4px;color:#a9d2ff}.mx-hero h1{font-size:clamp(26px,3vw,35px);margin:12px 0 10px;color:#fff;font-weight:750}.mx-hero p{font-size:14px;color:#e2eeff;margin:0}
+.mx-hero-icon{width:94px;height:94px;flex-shrink:0;background:#9bcaff;-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='black' stroke-width='3' stroke-linecap='round'%3E%3Crect x='8' y='8' width='48' height='48' rx='5'/%3E%3Cpath d='M24 8v48M40 8v48M8 24h48M8 40h48'/%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='black' stroke-width='3' stroke-linecap='round'%3E%3Crect x='8' y='8' width='48' height='48' rx='5'/%3E%3Cpath d='M24 8v48M40 8v48M8 24h48M8 40h48'/%3E%3C/svg%3E") center/contain no-repeat}
+.mx-stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-bottom:24px}.mx-stat{background:#fff;border:1px solid #d5e4f6;border-radius:13px;display:flex;align-items:center;gap:12px;padding:17px 15px;box-shadow:0 3px 12px rgba(25,70,132,.04)}.mx-stat-icon{width:46px;height:46px;min-width:46px;border-radius:11px;background:#eaf2ff;color:#2673e5;display:grid;place-items:center;font-size:25px}.mx-stat span,.mx-stat small{display:block;color:#7287a4;font-size:11px}.mx-stat strong{display:block;color:#16396f;font-size:25px;margin:3px 0}.mx-stat small{font-size:10px}
+.mx-panel-title{display:flex;align-items:center;gap:10px;margin:8px 0 7px}.mx-panel-title span{display:block;width:4px;height:31px;background:#2463b8;border-radius:5px}.mx-panel-title h2{font-size:20px;color:#173b73;margin:0;font-weight:750}
+.mx-axis{height:35px;background:#eaf2ff;border-radius:8px;color:#173b73;font-size:14px;font-weight:750;display:grid;place-items:center}.mx-y{height:49px}.mx-corner{font-size:11px}.mx-axis-caption{text-align:center;font-size:12px;font-weight:750;color:#173b73;margin:9px 0 15px}
+[class*="st-key-mx_cell_"] button{height:49px!important;min-height:49px!important;padding:2px!important;border-radius:9px!important;color:#173b73!important;font-size:14px!important;font-weight:750!important;white-space:pre-line!important;line-height:1.3!important;border:1px solid rgba(100,140,190,.12)!important;transition:filter .15s,box-shadow .15s!important}
+[class*="st-key-mx_cell_"] button p{white-space:pre-line!important;line-height:1.3!important;margin:0!important}
+[class*="st-key-mx_cell_"] button[kind="primary"]{outline:2px solid #173b75!important;outline-offset:1px!important;box-shadow:0 0 0 3px rgba(23,59,117,.12)!important}
+[class*="st-key-mx_cell_"] button:hover{filter:brightness(.97);border-color:#4c7cc2!important}
+.mx-result{background:#fff0df;border:1px solid #f9d6ad;border-radius:11px;padding:17px 16px;color:#193c73;display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin:13px 0}.mx-result-numbers{display:flex;gap:20px;font-size:19px}.mx-result strong{color:#a84b0a}.mx-result.very-low{background:#e3f5e9;border-color:#b8e1c6}.mx-result.low{background:#e5f3ff;border-color:#b8d9f7}.mx-result.medium{background:#fff5d5;border-color:#f5dfa1}.mx-result.critical{background:#ffe6e8;border-color:#f4b5be}.mx-result.critical strong{color:#b91c1c}
+.mx-count{font-size:13px;color:#5a7191;margin:12px 0}.mx-count strong{color:#173b73}.mx-detail-list{border:1px solid #d7e3f4;border-radius:11px;overflow:hidden;background:#fff}.mx-detail-row{display:grid;grid-template-columns:38% 62%;border-top:1px solid #e7eef8;min-height:53px}.mx-detail-row:first-child{border-top:none}.mx-detail-row span{background:#f2f6fc;color:#456489;padding:13px 12px;font-size:12px;font-weight:700}.mx-detail-row strong{color:#193c73;padding:13px 12px;font-size:12px;line-height:1.5;font-weight:600;overflow-wrap:anywhere}
+.mx-legend{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;margin:24px 0 18px;padding:17px;background:#fff;border:1px solid #d7e3f4;border-radius:12px;color:#34577f;font-size:12px}.mx-legend span{display:flex;align-items:center;gap:6px}.mx-legend i{display:inline-block;width:17px;height:17px;border-radius:5px}.mx-legend .very-low{background:#a9e3c2}.mx-legend .low{background:#a9d7f6}.mx-legend .medium{background:#ffe18a}.mx-legend .high{background:#ffbd86}.mx-legend .critical{background:#f5aab2}
+.mx-explain{border:1px solid #d7e3f4;border-radius:13px;background:#f8fbff;padding:18px 20px;margin:0 0 20px}.mx-explain h3{color:#173b73;font-size:18px;margin:0 0 14px}.mx-explain-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}.mx-explain-grid>div{border-left:2px solid #b6d1f4;padding-left:13px}.mx-explain-grid b{color:#194b91;font-size:13px}.mx-explain-grid p{font-size:12px;color:#6a7f9c;line-height:1.5;margin:7px 0 0}
+@media(max-width:1100px){.mx-stats{grid-template-columns:repeat(2,1fr)}.mx-explain-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:768px){[data-testid="stMainBlockContainer"],[data-testid="stMain"] .block-container,.block-container{width:100%!important;max-width:100%!important;padding:1rem!important}.mx-hero{padding:20px}.mx-hero-icon{width:55px;height:55px}.mx-stats{grid-template-columns:1fr 1fr}.mx-stat{padding:10px}.mx-stat-icon{width:32px;height:32px;min-width:32px;font-size:18px}.mx-stat strong{font-size:19px}.mx-explain-grid{grid-template-columns:1fr}}
+
+[class*="st-key-mx_cell_1_1"] button{background:#d7f1e3!important}
+[class*="st-key-mx_cell_1_2"] button{background:#d7f1e3!important}
+[class*="st-key-mx_cell_1_3"] button{background:#d7f1e3!important}
+[class*="st-key-mx_cell_1_4"] button{background:#d7f1e3!important}
+[class*="st-key-mx_cell_1_5"] button{background:#c8e4fa!important}
+[class*="st-key-mx_cell_2_1"] button{background:#d7f1e3!important}
+[class*="st-key-mx_cell_2_2"] button{background:#d7f1e3!important}
+[class*="st-key-mx_cell_2_3"] button{background:#c8e4fa!important}
+[class*="st-key-mx_cell_2_4"] button{background:#c8e4fa!important}
+[class*="st-key-mx_cell_2_5"] button{background:#fff0b5!important}
+[class*="st-key-mx_cell_3_1"] button{background:#d7f1e3!important}
+[class*="st-key-mx_cell_3_2"] button{background:#c8e4fa!important}
+[class*="st-key-mx_cell_3_3"] button{background:#c8e4fa!important}
+[class*="st-key-mx_cell_3_4"] button{background:#fff0b5!important}
+[class*="st-key-mx_cell_3_5"] button{background:#ffd5ad!important}
+[class*="st-key-mx_cell_4_1"] button{background:#d7f1e3!important}
+[class*="st-key-mx_cell_4_2"] button{background:#c8e4fa!important}
+[class*="st-key-mx_cell_4_3"] button{background:#fff0b5!important}
+[class*="st-key-mx_cell_4_4"] button{background:#ffd5ad!important}
+[class*="st-key-mx_cell_4_5"] button{background:#f9bfc1!important}
+[class*="st-key-mx_cell_5_1"] button{background:#c8e4fa!important}
+[class*="st-key-mx_cell_5_2"] button{background:#fff0b5!important}
+[class*="st-key-mx_cell_5_3"] button{background:#ffd5ad!important}
+[class*="st-key-mx_cell_5_4"] button{background:#f9bfc1!important}
+[class*="st-key-mx_cell_5_5"] button{background:#f9bfc1!important}
+/* Покращене оформлення: виразні KPI, деталізація, інструкція */
+.mx-stats .mx-stat{min-height:88px;border-color:#c9dffc;box-shadow:0 4px 14px rgba(28,78,142,.07)}
+.mx-stat-high{background:linear-gradient(115deg,#fff,#fff2e9)!important;border-color:#ffcca8!important}
+.mx-stat-high .mx-stat-icon{background:#ffead9!important;color:#ed7a28!important}
+.mx-stat-critical{background:linear-gradient(115deg,#fff,#fff0f4)!important;border-color:#fac3d2!important}
+.mx-stat-critical .mx-stat-icon{background:#fce4eb!important;color:#d9527c!important}
+.mx-stat-max{background:linear-gradient(115deg,#fff,#edf5ff)!important}
+.mx-stat span{font-weight:700;color:#204574;font-size:12px}
+.mx-stat strong{font-size:29px;color:#102f68}
+.mx-detail-heading{display:flex;align-items:center;gap:11px;background:linear-gradient(110deg,#123c7c,#2365b5);color:#fff;padding:14px 18px;border-radius:11px;box-shadow:0 5px 12px rgba(22,69,134,.14);margin:7px 0 13px}
+.mx-detail-heading span{font-size:25px;color:#d8eaff;line-height:1}
+.mx-detail-heading h2{margin:0;color:#fff;font-size:20px;font-weight:750}
+.mx-result{padding:16px 18px;border-radius:11px;box-shadow:0 3px 10px rgba(120,75,22,.04)}
+.mx-result-numbers{gap:18px;font-size:20px}
+.mx-result>div:last-child strong{display:inline-block;border-radius:999px;padding:5px 12px;background:#ffd19d;color:#a64400}
+.mx-result.critical>div:last-child strong{background:#ffd0d7;color:#b91c1c}
+.mx-result.medium>div:last-child strong{background:#ffe59b;color:#7c5700}
+.mx-result.low>div:last-child strong{background:#cce7ff;color:#15589a}
+.mx-result.very-low>div:last-child strong{background:#c5edce;color:#176b38}
+.mx-count{font-size:12px;font-weight:600;color:#526b90}
+.mx-detail-list{box-shadow:0 5px 18px rgba(24,69,126,.06);border-color:#c5d9f5}
+.mx-detail-row{grid-template-columns:41% 59%;min-height:60px}
+.mx-detail-row span{display:flex;align-items:center;gap:10px;background:#edf4ff;color:#183b74;font-size:12px}
+.mx-detail-row strong{display:flex;align-items:center;font-size:12px;color:#153769;font-weight:600;background:#fff}
+.mx-row-icon{font-style:normal;display:inline-flex;align-items:center;justify-content:center;width:25px;height:25px;min-width:25px;background:#dceaff;color:#1665c5;border-radius:7px;font-size:15px}
+.mx-guide{display:grid;grid-template-columns:240px 1fr;overflow:hidden;border:1px solid #bad5f6;border-radius:15px;background:linear-gradient(105deg,#fff,#f5f9ff);margin:6px 0 18px;box-shadow:0 5px 16px rgba(28,75,136,.07)}
+.mx-guide-label{display:flex;align-items:center;gap:13px;padding:22px;background:linear-gradient(130deg,#123e80,#2771c9);color:white}
+.mx-guide-label h3{font-size:17px;line-height:1.4;color:white;margin:0;font-weight:750}
+.mx-guide-book{font-size:32px;color:#d9edff}
+.mx-guide-steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));align-items:center;padding:17px 8px}
+.mx-guide-step{display:flex;gap:9px;min-height:85px;padding:5px 12px;border-left:1px solid #c6dbf5}
+.mx-guide-num{display:grid;place-items:center;width:30px;height:30px;min-width:30px;border-radius:50%;background:linear-gradient(130deg,#2778d2,#15509c);color:white;font-weight:750;font-size:14px}
+.mx-guide-step b{font-size:12px;color:#153c79}
+.mx-guide-step p{font-size:11px;line-height:1.5;color:#577294;margin:6px 0 0}
+@media(max-width:1250px){.mx-guide{grid-template-columns:1fr}.mx-guide-steps{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.mx-guide-label{padding:15px 20px}}
+@media(max-width:650px){.mx-guide-steps{grid-template-columns:1fr}.mx-result-numbers{font-size:15px;gap:10px}.mx-detail-row{grid-template-columns:42% 58%}.mx-detail-heading h2{font-size:17px}}
+
+
+/* Фінальні уточнення: ризик = бал; наявність оцінки = синя крапка */
+[class*="st-key-mx_cell_"] button {position:relative!important;overflow:visible!important}
+[class*="st-key-mx_cell_"] button p {white-space:normal!important;font-size:16px!important;font-weight:750!important}
+[class*="st-key-mx_cell_"] button[kind="primary"] {outline:3px solid #123c7c!important;outline-offset:1px!important;box-shadow:0 0 0 4px rgba(21,84,166,.12)!important}
+/* Нуль критичних ризиків — спокійний, нейтральний стан */
+.mx-stat-neutral{background:#fff!important;border-color:#d5e4f6!important}
+.mx-stat-neutral .mx-stat-icon{background:#eaf2ff!important;color:#2673e5!important}
+/* Найвищий ФАКТИЧНО збережений ризик отримує колір свого рівня */
+.mx-stat-max-high{background:linear-gradient(115deg,#fff,#fff1e7)!important;border-color:#ffbb86!important}
+.mx-stat-max-high .mx-stat-icon{background:#ffe4cf!important;color:#cf5d0d!important}
+.mx-stat-max-critical{background:linear-gradient(115deg,#fff,#ffedf0)!important;border-color:#f5aab2!important}
+.mx-stat-max-critical .mx-stat-icon{background:#ffe0e5!important;color:#c62840!important}
+.mx-stat-max-medium{background:#fffaf0!important;border-color:#f5dfa1!important}
+.mx-stat-max-medium .mx-stat-icon{background:#fff0c4!important;color:#8b6700!important}
+.mx-stat-max-low{background:#f2f9ff!important;border-color:#b8d9f7!important}
+.mx-stat-max-very-low{background:#f1fbf5!important;border-color:#b8e1c6!important}
+/* Компактніші й контрастніші підказки; ясний акцент на результаті */
+.mx-panel-title h2{font-size:21px}
+.mx-count{font-size:13px!important}
+.mx-result-numbers b:last-child{font-size:23px}
+.mx-detail-row:last-child{background:#f0f6ff}
+.mx-detail-row:last-child strong{font-size:14px;color:#153b78}
+
+
+/* ===== Уніфіковані темно-сині осі та результат ризику ===== */
+/* Осі P та I: відокремлюємо координати від кольорових балів матриці */
+.mx-axis, .mx-axis.mx-y, .mx-axis.mx-corner {
+    background: linear-gradient(115deg,#10264a,#20529b) !important;
+    color: #ffffff !important;
+    border: 1px solid #254f89 !important;
+    border-radius: 8px !important;
+    font-weight: 750 !important;
+    box-shadow: 0 2px 7px rgba(16,38,74,.12);
+}
+/* Темно-синя картка результату — незалежно від обраного рівня */
+.mx-result, .mx-result.very-low, .mx-result.low, .mx-result.medium,
+.mx-result.high, .mx-result.critical {
+    background: linear-gradient(115deg,#10264a,#20529b) !important;
+    border: 1px solid #315c99 !important;
+    color: #ffffff !important;
+    border-radius: 12px !important;
+    box-shadow: 0 5px 16px rgba(16,38,74,.16) !important;
+    padding: 17px 20px !important;
+    gap: 14px !important;
+}
+.mx-result-numbers {
+    display: flex !important;
+    align-items: center !important;
+    flex-wrap: wrap !important;
+    gap: 20px !important;
+}
+.mx-result-numbers span {
+    font-size: 20px !important;
+    font-weight: 750 !important;
+    line-height: 1.35 !important;
+    color: #ffffff !important;
+    font-variant-numeric: tabular-nums;
+}
+.mx-result-status {display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+.mx-result-label {font-size:13px;font-weight:600;color:#d9e8ff}
+.mx-result-status strong {
+    display:inline-flex !important;
+    align-items:center;
+    justify-content:center;
+    border-radius:999px !important;
+    padding:7px 14px !important;
+    font-size:14px !important;
+    font-weight:800 !important;
+    line-height:1.1;
+    border:1px solid transparent;
+}
+/* Тільки статус змінює колір за шкалою ризику */
+.mx-result.very-low .mx-result-status strong {background:#d7f1e3!important;color:#126336!important;border-color:#8fd4ad!important}
+.mx-result.low .mx-result-status strong {background:#d5ecff!important;color:#145ca4!important;border-color:#9ac9f4!important}
+.mx-result.medium .mx-result-status strong {background:#fff0b5!important;color:#805800!important;border-color:#efd36d!important}
+.mx-result.high .mx-result-status strong {background:#ffd2a5!important;color:#a43e00!important;border-color:#f6a65a!important}
+.mx-result.critical .mx-result-status strong {background:#ffd0d7!important;color:#ad1732!important;border-color:#f294a4!important}
+@media(max-width:750px){
+    .mx-result-numbers{gap:13px!important}
+    .mx-result-numbers span{font-size:17px!important}
+    .mx-result-status strong{font-size:13px!important}
+}
+
+/* ===== Фінальне оформлення KPI та матриці ===== */
+.mx-stats .mx-stat{background:#fff!important;border:1px solid #d5e4f6!important}
+.mx-stats .mx-stat.mx-stat-high{background:linear-gradient(115deg,#fff 12%,#fff0e1 100%)!important;border-color:#ffc18d!important}
+.mx-stats .mx-stat.mx-stat-high .mx-stat-icon{background:#ffead7!important;color:#d46b13!important}
+.mx-stats .mx-stat.mx-stat-critical{background:linear-gradient(115deg,#fff 12%,#ffe8eb 100%)!important;border-color:#f3a6b1!important}
+.mx-stats .mx-stat.mx-stat-critical .mx-stat-icon{background:#ffe0e5!important;color:#c72c48!important}
+.mx-stats .mx-stat.mx-stat-neutral{background:#fff!important;border-color:#d5e4f6!important}
+.mx-stats .mx-stat.mx-stat-neutral .mx-stat-icon{background:#eaf2ff!important;color:#2673e5!important}
+.mx-stats .mx-stat.mx-stat-max{background:linear-gradient(115deg,#10264a,#20529b)!important;border-color:#254e8b!important;box-shadow:0 6px 18px rgba(16,38,74,.16)!important}
+.mx-stat-max .mx-stat-icon{background:rgba(255,255,255,.13)!important;color:#c3e0ff!important}
+.mx-stat-max span,.mx-stat-max small{color:#d5e7ff!important}
+.mx-stat-max strong{color:#fff!important;font-size:27px!important;white-space:nowrap}
+.mx-max-content{min-width:0}
+.mx-max-value{display:flex;align-items:center;flex-wrap:wrap;gap:8px}
+.mx-max-badge{display:inline-flex!important;align-items:center;border-radius:999px;padding:5px 9px;font-weight:800!important;font-size:11px!important;white-space:nowrap}
+.mx-max-badge.very-low{color:#86e8b1!important;background:#164d45}
+.mx-max-badge.low{color:#9ed4ff!important;background:#1c4e86}
+.mx-max-badge.medium{color:#ffe184!important;background:#65541f}
+.mx-max-badge.high{color:#ffb36b!important;background:#693b1d}
+.mx-max-badge.critical{color:#ff9da7!important;background:#702c42}
+.mx-max-badge.none{color:#d5e7ff!important;background:#315581}
+/* Однакова ширина усіх шести колонок та рівні проміжки по обох осях. */
+.st-key-mx_matrix_grid [data-testid="stHorizontalBlock"]{gap:6px!important;align-items:stretch!important}
+.st-key-mx_matrix_grid [data-testid="stHorizontalBlock"] > [data-testid="stColumn"]{flex:1 1 0!important;width:0!important;min-width:0!important}
+.st-key-mx_matrix_grid [data-testid="stVerticalBlock"]{gap:6px!important}
+.st-key-mx_matrix_grid [data-testid="stColumn"] [data-testid="stVerticalBlock"]{gap:0!important}
+.st-key-mx_matrix_grid .mx-axis,.st-key-mx_matrix_grid .mx-axis.mx-y{height:47px!important;min-height:47px!important;border-radius:8px!important;background:#1b467d!important;color:#fff!important;box-shadow:none!important;border:0!important}
+.st-key-mx_matrix_grid .mx-axis.mx-corner{background:#10264a!important;border:2px solid #72b5f8!important;color:#fff!important;letter-spacing:.5px;font-size:12px!important}
+.st-key-mx_matrix_grid [class*="st-key-mx_cell_"] button{height:47px!important;min-height:47px!important;border-radius:8px!important;margin:0!important;box-shadow:none!important}
+.st-key-mx_matrix_grid [class*="st-key-mx_cell_"] button[kind="primary"]{outline:2px solid #173b75!important;outline-offset:-2px!important;box-shadow:inset 0 0 0 1px #173b75!important}
+/* Розділена палітра: зелений і блакитний мають помітно різні відтінки. */
+.st-key-mx_matrix_grid [class*="st-key-mx_cell_1_1"] button{background:#c6ebd4!important}
+.st-key-mx_matrix_grid [class*="st-key-mx_cell_1_2"] button{background:#c6ebd4!important}
+.st-key-mx_matrix_grid [class*="st-key-mx_cell_1_3"] button{background:#c6ebd4!important}
+.st-key-mx_matrix_grid [class*="st-key-mx_cell_1_4"] button{background:#c6ebd4!important}
+.st-key-mx_matrix_grid [class*="st-key-mx_cell_1_5"] button{background:#b7ddfa!important}
+.st-key-mx_matrix_grid [class*="st-key-mx_cell_2_1"] button{background:#c6ebd4!important}
+.st-key-mx_matrix_grid [class*="st-key-mx_cell_2_2"] button{background:#c6ebd4!important}
+.st-key-mx_matrix_grid [class*="st-key-mx_cell_2_3"] button{background:#b7ddfa!important}
+.st-key-mx_matrix_grid [class*="st-key-mx_cell_2_4"] button{background:#b7ddfa!important}
+.st-key-mx_matrix_grid [class*="st-key-mx_cell_2_5"] button{background:#fff0ae!important}
+.st-key-mx_matrix_grid [class*="st-key-mx_cell_3_1"] button{background:#c6ebd4!important}
+.st-key-mx_matrix_grid [class*="st-key-mx_cell_3_2"] button{background:#b7ddfa!important}
+.st-key-mx_matrix_grid [class*="st-key-mx_cell_3_3"] button{background:#b7ddfa!important}
+.st-key-mx_matrix_grid [class*="st-key-mx_cell_3_4"] button{background:#fff0ae!important}
+.st-key-mx_matrix_grid [class*="st-key-mx_cell_3_5"] button{background:#ffd0a5!important}
+.st-key-mx_matrix_grid [class*="st-key-mx_cell_4_1"] button{background:#c6ebd4!important}
+.st-key-mx_matrix_grid [class*="st-key-mx_cell_4_2"] button{background:#b7ddfa!important}
+.st-key-mx_matrix_grid [class*="st-key-mx_cell_4_3"] button{background:#fff0ae!important}
+.st-key-mx_matrix_grid [class*="st-key-mx_cell_4_4"] button{background:#ffd0a5!important}
+.st-key-mx_matrix_grid [class*="st-key-mx_cell_4_5"] button{background:#f4b3be!important}
+.st-key-mx_matrix_grid [class*="st-key-mx_cell_5_1"] button{background:#b7ddfa!important}
+.st-key-mx_matrix_grid [class*="st-key-mx_cell_5_2"] button{background:#fff0ae!important}
+.st-key-mx_matrix_grid [class*="st-key-mx_cell_5_3"] button{background:#ffd0a5!important}
+.st-key-mx_matrix_grid [class*="st-key-mx_cell_5_4"] button{background:#f4b3be!important}
+.st-key-mx_matrix_grid [class*="st-key-mx_cell_5_5"] button{background:#f4b3be!important}
+
+.mx-legend .very-low{background:#c6ebd4!important}.mx-legend .low{background:#b7ddfa!important}.mx-legend .medium{background:#fff0ae!important}.mx-legend .high{background:#ffd0a5!important}.mx-legend .critical{background:#f4b3be!important}
+@media(max-width:700px){.st-key-mx_matrix_grid [data-testid="stHorizontalBlock"]{gap:3px!important}.st-key-mx_matrix_grid .mx-axis,.st-key-mx_matrix_grid .mx-axis.mx-y,.st-key-mx_matrix_grid [class*="st-key-mx_cell_"] button{height:40px!important;min-height:40px!important;font-size:12px!important}.mx-max-value{gap:5px}}
+
+/* Максимальний бал: кольоровий напис без плашки або індикатора */
+.mx-stats .mx-stat-max .mx-max-status {
+    display:inline-block!important; padding:0!important; margin:0!important;
+    border:0!important; border-radius:0!important; background:transparent!important;
+    box-shadow:none!important; font-size:13px!important; font-weight:750!important;
+    line-height:1.3!important; white-space:nowrap;
+}
+.mx-stats .mx-stat-max .mx-max-status.very-low {color:#86e8b1!important}
+.mx-stats .mx-stat-max .mx-max-status.low {color:#9ed4ff!important}
+.mx-stats .mx-stat-max .mx-max-status.medium {color:#ffe184!important}
+.mx-stats .mx-stat-max .mx-max-status.high {color:#ffb36b!important}
+.mx-stats .mx-stat-max .mx-max-status.critical {color:#ff9da7!important}
+.mx-stats .mx-stat-max .mx-max-status.none {color:#d5e7ff!important}
+
+/* Компактний фінальний дизайн */
+.mx-matrix-hint{display:flex;align-items:center;gap:8px;color:#526a8d;font-size:12px;line-height:1.5;margin:2px 0 10px}
+.mx-hint-icon{font-size:17px;font-weight:700;color:#1e69bf}
+.mx-axis-explain{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:0 0 9px;color:#506888;font-size:11px}
+.mx-axis-explain b{color:#123a70}
+.mx-distribution{display:grid;grid-template-columns:minmax(210px,1.55fr) repeat(5,minmax(0,1fr));gap:10px;margin:18px 0 15px;align-items:stretch}
+.mx-distribution-heading{display:flex;align-items:center;gap:12px;background:linear-gradient(110deg,#eef5ff,#e4efff);border:1px solid #d4e4fb;border-radius:11px;padding:12px 14px;min-width:0}
+.mx-distribution-heading h3{font-size:14px!important;line-height:1.25!important;color:#123263!important;margin:0!important}
+.mx-distribution-heading p{font-size:10px!important;color:#5d7392!important;margin:5px 0 0!important;line-height:1.4}
+.mx-distribution-icon{font-size:25px;color:#2166b7;flex-shrink:0}
+.mx-distribution-item{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;border-radius:11px;padding:12px 5px;min-width:0}
+.mx-distribution-item strong{font-size:25px;line-height:1.1;font-weight:800;font-variant-numeric:tabular-nums}
+.mx-distribution-item span{font-size:11px;line-height:1.3;text-align:center;font-weight:750}
+.mx-distribution-item.very-low{background:#d6f3e0;color:#126336}
+.mx-distribution-item.low{background:#d6eaff;color:#15539a}
+.mx-distribution-item.medium{background:#fff0b6;color:#78520c}
+.mx-distribution-item.high{background:#ffdec3;color:#a7470b}
+.mx-distribution-item.critical{background:#f8d2db;color:#9f2944}
+.mx-method{display:grid;grid-template-columns:minmax(190px,1.25fr) minmax(220px,1.55fr) minmax(100px,.65fr) minmax(130px,.85fr) minmax(210px,1.25fr);gap:0;align-items:center;border:1px solid #d3e3f7;border-radius:12px;background:linear-gradient(115deg,#fff,#f5f9ff);box-shadow:0 3px 13px rgba(24,67,121,.06);padding:14px 12px;margin:8px 0 18px}
+.mx-method-heading{display:flex;align-items:center;gap:11px;padding:8px 12px}
+.mx-method-heading h3{font-size:14px!important;line-height:1.35!important;color:#123263!important;margin:0!important}
+.mx-method-icon{font-size:25px;color:#2166b7}
+.mx-method-formula{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;padding:8px 10px;border-left:1px solid #c8dcf5;min-width:0;text-align:center}
+.mx-method-formula span{font-size:11px;font-weight:750;color:#173b71}
+.mx-method-formula strong{display:block;background:#e9f2ff;border:1px solid #d4e4fb;border-radius:8px;padding:10px 7px;color:#123263;font-size:13px;font-weight:800;white-space:normal;line-height:1.4}
+.mx-method-definitions{border-left:1px solid #c8dcf5;padding:7px 12px;font-size:10px;line-height:1.75;color:#3c5271}
+@media(max-width:1150px){.mx-distribution{grid-template-columns:repeat(5,minmax(0,1fr))}.mx-distribution-heading{grid-column:1/-1}.mx-method{grid-template-columns:repeat(3,minmax(0,1fr))}.mx-method-heading{grid-column:1/-1}.mx-method-definitions{grid-column:1/-1;border-left:0;border-top:1px solid #c8dcf5;margin-top:8px}}
+@media(max-width:650px){.mx-distribution{gap:5px}.mx-distribution-item{padding:9px 3px}.mx-distribution-item strong{font-size:19px}.mx-distribution-item span{font-size:9px}.mx-method{grid-template-columns:1fr}.mx-method-formula{border-left:0;border-top:1px solid #c8dcf5}.mx-method-definitions{grid-column:1}}
+
+/* Підсилення візуальної ієрархії відповідно до узгодженого макета. */
+.mx-hero{min-height:135px!important;padding:23px 30px!important;margin-bottom:17px!important;border-radius:12px!important}
+.mx-hero h1{font-size:31px!important;margin:8px 0!important}
+.mx-hero p{font-size:14px!important}
+.mx-hero-icon{width:74px!important;height:74px!important}
+.mx-stats{gap:12px!important;margin-bottom:19px!important}
+.mx-stats .mx-stat{min-height:105px!important;padding:17px!important;gap:14px!important}
+.mx-stat-icon{width:52px!important;height:52px!important;min-width:52px!important;font-size:28px!important}
+.mx-stats .mx-stat span{font-size:14px!important;line-height:1.3!important}
+.mx-stats .mx-stat strong{font-size:31px!important;line-height:1.1!important}
+.mx-stats .mx-stat small{font-size:12px!important;line-height:1.4!important}
+.mx-stats .mx-stat-max .mx-max-status{font-size:16px!important;line-height:1.25!important}
+.mx-panel-title{margin:4px 0 6px!important}
+.mx-panel-title h2{font-size:22px!important}
+.mx-matrix-hint{font-size:13px!important;line-height:1.5!important;margin:0 0 12px!important;min-height:24px}
+.mx-detail-heading{padding:13px 17px!important;margin:3px 0 13px!important;min-height:49px}
+.mx-detail-heading h2{font-size:19px!important}
+.mx-result{min-height:62px!important}
+.mx-result-numbers span{font-size:19px!important}
+.mx-detail-row{min-height:58px!important}
+.mx-detail-row span,.mx-detail-row strong{font-size:13px!important;line-height:1.45!important}
+.mx-count{font-size:13px!important}
+.mx-axis-caption{font-size:12px!important;margin:10px 0 8px!important}
+/* Розподіл: достатня висота, виразні числа, пропорційна ширина. */
+.mx-distribution{grid-template-columns:minmax(240px,1.55fr) repeat(5,minmax(0,1fr))!important;gap:10px!important;margin:20px 0 18px!important}
+.mx-distribution-heading{padding:15px!important;min-height:89px!important}
+.mx-distribution-heading h3{font-size:16px!important;line-height:1.35!important}
+.mx-distribution-heading p{font-size:12px!important;margin-top:6px!important}
+.mx-distribution-icon{font-size:30px!important}
+.mx-distribution-item{min-height:89px!important;gap:7px!important;padding:13px 6px!important}
+.mx-distribution-item strong{font-size:30px!important;line-height:1.1!important}
+.mx-distribution-item span{font-size:13px!important;line-height:1.3!important}
+/* Методика: одна зрозуміла панель із читабельними формулами. */
+.mx-method{grid-template-columns:minmax(190px,1.18fr) minmax(240px,1.55fr) minmax(120px,.75fr) minmax(150px,.95fr) minmax(220px,1.3fr)!important;min-height:122px!important;padding:15px 12px!important;gap:0!important;margin:4px 0 20px!important}
+.mx-method-heading{padding:10px 14px!important;gap:12px!important}
+.mx-method-heading h3{font-size:17px!important;line-height:1.4!important}
+.mx-method-icon{font-size:30px!important}
+.mx-method-formula{min-height:92px!important;gap:10px!important;padding:8px 12px!important}
+.mx-method-formula span{font-size:13px!important;line-height:1.3!important}
+.mx-method-formula strong{font-size:16px!important;padding:11px 9px!important;line-height:1.35!important;white-space:nowrap!important}
+.mx-method-definitions{font-size:12px!important;line-height:1.8!important;padding:8px 14px!important}
+@media(max-width:1350px){
+.mx-distribution{grid-template-columns:repeat(5,minmax(0,1fr))!important}
+.mx-distribution-heading{grid-column:1/-1!important;min-height:64px!important}
+.mx-method{grid-template-columns:repeat(3,minmax(0,1fr))!important}
+.mx-method-heading{grid-column:1/-1!important}
+.mx-method-definitions{grid-column:1/-1!important;border-left:0!important;border-top:1px solid #c8dcf5!important}
+}
+@media(max-width:700px){
+.mx-distribution{gap:5px!important}.mx-distribution-item{min-height:75px!important}
+.mx-distribution-item strong{font-size:22px!important}.mx-distribution-item span{font-size:10px!important}
+.mx-method{grid-template-columns:1fr!important}
+.mx-method-formula{border-left:0!important;border-top:1px solid #c8dcf5!important}
+.mx-stats .mx-stat span{font-size:12px!important}.mx-stats .mx-stat strong{font-size:23px!important}
+}
+
+/* Темно-синій заголовок блоку розподілу ризиків */
+.mx-distribution-heading{background:linear-gradient(110deg,#10264A,#20529B)!important;border-color:#173F79!important;box-shadow:0 3px 10px rgba(16,38,74,.14)!important}
+.mx-distribution-heading h3{color:#FFFFFF!important}
+.mx-distribution-heading p{color:#D5E5FA!important}
+.mx-distribution-heading .mx-distribution-icon{color:#B6D9FF!important}
+
+
+/* Затверджена читабельна методика: ізольовані стилі без залежності від старих mx-method */
+.mx-method-v2{display:grid;grid-template-columns:minmax(220px,1.28fr) minmax(250px,1.38fr) minmax(150px,.85fr) minmax(190px,1.05fr) minmax(245px,1.3fr);align-items:stretch;gap:0;width:100%;margin:20px 0 22px;border:1px solid #bfd5f4;border-radius:16px;background:#f8fbff;box-shadow:0 5px 16px rgba(15,55,115,.09);overflow:hidden;min-height:158px}
+.mx-method-v2-title{background:linear-gradient(125deg,#10264a 0%,#174780 68%,#1760b4 100%);color:#fff;display:flex;align-items:center;gap:15px;padding:24px 22px;min-width:0}
+.mx-method-v2-title h3{font-size:19px!important;line-height:1.35!important;font-weight:800!important;color:#fff!important;margin:0!important}
+.mx-method-v2-icon{display:grid;place-items:center;flex:0 0 51px;width:51px;height:51px;border-radius:13px;background:rgba(99,172,255,.2);color:#e7f4ff;font-size:33px;line-height:1}
+.mx-method-v2-step{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;min-width:0;padding:19px 13px;position:relative}
+.mx-method-v2-step:not(.mx-method-v2-p)::before{content:"";position:absolute;left:0;top:24px;bottom:24px;width:1px;background:#c8d9f2}
+.mx-method-v2-label{display:flex;align-items:center;justify-content:center;gap:7px;font-size:15px;font-weight:800;color:#102d59;text-align:center;line-height:1.3}
+.mx-method-v2-label span{color:#1765b8;font-size:21px}
+.mx-method-v2-equation{background:linear-gradient(180deg,#eaf3ff,#dcecff);border:1px solid #b8d5fc;border-radius:10px;padding:13px 12px;color:#092f65;font-size:20px;font-weight:800;line-height:1.3;text-align:center;white-space:nowrap;box-shadow:0 2px 5px rgba(23,92,180,.08);font-variant-numeric:tabular-nums}
+.mx-method-v2-p .mx-method-v2-equation{font-size:17px}
+.mx-method-v2-definitions{display:flex;flex-direction:column;justify-content:center;gap:7px;border-left:1px solid #c8d9f2;padding:16px 15px;min-width:0}
+.mx-method-v2-definitions>div{display:flex;align-items:center;gap:9px;font-size:12px;color:#203c66;line-height:1.35}
+.mx-method-v2-definitions b{display:inline-flex;align-items:center;justify-content:center;flex:0 0 42px;min-width:42px;padding:5px 4px;border:1px solid #c2dafa;border-radius:7px;background:#e7f1ff;color:#165bb0;font-size:13px;font-weight:800}
+@media(max-width:1450px){.mx-method-v2{grid-template-columns:1.1fr 1.3fr .8fr 1fr;}.mx-method-v2-definitions{grid-column:1/-1;border-left:0;border-top:1px solid #c8d9f2;flex-direction:row;flex-wrap:wrap;gap:12px;justify-content:space-evenly}.mx-method-v2-title h3{font-size:18px!important}}
+@media(max-width:900px){.mx-method-v2{grid-template-columns:repeat(3,minmax(0,1fr))}.mx-method-v2-title{grid-column:1/-1;min-height:85px}.mx-method-v2-definitions{grid-column:1/-1}.mx-method-v2-equation{font-size:17px}.mx-method-v2-p .mx-method-v2-equation{font-size:15px}}
+@media(max-width:650px){.mx-method-v2{grid-template-columns:1fr}.mx-method-v2-title{grid-column:1}.mx-method-v2-step{border-top:1px solid #c8d9f2}.mx-method-v2-step::before{display:none}.mx-method-v2-definitions{grid-column:1;justify-content:flex-start}}
+
+/* Затверджена інструкція: замінює методику, решта сторінки без змін */
+.mx-guide{display:grid;grid-template-columns:minmax(225px,1.32fr) repeat(4,minmax(0,1fr));align-items:stretch;width:100%;min-height:126px;margin:18px 0 22px;border:1px solid #c4d9f6;border-radius:13px;background:linear-gradient(105deg,#fff,#f5f9ff);box-shadow:0 3px 12px rgba(17,56,105,.08);overflow:hidden}
+.mx-guide-title{display:flex;align-items:center;gap:13px;background:linear-gradient(125deg,#10264a,#205ca5);padding:19px 18px;color:#fff;min-width:0}
+.mx-guide-title h3{margin:0!important;color:#fff!important;font-size:18px!important;line-height:1.32!important;font-weight:800!important}
+.mx-guide-title-icon{display:grid;place-items:center;flex:0 0 45px;width:45px;height:45px;border-radius:10px;background:rgba(138,192,255,.19);font-size:27px;color:#e5f2ff}
+.mx-guide-step{display:flex;align-items:flex-start;gap:10px;padding:25px 13px 15px;position:relative;min-width:0}
+.mx-guide-step:not(:nth-child(2))::before{content:"";position:absolute;left:0;top:21px;bottom:21px;width:1px;background:#cadcf5}
+.mx-guide-number{display:grid;place-items:center;flex:0 0 31px;width:31px;height:31px;border-radius:50%;background:linear-gradient(140deg,#287bd2,#1456a6);color:white;font-size:15px;font-weight:800;box-shadow:0 2px 5px rgba(22,84,164,.15)}
+.mx-guide-copy{min-width:0}.mx-guide-copy h4{margin:1px 0 8px!important;color:#133668!important;font-size:14px!important;line-height:1.3!important;font-weight:800!important}.mx-guide-copy p{margin:0!important;color:#506887!important;font-size:12px!important;line-height:1.55!important}
+@media(max-width:1250px){.mx-guide{grid-template-columns:repeat(4,minmax(0,1fr))}.mx-guide-title{grid-column:1/-1;min-height:75px}.mx-guide-step{padding:17px 13px 20px}.mx-guide-step:nth-child(2)::before{display:none}}
+@media(max-width:760px){.mx-guide{grid-template-columns:repeat(2,minmax(0,1fr))}.mx-guide-title{grid-column:1/-1}.mx-guide-step{border-top:1px solid #cadcf5}.mx-guide-step:nth-child(4)::before{display:none}}
+@media(max-width:480px){.mx-guide{grid-template-columns:1fr}.mx-guide-step::before{display:none!important}.mx-guide-step{padding:15px}}
+
+/* Компактна шкала рівнів кіберризику: не дублює кількість оцінок. */
+.mx-scale{display:grid;grid-template-columns:minmax(165px,1.65fr) repeat(5,minmax(100px,1fr)) minmax(88px,.65fr);gap:10px;align-items:center;background:rgba(255,255,255,.96);border:1px solid #cbdcf2;border-radius:10px;padding:12px 14px;margin:16px 0 15px;box-shadow:0 2px 9px rgba(16,48,90,.035);min-height:65px}
+.mx-scale-title{display:flex;align-items:center;gap:10px;min-width:0}
+.mx-scale-title h3{margin:0!important;color:#183a70!important;font-size:13px!important;font-weight:750!important;line-height:1.35!important}
+.mx-scale-icon{display:flex;align-items:center;justify-content:center;flex-shrink:0;width:30px;height:30px;border-radius:7px;background:#e8f1ff;color:#1c64b4;font-size:19px}
+.mx-scale-level{display:flex;align-items:center;gap:9px;min-width:0}
+.mx-scale-level>div{display:flex;flex-direction:column;gap:4px;min-width:0}
+.mx-scale-level strong{color:#173663;font-size:11px!important;line-height:1.2!important;font-weight:750!important;white-space:nowrap}
+.mx-scale-level span{color:#62758f;font-size:10px!important;line-height:1.2!important;white-space:nowrap}
+.mx-scale-swatch{width:22px;height:28px;flex-shrink:0;border-radius:6px;display:block}
+.mx-scale-swatch.very-low{background:#c9ebd7}
+.mx-scale-swatch.low{background:#c6e3fb}
+.mx-scale-swatch.medium{background:#ffedaa}
+.mx-scale-swatch.high{background:#ffd1aa}
+.mx-scale-swatch.critical{background:#f4b8c5}
+.mx-scale-formula{font-size:12px;color:#193d70;font-weight:750;text-align:center;white-space:nowrap;border-left:1px solid #d7e4f5;padding:8px 0 8px 10px}
+@media(max-width:1300px){.mx-scale{grid-template-columns:repeat(5,minmax(0,1fr))}.mx-scale-title{grid-column:1/4}.mx-scale-formula{grid-column:4/6;grid-row:1}.mx-scale-level{grid-row:2}.mx-scale-level strong{white-space:normal}}
+@media(max-width:700px){.mx-scale{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.mx-scale-title{grid-column:1/-1}.mx-scale-formula{grid-column:1/-1;grid-row:auto;border-left:0;border-top:1px solid #d7e4f5}.mx-scale-level{grid-row:auto}}
+
+
+/* Кілька оцінок у клітинці: компактний індикатор вибраного запису. */
+.mx-selection-meta {
+    display:flex;
+    align-items:center;
+    gap:6px;
+    flex-wrap:wrap;
+    margin:4px 0 11px;
+    padding:7px 11px;
+    background:#f0f6ff;
+    border:1px solid #d4e3f8;
+    border-radius:8px;
+    color:#486788;
+    font-size:12px;
+    line-height:1.35;
+}
+.mx-selection-meta b {color:#173b75;font-weight:800}
+.mx-selection-meta span {color:#66809c}

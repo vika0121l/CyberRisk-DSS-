@@ -1,0 +1,635 @@
+/* CyberRisk DSS — Загрози */
+.stApp [data-testid="stMain"] {background-color:#fff;background-image:linear-gradient(rgba(50,108,182,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(50,108,182,.045) 1px,transparent 1px);background-size:52px 52px;}
+.th-hero{background:linear-gradient(115deg,#112a51,#24569d);border-radius:14px;padding:28px 32px;color:#fff;display:flex;align-items:center;justify-content:space-between;min-height:164px;margin:4px 0 22px;}
+.th-eyebrow{font-size:10px;font-weight:750;letter-spacing:1.4px;color:#a9d2ff}.th-hero h1{font-size:30px;margin:20px 0 13px;color:white;font-weight:760}.th-hero p{font-size:12px;color:#e2eeff;margin:0}.th-hero-icon{width:85px;height:85px;color:#93c7ff;opacity:.85}.th-hero-icon svg{width:100%;height:100%}
+.th-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-bottom:34px}.th-stat{background:#fff;border:1px solid #dce8f8;border-radius:12px;display:flex;align-items:center;gap:15px;padding:22px 18px;box-shadow:0 3px 14px rgba(25,70,132,.035)}.th-stat-icon{width:44px;height:44px;border-radius:11px;background:#eaf2ff;color:#2673e5;display:grid;place-items:center;font-size:24px}.th-stat span,.th-stat small{display:block;color:#7287a4;font-size:12px}.th-stat strong{display:block;color:#16396f;font-size:25px;margin:5px 0}.th-stat small{font-size:10px}
+.th-section{margin:10px 0 22px}.th-section h2{font-size:20px;color:#173b73;margin:0 0 8px}.th-section p{color:#8092ab;font-size:12px;margin:0}.th-table-wrap{border:1px solid #d7e3f4;border-radius:11px;overflow-x:auto;background:#fff}.th-table{width:100%;border-collapse:collapse;font-size:12px;color:#24466f}.th-table th{background:#f2f6fc;text-align:left;color:#6781a2;font-weight:700;padding:15px 12px;white-space:nowrap}.th-table td{padding:16px 12px;border-top:1px solid #e8eef7;vertical-align:middle}.th-table tr:hover td{background:#f8fbff}.th-name{font-weight:700;color:#173b73}.th-category{display:inline-block;background:#eaf2ff;color:#2463b7;border-radius:16px;padding:5px 10px;font-weight:650;white-space:nowrap}.th-rule,.th-bottom-rule{height:1px;background:#dbe7f7;margin:28px 0 22px}.th-bottom-rule{margin-top:38px}
+.stApp [data-testid="stMain"] button[kind="secondary"]{border-radius:9px}.stApp [data-testid="stMain"] button[kind="secondary"]:not(:disabled){transition:background .2s}
+@media(max-width:900px){.th-stats{grid-template-columns:1fr}.th-hero{padding:23px}.th-hero h1{font-size:24px}.th-hero-icon{width:60px;height:60px}}
+
+
+/* ===== CyberRisk DSS: єдиний стиль із сторінкою «Інформаційні активи» ===== */
+/* Ті самі ширина контенту і верхній відступ, що й на сторінці активів. */
+[data-testid="stMainBlockContainer"],
+[data-testid="stMain"] .block-container,
+.block-container {
+    max-width: 95% !important;
+    width: 95% !important;
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+    padding-top: 2rem !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+.th-hero {
+    min-height: 166px;
+    padding: 28px 36px;
+    margin: 0 0 24px;
+    border-radius: 16px;
+    background: linear-gradient(115deg, #10264a, #20529b);
+}
+.th-hero h1 {
+    font-size: clamp(26px, 3vw, 35px);
+    line-height: 1.2;
+    margin: 12px 0 10px;
+    font-weight: 750;
+}
+.th-hero p {font-size: 14px;}
+.th-hero-icon {
+    width: 112px;
+    height: 112px;
+    flex-shrink: 0;
+    color: #9bcaff;
+}
+.th-stats { margin-bottom: 28px; }
+.th-stat { padding: 21px; border-radius: 13px; }
+.th-stat-icon { width: 48px; height: 48px; border-radius: 12px; }
+.th-stat strong { font-size: 29px; }
+.th-section { margin: 14px 0 18px; }
+.th-rule { margin: 28px 0 22px; }
+.th-bottom-rule { margin: 38px 0 12px; }
+
+/* Темно-сині кнопки, незалежно від primary/secondary. Стилі лише цієї сторінки. */
+.st-key-threat_action_add button,
+.st-key-threat_action_edit button,
+.st-key-threat_action_delete button {
+    background: #173B75 !important;
+    border: 1px solid #173B75 !important;
+    color: #FFFFFF !important;
+    border-radius: 12px !important;
+    min-height: 60px !important;
+    font-size: 15px !important;
+    font-weight: 600 !important;
+    box-shadow: 0 4px 12px rgba(23,59,117,.12) !important;
+    transition: background .2s, box-shadow .2s !important;
+}
+.st-key-threat_action_add button *,
+.st-key-threat_action_edit button *,
+.st-key-threat_action_delete button * { color: #FFFFFF !important; }
+.st-key-threat_action_add button:hover:not(:disabled),
+.st-key-threat_action_edit button:hover:not(:disabled),
+.st-key-threat_action_delete button:hover:not(:disabled) {
+    background: #24549B !important;
+    border-color: #24549B !important;
+    box-shadow: 0 6px 16px rgba(23,59,117,.2) !important;
+}
+.st-key-threat_action_add button[kind="primary"],
+.st-key-threat_action_edit button[kind="primary"],
+.st-key-threat_action_delete button[kind="primary"] {
+    background: #2053A0 !important;
+    border-color: #2053A0 !important;
+}
+.st-key-threat_action_add button:disabled,
+.st-key-threat_action_edit button:disabled,
+.st-key-threat_action_delete button:disabled {
+    background: #aab9cf !important;
+    border-color: #aab9cf !important;
+    color: #fff !important;
+    opacity: .65;
+}
+[data-testid="stForm"] {
+    background: #fff;
+    border: 1px solid #dce8f8;
+    border-radius: 15px;
+    padding: 22px;
+}
+@media(max-width: 768px) {
+    [data-testid="stMainBlockContainer"],
+    [data-testid="stMain"] .block-container,
+    .block-container { width: 100% !important; max-width: 100% !important; padding-left: 1rem !important; padding-right: 1rem !important; }
+    .th-hero { padding: 23px; min-height: 140px; }
+    .th-hero-icon { width: 64px; height: 64px; }
+    .st-key-threat_action_add button,
+    .st-key-threat_action_edit button,
+    .st-key-threat_action_delete button { min-height: 56px !important; font-size: 12px !important; }
+}
+/* Кнопки збереження загроз */
+
+.stFormSubmitButton button[kind="primary"] {
+    width: auto !important;
+    min-width: 150px !important;
+    min-height: 38px !important;
+    padding: 8px 18px !important;
+    background-color: #1B3F78 !important;
+    color: white !important;
+    border: 1px solid #1B3F78 !important;
+    border-radius: 8px !important;
+    font-weight: 600 !important;
+}
+
+.stFormSubmitButton button[kind="primary"]:hover {
+    background-color: #24569A !important;
+    border-color: #24569A !important;
+    color: white !important;
+}
+
+/* Заголовок реєстру кіберзагроз */
+.threats-register-heading {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: 34px 0 22px;
+}
+
+.threats-register-accent {
+    width: 4px;
+    height: 48px;
+    flex-shrink: 0;
+    background: #2463B8;
+    border-radius: 8px;
+}
+
+.threats-register-content h2 {
+    margin: 0 0 7px;
+    color: #173B73;
+    font-size: 23px;
+    font-weight: 750;
+    line-height: 1.3;
+    letter-spacing: -0.35px;
+}
+
+.threats-register-content p {
+    margin: 0;
+    color: #7185A2;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+/* Назви кіберзагроз у таблиці */
+.th-table .th-name {
+    color: #173B73;
+    font-weight: 700;
+}
+
+/* Підсвічування рядків при наведенні */
+.th-table tbody tr {
+    transition: background-color 0.18s ease;
+}
+
+.th-table tbody tr:hover {
+    background-color: #F0F6FF;
+}
+
+/* Заголовок блоку видалення */
+.th-delete-heading {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin: 18px 0 16px;
+}
+
+.th-delete-heading strong {
+    color: #173B73;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.th-delete-heading span {
+    color: #7185A2;
+    font-size: 13px;
+}
+
+/* Кнопка підтвердження видалення */
+.st-key-th_confirm_delete button {
+    background: #C62828 !important;
+    color: #FFFFFF !important;
+    border: 1px solid #C62828 !important;
+    border-radius: 8px !important;
+    padding: 9px 20px !important;
+    font-weight: 600 !important;
+}
+
+.st-key-th_confirm_delete button:hover:not(:disabled) {
+    background: #A91F1F !important;
+    border-color: #A91F1F !important;
+}
+
+.st-key-th_confirm_delete button:disabled {
+    background: #E5EAF1 !important;
+    color: #8A98AC !important;
+    border-color: #E5EAF1 !important;
+    opacity: 1 !important;
+}
+/* Зелене сповіщення про успішну операцію */
+div[data-testid="stToast"] {
+    background-color: #E8F7EE !important;
+    border: 1px solid #A7E3BB !important;
+    border-left: 4px solid #16A34A !important;
+    border-radius: 10px !important;
+    color: #166534 !important;
+    box-shadow: 0 4px 16px rgba(22, 163, 74, 0.10) !important;
+}
+
+div[data-testid="stToast"] * {
+    color: #166534 !important;
+}
+
+/* ==========================================
+   CYBERRISK DSS — ІКОНКА СТОРІНКИ "ЗАГРОЗИ"
+   Світло-блакитний щит зі знаком оклику
+   ========================================== */
+
+.th-hero-icon {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    width: 112px !important;
+    height: 112px !important;
+    min-width: 112px !important;
+
+    flex-shrink: 0 !important;
+    background: none !important;
+    opacity: 1 !important;
+}
+
+/* Прибираємо старі зображення, якщо вони є */
+.th-hero-icon svg,
+.th-hero-icon img {
+    display: none !important;
+}
+
+/* Нова контурна іконка щита */
+.th-hero-icon::after {
+    content: "";
+    display: block !important;
+
+    width: 90px;
+    height: 90px;
+    flex-shrink: 0;
+
+    background-color: #9BCAFF;
+
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='black' stroke-width='2.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M32 5 54 14v17c0 14-9 23-22 28C19 54 10 45 10 31V14L32 5Z'/%3E%3Cpath d='M32 19v19'/%3E%3Ccircle cx='32' cy='46' r='1.8' fill='black' stroke='none'/%3E%3C/svg%3E");
+    -webkit-mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='black' stroke-width='2.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M32 5 54 14v17c0 14-9 23-22 28C19 54 10 45 10 31V14L32 5Z'/%3E%3Cpath d='M32 19v19'/%3E%3Ccircle cx='32' cy='46' r='1.8' fill='black' stroke='none'/%3E%3C/svg%3E");
+    mask-position: center;
+    mask-repeat: no-repeat;
+    mask-size: contain;
+}
+
+/* Адаптація для планшетів і телефонів */
+@media (max-width: 900px) {
+    .th-hero-icon {
+        width: 64px !important;
+        height: 64px !important;
+        min-width: 64px !important;
+    }
+
+    .th-hero-icon::after {
+        width: 56px;
+        height: 56px;
+    }
+}
+
+
+/* ============================================================
+   CYBERRISK DSS — ЗАГРОЗИ: УЗГОДЖЕНИЙ РЕЄСТР (v2)
+   Верхній банер .th-hero, меню та структуру сторінки не змінюємо.
+   ============================================================ */
+
+/* Пошук, фільтр та сортування — цілісна тонка рамка. */
+.st-key-th_search_text [data-baseweb="input"],
+.st-key-th_category_filter [data-baseweb="select"] > div,
+.st-key-th_sort_order [data-baseweb="select"] > div {
+    border: 1px solid #B9D3F8 !important;
+    border-radius: 10px !important;
+    background: #F5F9FF !important;
+    box-shadow: none !important;
+    min-height: 42px !important;
+}
+.st-key-th_search_text [data-baseweb="input"] {
+    box-sizing: border-box !important;
+    overflow: visible !important;
+}
+.st-key-th_search_text [data-baseweb="input"] input {
+    background: transparent !important;
+    color: #173B73 !important;
+}
+.st-key-th_search_text [data-baseweb="input"]:focus-within,
+.st-key-th_category_filter [data-baseweb="select"] > div:focus-within,
+.st-key-th_sort_order [data-baseweb="select"] > div:focus-within {
+    border-color: #3979CF !important;
+    box-shadow: 0 0 0 2px rgba(57, 121, 207, .10) !important;
+}
+
+/* Реєстр з акуратною рамкою, синьою шапкою та смугастими рядками. */
+.threats-register-heading { margin-bottom: 14px !important; }
+.th-table-wrap {
+    background: #FFFFFF !important;
+    border: 1px solid #BBD5FA !important;
+    border-radius: 13px !important;
+    overflow-x: auto !important;
+    box-shadow: 0 3px 14px rgba(21, 65, 125, .045) !important;
+    margin-top: 12px;
+}
+.th-table { width:100%; min-width:800px; font-size:12px; }
+.th-table thead th {
+    background:#E5F0FF !important;
+    color:#173B73 !important;
+    font-weight:750 !important;
+    border-bottom: 1px solid #BBD5FA !important;
+    padding: 13px 12px !important;
+}
+.th-table tbody td { padding: 12px !important; border-top: 1px solid #E2ECFB !important; }
+.th-table tbody tr:nth-child(even) td { background:#F5F9FF; }
+.th-table tbody tr:hover td { background:#EAF3FF !important; }
+.th-table .th-name { font-weight:700; color:#153B70; }
+
+/* Колір показує категорію загрози, а не її критичність. */
+.th-category {
+    font-size: 11px !important;
+    font-weight: 700 !important;
+    border: 1px solid transparent;
+    border-radius: 50px !important;
+    line-height: 1.4;
+    padding: 5px 10px !important;
+}
+.th-cat-blue   { background:#E7F0FF !important; color:#1A57AB !important; border-color:#C7DCF9 !important; }
+.th-cat-red    { background:#FDECEE !important; color:#B42338 !important; border-color:#FAC7D0 !important; }
+.th-cat-orange { background:#FFF0DE !important; color:#A65C0D !important; border-color:#F8D5AD !important; }
+.th-cat-violet { background:#F1ECFF !important; color:#6540AB !important; border-color:#D9CBFB !important; }
+.th-cat-teal   { background:#E4F7F4 !important; color:#147A70 !important; border-color:#B8E5DF !important; }
+
+/* Компактні кнопки; їхні темно-сині кольори залишаємо. */
+.st-key-threat_action_add button,
+.st-key-threat_action_edit button,
+.st-key-threat_action_delete button {
+    min-height: 48px !important;
+    border-radius: 10px !important;
+}
+.th-rule { margin: 18px 0 17px !important; }
+.th-bottom-rule { margin: 20px 0 9px !important; }
+
+/* Toast — той самий зелений стиль, що у «Інформаційних активах». */
+div[data-testid="stToast"] {
+    background: #E8F7EE !important;
+    border: 1px solid #A7E3BB !important;
+    border-left: 4px solid #16A34A !important;
+    color: #166534 !important;
+    border-radius: 11px !important;
+    box-shadow: 0 5px 18px rgba(22,163,74,.12) !important;
+}
+div[data-testid="stToast"] * { color: #166534 !important; }
+
+@media(max-width: 768px) {
+    .th-table { min-width: 680px; }
+    .th-category { white-space: normal !important; }
+}
+
+
+/* ============================================================
+   CYBERRISK DSS · THREATS v3 · ВІЗУАЛЬНА ЄДНІСТЬ ІЗ АКТИВАМИ
+   ВЕРХНІЙ .th-hero, щит та сайдбар не змінювалися.
+   ============================================================ */
+
+/* Та сама легка фонова сітка, що на сторінці активів. */
+.stApp [data-testid="stMain"] {
+    background-color: #FFFFFF;
+    background-image:
+        linear-gradient(rgba(31,91,170,.045) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(31,91,170,.045) 1px, transparent 1px);
+    background-size: 60px 60px;
+}
+
+/* Три KPI-картки: геометрія, градієнт, тінь, кольори та шрифти як в активах. */
+.th-stats {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0,1fr));
+    gap: 15px;
+    margin-bottom: 23px;
+}
+.th-stat {
+    min-height: 104px;
+    padding: 17px 19px;
+    gap: 15px;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(115deg, #FFFFFF 5%, #F1F7FF 100%);
+    border: 1px solid #C6DDFC;
+    border-radius: 13px;
+    box-shadow: 0 5px 15px rgba(20,71,133,.06);
+}
+.th-stat-icon {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-shrink:0;
+    width:48px;
+    height:48px;
+    border-radius:11px;
+    background:#E5F0FF;
+    color:#2867C8;
+}
+.th-stat-icon img { display:block; width:28px; height:28px; }
+.th-stat-copy { min-width:0; }
+.th-stat-label {
+    color:#365779;
+    font-size:13px;
+    font-weight:700;
+    line-height:1.35;
+}
+.th-stat-value {
+    color:#153D73;
+    font-size:31px;
+    font-weight:800;
+    line-height:1.1;
+    margin:4px 0;
+}
+.th-stat-note {
+    color:#7A91AC;
+    font-size:11px;
+    line-height:1.35;
+}
+
+/* Замість старого дворядкового заголовка зі смугою — стиль активів. */
+.th-section-title {
+    color:#142D52;
+    font-size:19px;
+    font-weight:750;
+    margin:13px 0 12px;
+}
+
+/* Фільтри без великих порожніх смуг над таблицею. */
+.st-key-th_search_text,
+.st-key-th_category_filter,
+.st-key-th_sort_order {
+    margin-bottom:0 !important;
+}
+.st-key-th_search_text [data-baseweb="input"] {
+    width:100% !important;
+    height:42px !important;
+    min-height:42px !important;
+    box-sizing:border-box !important;
+    display:flex !important;
+    align-items:center !important;
+    background:#F5F9FF !important;
+    border:1px solid #C9DDFC !important;
+    border-radius:10px !important;
+    box-shadow:none !important;
+    overflow:hidden !important;
+}
+.st-key-th_search_text [data-baseweb="input"] > div {
+    min-height:0 !important;
+    max-height:100% !important;
+    box-sizing:border-box !important;
+    background:transparent !important;
+    border:0 !important;
+    box-shadow:none !important;
+}
+.st-key-th_search_text [data-baseweb="input"] input {
+    height:100% !important;
+    max-height:100% !important;
+    min-height:0 !important;
+    box-sizing:border-box !important;
+    border:0 !important;
+    outline:0 !important;
+    box-shadow:none !important;
+    border-radius:0 !important;
+    background:transparent !important;
+    padding:0 12px !important;
+    color:#173B73 !important;
+}
+.st-key-th_search_text [data-baseweb="input"]:focus-within {
+    border-color:#3979CF !important;
+    box-shadow:0 0 0 2px rgba(57,121,207,.10) !important;
+    overflow:visible !important;
+}
+.st-key-th_search_text,
+.st-key-th_search_text [data-testid="stTextInput"] { overflow:visible !important; }
+.st-key-th_category_filter [data-baseweb="select"] > div,
+.st-key-th_sort_order [data-baseweb="select"] > div {
+    background:#F5F9FF !important;
+    border:1px solid #C9DDFC !important;
+    border-radius:10px !important;
+    min-height:42px !important;
+}
+.st-key-th_category_filter [data-baseweb="select"] > div:focus-within,
+.st-key-th_sort_order [data-baseweb="select"] > div:focus-within {
+    border-color:#3979CF !important;
+    box-shadow:0 0 0 2px rgba(57,121,207,.10) !important;
+}
+
+/* Та сама таблиця, що на сторінці активів. */
+.th-table-wrap {
+    width:100%;
+    margin-top:0 !important;
+    overflow-x:auto;
+    background:#FFFFFF !important;
+    border:1px solid #C8DCFA !important;
+    border-radius:14px !important;
+    box-shadow:0 5px 18px rgba(20,71,133,.055) !important;
+}
+.th-table {
+    width:100%;
+    min-width:850px;
+    border-collapse:collapse;
+    font-family:inherit;
+    font-size:13px !important;
+    color:#173B70;
+}
+.th-table thead th {
+    background:#E6F0FE !important;
+    color:#173B73 !important;
+    font-weight:750 !important;
+    padding:12px !important;
+    text-align:left;
+    border-bottom:1px solid #BDD7FA !important;
+    white-space:nowrap;
+}
+.th-table tbody td {
+    background:#FFFFFF;
+    text-align:left;
+    padding:12px !important;
+    border-top:0 !important;
+    border-bottom:1px solid #E5ECF6 !important;
+    vertical-align:middle;
+}
+.th-table tbody tr:nth-child(even) td { background:#F7FAFF !important; }
+.th-table tbody tr:hover td { background:#EAF4FF !important; }
+.th-table tbody tr:last-child td { border-bottom:0 !important; }
+.th-table th:first-child,
+.th-table td:first-child { width:48px; }
+.th-table .th-name { font-weight:700; color:#164477; }
+.th-category { display:inline-flex; align-items:center; gap:6px; font-weight:750; }
+.th-category::before { content:""; width:6px; height:6px; border-radius:50%; background:currentColor; flex-shrink:0; }
+
+/* Кнопки — як у «Інформаційних активах». */
+.st-key-threat_action_add button,
+.st-key-threat_action_edit button,
+.st-key-threat_action_delete button {
+    min-height:48px !important;
+    font-size:14px !important;
+    font-weight:700 !important;
+    border-radius:10px !important;
+    box-shadow:0 3px 9px rgba(23,59,117,.09) !important;
+    transition:background .18s ease,box-shadow .18s ease,transform .18s ease !important;
+}
+.st-key-threat_action_add button:hover:not(:disabled),
+.st-key-threat_action_edit button:hover:not(:disabled),
+.st-key-threat_action_delete button:hover:not(:disabled) {
+    box-shadow:0 5px 14px rgba(23,59,117,.16) !important;
+    transform:translateY(-1px);
+}
+.th-rule { margin:18px 0 12px !important; }
+.th-bottom-rule { margin:22px 0 9px !important; }
+
+/* Спливаючі повідомлення — такий самий зелений тост. */
+[data-testid="stToast"] {
+    background:#EAF9EF !important;
+    border:1px solid #99DCB2 !important;
+    border-left:4px solid #22A35B !important;
+    border-radius:12px !important;
+    color:#155C36 !important;
+    box-shadow:0 7px 24px rgba(26,113,67,.14) !important;
+}
+[data-testid="stToast"] p,
+[data-testid="stToast"] span { color:#155C36 !important; font-weight:650 !important; }
+
+/* Футер — центр унизу вікна, без position:fixed і перекриття форм. */
+[data-testid="stMainBlockContainer"] {
+    min-height:calc(100dvh - 4.5rem) !important;
+    display:flex !important;
+    flex-direction:column !important;
+}
+[data-testid="stMainBlockContainer"] > [data-testid="stVerticalBlock"] {
+    display:flex !important;
+    flex-direction:column !important;
+    flex:1 0 auto !important;
+}
+[data-testid="stMainBlockContainer"] > [data-testid="stVerticalBlock"] > div:has(.cr-footer) {
+    margin-top:auto !important;
+}
+[data-testid="stMainBlockContainer"] [data-testid="stVerticalBlock"] > [data-testid="stElementContainer"]:has(.cr-footer) {
+    margin-top:auto !important;
+}
+[data-testid="stMainBlockContainer"] .cr-footer {
+    margin-top:0 !important;
+    padding:22px 12px 18px !important;
+    text-align:center !important;
+}
+.cr-footer-brand { justify-content:center !important; }
+.cr-footer-description,.cr-footer-copy { text-align:center !important; }
+
+@media(max-width:900px) {
+    .th-stats { grid-template-columns:1fr; }
+    .th-stat { min-height:90px; padding:15px; }
+}
+@media(max-width:768px) {
+    .th-table { min-width:740px; }
+    [data-testid="stMainBlockContainer"] { min-height:calc(100dvh - 3rem) !important; }
+}
+
+
+/* ===== v5: компактний проміжок між показниками та реєстром =====
+   Не змінюємо висоту карток, верхній банер чи інші секції. */
+.th-stats {
+    margin-bottom: 6px !important;
+}
+.th-section-title {
+    margin-top: 4px !important;
+    margin-bottom: 12px !important;
+}

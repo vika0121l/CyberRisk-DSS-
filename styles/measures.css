@@ -1,0 +1,201 @@
+/* CyberRisk DSS — Заходи захисту. Узгоджений компактний банер. */
+.stApp{background:#fff!important}
+[data-testid="stAppViewContainer"]::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;background-image:linear-gradient(rgba(31,91,170,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(31,91,170,.045) 1px,transparent 1px),radial-gradient(circle at 80% 25%,rgba(42,111,207,.025),transparent 40%);background-size:60px 60px,60px 60px,100% 100%}
+[data-testid="stMain"]{position:relative;z-index:1;background:transparent!important}
+section[data-testid="stMain"] .block-container{padding-top:2.5rem!important}
+.sm-hero{box-sizing:border-box;width:100%;background:linear-gradient(115deg,#122f5e 0%,#194680 58%,#2867b5 100%);border-radius:12px;padding:24px 26px;min-height:0;height:auto;display:flex;align-items:center;justify-content:space-between;gap:20px;color:#fff;margin-bottom:22px;box-shadow:0 7px 20px rgba(16,38,74,.13);position:relative;overflow:hidden}
+.sm-hero::after{content:"";position:absolute;width:240px;height:240px;right:-75px;top:-100px;border:1px solid rgba(255,255,255,.14);border-radius:50%;box-shadow:0 0 0 38px rgba(255,255,255,.035),0 0 0 80px rgba(255,255,255,.025);pointer-events:none}
+.sm-hero-content{position:relative;z-index:1;max-width:700px;min-width:0;flex:1}
+.sm-eyebrow{font-size:10px;letter-spacing:1.5px;color:#b9d5f9;font-weight:700;margin-bottom:8px}
+.sm-hero h1{font-size:28px!important;line-height:1.2!important;font-weight:800!important;color:#fff!important;margin:0 0 9px!important}
+.sm-hero p{font-size:12px!important;line-height:1.6!important;color:#d9e8fb!important;margin:0!important;max-width:620px!important}
+.sm-hero-icon{position:relative;z-index:1;width:66px;height:66px;min-width:66px;flex:none;border-radius:16px;border:1px solid rgba(255,255,255,.22);background:rgba(255,255,255,.11);display:flex;align-items:center;justify-content:center;color:#d7eaff}
+.sm-hero-icon img,.sm-hero-icon svg{display:block;width:42px;height:42px}
+.sm-stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:13px;margin:8px 0 24px}
+.sm-stat{background:#fff;border:1px solid #d9e5f5;border-radius:13px;box-shadow:0 3px 13px rgba(25,62,111,.055);padding:16px 18px;display:flex;flex-direction:column;gap:6px}
+.sm-stat span{font-size:12px;color:#5d7290;font-weight:700}.sm-stat strong{font-size:29px;color:#173b73;font-weight:850;line-height:1.15;font-variant-numeric:tabular-nums}.sm-stat small{font-size:11px;color:#8293aa}
+.sm-stat-dark{background:linear-gradient(110deg,#10264a,#20529b);border-color:#183e77}.sm-stat-dark span,.sm-stat-dark small{color:#c8dcf6}.sm-stat-dark strong{color:#fff}
+.sm-heading{margin:10px 0 12px;border-left:4px solid #2563b8;padding:2px 0 2px 13px}.sm-heading h2{font-size:19px!important;color:#173b73!important;margin:0!important}.sm-heading p{font-size:12px!important;color:#667f9f!important;margin:5px 0 0!important}
+.sm-table-scroll{overflow-x:auto;border:1px solid #d8e4f3;border-radius:12px;background:white}.sm-table{border-collapse:collapse;width:100%;font-size:12px;min-width:890px}.sm-table th{background:#edf4fd;color:#284f80;font-size:11px;text-align:left;padding:13px 12px;white-space:nowrap}.sm-table td{padding:13px 12px;border-top:1px solid #edf2f8;color:#42546d;vertical-align:top}.sm-table tr:hover td{background:#f7faff}.sm-strong{font-weight:750;color:#163f76!important}.sm-num{font-variant-numeric:tabular-nums;white-space:nowrap}.sm-score{background:#e6f0ff;border-radius:7px;padding:5px 8px;font-weight:750;color:#1a4d92}
+.sm-form-heading{margin:24px 0 12px;background:#edf5ff;border:1px solid #d5e5fa;border-radius:11px;padding:13px 16px}.sm-form-heading h3{font-size:16px!important;margin:0!important;color:#173b73!important}.sm-form-heading p{font-size:12px!important;margin:4px 0 0!important;color:#5c7699!important}.sm-note{display:flex;gap:13px;align-items:flex-start;background:#f2f7ff;border:1px solid #dce8f9;border-radius:11px;padding:14px 16px;margin:20px 0 15px;color:#526c8e;font-size:12px;line-height:1.6}.sm-note strong{white-space:nowrap;color:#173b73}
+[class*="st-key-sm_"] button,[class*="st-key-sm_"] button[kind="secondary"],[class*="st-key-sm_"] button[kind="primary"]{background:linear-gradient(115deg,#173b73,#2867c8)!important;color:#fff!important;border:1px solid #1e56a4!important;border-radius:10px!important;box-shadow:0 3px 9px rgba(29,83,157,.13)!important;min-height:43px!important;font-weight:700!important}
+[class*="st-key-sm_"] button:hover{background:linear-gradient(115deg,#194a92,#3379d6)!important;border-color:#2469bd!important}
+[class*="st-key-sm_"] button:disabled{opacity:.5!important;cursor:not-allowed!important}
+[class*="st-key-sm_"] button p,[class*="st-key-sm_"] button span,[class*="st-key-sm_"] button div,[class*="st-key-sm_"] button [data-testid="stMarkdownContainer"]{background:transparent!important;background-image:none!important;box-shadow:none!important;border:none!important;color:#fff!important;border-radius:0!important;padding:0!important}
+[data-testid="stForm"] button[kind="primary"],[data-testid="stForm"] button[data-testid="stBaseButton-primary"]{background:linear-gradient(115deg,#173b73,#2867c8)!important;color:#fff!important;border:1px solid #1e56a4!important;border-radius:10px!important}
+[data-testid="stForm"] button[kind="primary"] p,[data-testid="stForm"] button[kind="primary"] span,[data-testid="stForm"] button[kind="primary"] [data-testid="stMarkdownContainer"]{background:transparent!important;color:#fff!important;box-shadow:none!important;border:none!important;padding:0!important}
+@media(max-width:950px){.sm-stats{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:768px){section[data-testid="stMain"] .block-container{padding-top:1rem!important}.sm-hero{padding:20px;gap:12px}.sm-hero h1{font-size:24px!important}.sm-hero-icon{width:54px;height:54px;min-width:54px}.sm-hero-icon img,.sm-hero-icon svg{width:34px;height:34px}}
+@media(max-width:570px){.sm-stats{grid-template-columns:1fr}.sm-hero-icon{display:none}.sm-note{flex-direction:column}}
+
+/* ===== CyberRisk DSS: уніфіковані картки, реєстр і мінімальні відступи ===== */
+.sm-stats{gap:12px!important;margin:4px 0 10px!important}
+.sm-stats .sm-stat{display:flex!important;flex-direction:row!important;align-items:center!important;gap:14px!important;
+  background:linear-gradient(115deg,#fff,#f0f6ff)!important;border:1px solid #c7dcfa!important;
+  border-radius:13px!important;min-height:95px!important;padding:16px 17px!important;box-shadow:0 4px 12px rgba(22,62,121,.055)!important}
+.sm-stat .sm-stat-icon{display:grid!important;place-items:center!important;width:45px;height:45px;min-width:45px;
+  background:#e6f0ff;border-radius:12px;color:#2268c4;flex-shrink:0}
+.sm-stat .sm-stat-icon svg{width:26px;height:26px}
+.sm-stat .sm-stat-copy{min-width:0;display:flex;flex-direction:column;gap:3px;align-items:flex-start}
+.sm-stats .sm-stat span:not(.sm-stat-icon){font-size:13px;color:#173b73;font-weight:750;line-height:1.3}
+.sm-stats .sm-stat strong{font-size:27px!important;line-height:1.15!important;margin:0!important;color:#153c79!important}
+.sm-stats .sm-stat small{color:#7187a6!important;font-size:11px!important;line-height:1.4!important}
+.sm-stats .sm-stat.sm-stat-dark{background:linear-gradient(110deg,#10264a,#20529b)!important;border-color:#224c86!important;
+   box-shadow:0 5px 16px rgba(16,38,74,.16)!important}
+.sm-stat-dark .sm-stat-icon{background:rgba(255,255,255,.13)!important;color:#d8eaff!important}
+.sm-stats .sm-stat-dark span:not(.sm-stat-icon),.sm-stats .sm-stat-dark small{color:#d5e7ff!important}
+.sm-stats .sm-stat-dark strong{color:#fff!important}
+.sm-heading{margin:6px 0 8px!important;border:0!important;padding:0!important}
+.sm-heading h2{font-size:20px!important;font-weight:800!important;color:#173b73!important;line-height:1.3!important}
+.sm-heading-symbol{color:#215eae;margin-right:5px}
+.sm-heading p{margin:4px 0 0!important;font-size:12px!important}
+/* Фільтр-панель без зайвих зовнішніх рамок. Цілісна рамка поля пошуку. */
+.st-key-sm_search [data-baseweb="input"]{height:43px!important;min-height:43px!important;box-sizing:border-box!important;
+  background:#f5f9ff!important;border:1px solid #bfd7fc!important;border-radius:10px!important;
+  box-shadow:none!important;overflow:visible!important}
+.st-key-sm_search [data-baseweb="input"] > div{background:transparent!important;box-shadow:none!important;border:0!important;height:100%!important;min-height:0!important}
+.st-key-sm_search [data-baseweb="input"] input{height:100%!important;min-height:0!important;padding:0 12px!important;
+  background:transparent!important;box-shadow:none!important;border:0!important;color:#173b73!important}
+.st-key-sm_search [data-baseweb="input"]:focus-within{border-color:#3979cf!important;
+  box-shadow:0 0 0 2px rgba(57,121,207,.1)!important}
+.st-key-sm_search,.st-key-sm_search [data-testid="stTextInput"]{overflow:visible!important}
+.st-key-sm_risk_filter [data-baseweb="select"]>div,.st-key-sm_sort [data-baseweb="select"]>div{
+  background:#f5f9ff!important;border:1px solid #bfd7fc!important;border-radius:10px!important;min-height:43px!important}
+/* Схожа на реєстри активів, загроз і вразливостей таблиця. */
+.sm-table-scroll{border:1px solid #bad4f9!important;border-radius:12px!important;box-shadow:0 3px 12px rgba(20,60,112,.04);background:#fff}
+.sm-table{min-width:1260px!important;font-size:12px!important;color:#24466f!important}
+.sm-table th{background:#e5f0ff!important;color:#173b73!important;font-size:12px!important;font-weight:800!important;
+  padding:14px 11px!important;border-bottom:1px solid #bfd7fb!important;text-align:left!important}
+.sm-table td{border-top:1px solid #dce8f9!important;vertical-align:middle!important;padding:15px 11px!important;
+  font-size:12px!important;color:#24466f!important;line-height:1.5!important}
+.sm-table tbody tr:nth-child(even) td{background:#f6f9ff}
+.sm-table tbody tr:hover td{background:#eaf3ff!important}
+.sm-table .sm-strong{font-weight:800!important;color:#153c75!important}
+.sm-table .sm-id{font-variant-numeric:tabular-nums}
+.sm-table .sm-num{white-space:nowrap!important;font-weight:700!important;color:#153c75!important}
+.sm-risk-badge{display:inline-flex;align-items:center;gap:6px;padding:5px 9px;border-radius:999px;
+  font-size:11px!important;font-weight:800!important;line-height:1.35!important;border:1px solid transparent;white-space:nowrap}
+.sm-risk-dot{width:7px;height:7px;flex-shrink:0;border-radius:50%;background:currentColor}
+.sm-risk-badge.very-low{background:#e7f8ef;color:#197345;border-color:#b7e7ca}
+.sm-risk-badge.low{background:#e5f1ff;color:#175dad;border-color:#c2dcff}
+.sm-risk-badge.medium{background:#fff7d8;color:#916a03;border-color:#f1dc94}
+.sm-risk-badge.high{background:#fff0df;color:#ad5107;border-color:#f5d3a8}
+.sm-risk-badge.critical{background:#fde8eb;color:#b4233d;border-color:#f4bec8}
+.sm-model-note{background:#f1f7ff;border:1px solid #cbdfff;border-radius:9px;padding:11px 13px;
+   margin:7px 0 12px;font-size:12px;line-height:1.55;color:#46668b}
+.sm-model-note strong{color:#153c79;font-weight:800}
+/* Темно-сині кнопки як на попередніх реєстрах. */
+.st-key-sm_add_btn button,.st-key-sm_edit_btn button,.st-key-sm_delete_btn button{
+  min-height:45px!important;background:#173b75!important;border:1px solid #173b75!important;
+  border-radius:9px!important;box-shadow:0 3px 10px rgba(25,62,120,.12)!important}
+.st-key-sm_add_btn button:hover:not(:disabled),.st-key-sm_edit_btn button:hover:not(:disabled),
+.st-key-sm_delete_btn button:hover:not(:disabled){background:#24549b!important;border-color:#24549b!important}
+/* Зелені спливаючі повідомлення в затвердженому дизайні */
+div[data-testid="stToast"]{background:#e8f7ee!important;border:1px solid #a7e3bb!important;
+  border-left:4px solid #16a34a!important;border-radius:11px!important;color:#166534!important;
+  box-shadow:0 5px 17px rgba(22,163,74,.12)!important}
+div[data-testid="stToast"] *{color:#166534!important}
+/* Футер унизу: не fixed, щоб не перекривати інтерактивні форми. */
+.stApp [data-testid="stMainBlockContainer"]:has(.sm-hero){min-height:calc(100dvh - 4.5rem);
+  display:flex!important;flex-direction:column!important}
+.stApp [data-testid="stMainBlockContainer"]:has(.sm-hero)>[data-testid="stVerticalBlock"]{
+  display:flex!important;flex-direction:column!important;flex:1 0 auto!important}
+.stApp [data-testid="stMainBlockContainer"]:has(.sm-hero) [data-testid="stElementContainer"]:has(.cr-footer){margin-top:auto!important}
+.stApp [data-testid="stMainBlockContainer"]:has(.sm-hero) .cr-footer{
+  padding:22px 12px 16px!important;margin-top:0!important;text-align:center!important}
+.stApp [data-testid="stMainBlockContainer"]:has(.sm-hero) .cr-footer-brand{justify-content:center!important}
+.stApp [data-testid="stMainBlockContainer"]:has(.sm-hero) .cr-footer-description,
+.stApp [data-testid="stMainBlockContainer"]:has(.sm-hero) .cr-footer-copy{text-align:center!important}
+@media(max-width:1100px){.sm-stats{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
+@media(max-width:650px){.sm-stats{grid-template-columns:1fr!important}.sm-table{min-width:1150px!important}
+  .sm-note{flex-direction:column}.sm-stat .sm-stat-icon{height:42px;width:42px;min-width:42px}}
+
+
+/* v4: надійні SVG-іконки KPI через CSS, не залежать від HTML-санітизації Streamlit. */
+.sm-stats .sm-stat .sm-stat-icon {display:grid!important;place-items:center!important;flex:0 0 45px!important;width:45px!important;height:45px!important;min-width:45px!important;background:#e6f0ff!important;border-radius:12px!important}
+.sm-stats .sm-stat .sm-stat-icon::before {content:""!important;display:block!important;width:26px!important;height:26px!important;background-position:center!important;background-repeat:no-repeat!important;background-size:contain!important}
+.sm-stats .sm-stat.sm-stat-dark .sm-stat-icon {background:rgba(255,255,255,.13)!important}
+/* Підпис вартості має вміщуватися навіть у звужену картку. */
+.sm-stats .sm-stat .sm-stat-copy {min-width:0!important}
+.sm-stats .sm-stat .sm-stat-copy>span {overflow-wrap:anywhere}
+.sm-stats .sm-icon-measures::before {background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMjA2OEJFIiBzdHJva2Utd2lkdGg9IjEuOSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj48cmVjdCB4PSI1IiB5PSIzIiB3aWR0aD0iMTQiIGhlaWdodD0iMTgiIHJ4PSIyIi8+PHBhdGggZD0iTTkgM3YzaDZWM005IDEwaDZNOSAxNGg2TTkgMThoNCIvPjwvc3ZnPg==")!important}
+.sm-stats .sm-icon-coverage::before {background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMjA2OEJFIiBzdHJva2Utd2lkdGg9IjEuOSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj48cGF0aCBkPSJNMTIgMiAyMCA2djZjMCA1LTMuNSA4LTggMTAtNC41LTItOC01LTgtMTBWNnoiLz48cGF0aCBkPSJtOC41IDEyLjMgMi41IDIuNSA0LjgtNSIvPjwvc3ZnPg==")!important}
+.sm-stats .sm-icon-cost::before {background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMjA2OEJFIiBzdHJva2Utd2lkdGg9IjEuOSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj48Y2lyY2xlIGN4PSIxMiIgY3k9IjEyIiByPSI5Ii8+PHBhdGggZD0iTTE1IDguNWMtMS41LTEtNS41LTEtNS41IDEuMyAwIDIuNSA1LjUgMSA1LjUgMy40IDAgMi40LTQgMi44LTUuOCAxLjZNMTIgNS41djEzIi8+PC9zdmc+")!important}
+.sm-stats .sm-icon-uncovered::before {background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjRDhFQUZGIiBzdHJva2Utd2lkdGg9IjEuOSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj48cGF0aCBkPSJNMTIgMiAyMCA2djZjMCA1LTMuNSA4LTggMTAtNC41LTItOC01LTgtMTBWNnoiLz48cGF0aCBkPSJNMTIgOHY1TTEyIDE3aC4wMSIvPjwvc3ZnPg==")!important}
+
+
+/* === v5: компактна таблиця для масштабу 90% === */
+/* Не розширюємо сторінку примусовою мінімальною шириною 1260 px. */
+.sm-table-scroll {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: auto !important;
+    border-radius: 12px !important;
+}
+.sm-table.sm-table-compact {
+    width: 100% !important;
+    min-width: 940px !important; /* лише на справді вузьких екранах — горизонтальна прокрутка */
+    table-layout: fixed !important;
+    border-collapse: collapse !important;
+}
+.sm-table.sm-table-compact th,
+.sm-table.sm-table-compact td {
+    overflow-wrap: anywhere !important;
+    word-break: normal !important;
+    vertical-align: middle !important;
+    padding: 12px 9px !important;
+}
+.sm-table.sm-table-compact th {
+    white-space: normal !important;
+    font-size: 12px !important;
+    line-height: 1.35 !important;
+}
+.sm-table.sm-table-compact .sm-id,
+.sm-table.sm-table-compact .sm-num {white-space: nowrap !important}
+.sm-table.sm-table-compact .sm-num {font-size: 12px !important}
+.sm-effect {white-space: normal !important}
+.sm-effect-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    white-space: nowrap;
+    padding: 4px 7px;
+    margin: 2px 3px 2px 0;
+    background: #edf5ff;
+    border: 1px solid #d4e5fb;
+    border-radius: 7px;
+    color: #24538d;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 1.25;
+}
+.sm-effect-chip b {font-weight: 800; color: #173b73}
+.sm-table.sm-table-compact .sm-risk-change {padding-left: 9px !important;padding-right: 7px !important}
+.sm-change-scores {display:flex;align-items:center;gap:6px;flex-wrap:nowrap;white-space:nowrap}
+.sm-score-chip {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px 7px;
+    border-radius: 999px;
+    border: 1px solid transparent;
+    font-size: 11px;
+    font-weight: 800;
+    line-height: 1.25;
+    white-space: nowrap;
+    font-variant-numeric:tabular-nums;
+}
+.sm-score-chip.very-low{background:#e7f8ef;color:#197345;border-color:#b7e7ca}
+.sm-score-chip.low{background:#e5f1ff;color:#175dad;border-color:#c2dcff}
+.sm-score-chip.medium{background:#fff7d8;color:#916a03;border-color:#f1dc94}
+.sm-score-chip.high{background:#fff0df;color:#ad5107;border-color:#f5d3a8}
+.sm-score-chip.critical{background:#fde8eb;color:#b4233d;border-color:#f4bec8}
+.sm-change-arrow {flex:0 0 auto;font-size:17px;font-weight:900;color:#5c7ca6;line-height:1}
+.sm-change-levels {font-size:10px;color:#657e9d;line-height:1.4;margin-top:5px;overflow-wrap:anywhere}
+.sm-change-delta {font-size:10px;font-weight:800;margin-top:4px}
+.sm-change-delta.improved{color:#13804b}
+.sm-change-delta.unchanged{color:#70839f}
+.sm-change-delta.worsened{color:#c43646}
+@media (max-width:900px) {
+    .sm-table.sm-table-compact {min-width:940px!important}
+}

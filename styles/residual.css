@@ -1,0 +1,394 @@
+/* CyberRisk DSS — residual risk, isolated rr- classes */
+.stApp{background:#fff!important}
+[data-testid="stAppViewContainer"]::before{content:"";position:fixed;inset:0;pointer-events:none;background-image:linear-gradient(rgba(31,91,170,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(31,91,170,.04) 1px,transparent 1px);background-size:60px 60px}
+section[data-testid="stMain"] .block-container{max-width:1500px;padding-top:2.2rem!important}
+.rr-hero{background:linear-gradient(115deg,#102957 0%,#0d3f86 58%,#0750a8 100%);border-radius:15px;padding:23px 29px;min-height:120px;color:white;display:flex;align-items:center;justify-content:space-between;gap:25px;position:relative;overflow:hidden;box-shadow:0 6px 16px rgba(17,50,105,.13);margin-bottom:16px}
+.rr-hero::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(35deg,transparent 0 65px,rgba(87,168,255,.08) 66px,transparent 67px);opacity:.8;pointer-events:none}
+.rr-hero>div{position:relative;z-index:1}.rr-eyebrow{font-size:10px;letter-spacing:1.4px;font-weight:800;color:#c3ddff}.rr-hero h1{color:#fff!important;font-size:32px!important;margin:4px 0 5px!important;font-weight:800!important}.rr-hero p{font-size:12px!important;color:#e3efff!important;margin:0!important;max-width:900px}.rr-hero-icon{width:76px;height:76px;border-radius:18px;background:#ffffff1e;display:grid;place-items:center;border:1px solid #ffffff30;flex-shrink:0}.rr-hero-icon img{width:52px;height:52px}
+.rr-field-title{font-size:14px;font-weight:800;color:#11396e;background:#f8fbff;border:1px solid #d5e5fb;border-bottom:0;border-radius:12px 12px 0 0;padding:13px 15px 3px}
+[data-testid="stSelectbox"]{background:#f8fbff;border:1px solid #d5e5fb;border-top:0;border-radius:0 0 12px 12px;padding:3px 15px 13px;box-shadow:0 3px 11px #123b7010}
+[data-testid="stSelectbox"]>div{margin-bottom:0!important}
+.rr-kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:13px;margin:18px 0 20px}.rr-kpi{min-height:90px;padding:16px;display:flex;align-items:center;gap:14px;border-radius:14px;border:1px solid #e4edf8}.rr-kpi.orange{background:linear-gradient(115deg,#fff3e5,#fff8f1);color:#b94b05}.rr-kpi.blue{background:linear-gradient(115deg,#eaf3ff,#f3f8ff);color:#123c7e}.rr-kpi.green{background:linear-gradient(115deg,#e8f9ef,#f1fbf5);color:#08712d}.rr-kpi-icon{font-size:27px;width:51px;height:51px;border-radius:50%;display:grid;place-items:center;background:#ffffff80;flex:none}.rr-kpi-label{font-size:12px;font-weight:800;margin-bottom:5px}.rr-kpi strong{font-size:30px;font-weight:850;line-height:1.05;white-space:nowrap}
+.rr-panel{border:1px solid #d3e3f8;border-radius:14px;background:#fff;box-shadow:0 4px 14px #1b4c8210;padding:17px 17px 15px;height:350px;overflow:hidden}.rr-panel h3{font-size:17px!important;color:#103b7b!important;margin:0 0 4px!important;font-weight:800!important}.rr-panel h3 span{color:#277af2;margin-right:7px}.rr-panel p{font-size:11px!important;color:#5c7395!important;margin:0!important}.rr-graph svg{display:block;width:100%;height:280px;margin-top:2px}.rr-calc table{border-collapse:collapse;width:100%;font-size:13px;margin-top:17px}.rr-calc th{background:#e5f0ff;color:#153c75;padding:13px 7px;font-size:11px;text-align:center}.rr-calc th:first-child{text-align:left;border-radius:8px 0 0 0}.rr-calc td{padding:13px 7px;border-bottom:1px solid #e1eaf6;text-align:center;color:#153c75;font-weight:700}.rr-calc td:first-child{text-align:left}.rr-calc .rr-total td{background:#f0f6ff;font-weight:850}.rr-pill{background:#d8f7e4;border-radius:8px;color:#0b7431;padding:5px 10px}.rr-pill.neutral{background:#e9f1ff;color:#16487d}.rr-equation{font-size:12px;line-height:1.6;color:#183d77;background:#eff6ff;border-radius:10px;margin-top:15px;padding:12px}
+.rr-accept-title{font-size:18px;color:#103b7b;font-weight:800;margin:23px 0 12px}.rr-accept-result{background:#e8faef;border-radius:12px;padding:17px 18px;min-height:115px;color:#0b6830;margin-top:10px}.rr-accept-result.rejected{background:#fff1e8;color:#ad4608}.rr-accept-result strong{font-size:20px}.rr-accept-result p{font-size:13px;margin:8px 0 0}.rr-conclusion{background:linear-gradient(120deg,#103773,#0e58b2);border-radius:14px;padding:16px;margin-top:22px;min-height:210px;color:#fff;box-shadow:0 4px 15px #164b8620}.rr-conclusion h3{font-size:18px!important;color:#fff!important;margin:0 0 13px!important}.rr-conclusion-body{background:#eaf3ff;border-radius:12px;padding:17px;display:flex;align-items:flex-start;gap:14px;color:#113b78;min-height:135px}.rr-conclusion-body>span{font-size:25px;border-radius:50%;background:#c9f6de;color:#09873e;display:grid;place-items:center;width:43px;height:43px;flex:none}.rr-conclusion-body p{font-size:13px;line-height:1.55;margin:0;font-weight:650}.rr-caveat{background:#f1f6ff;border-left:4px solid #2e7fe8;border-radius:9px;padding:12px 16px;color:#214b82;font-size:12px;margin:19px 0}
+@media(max-width:1100px){.rr-kpis{grid-template-columns:repeat(2,minmax(0,1fr))}.rr-kpi strong{font-size:26px}.rr-panel{height:auto;min-height:340px}}
+@media(max-width:680px){.rr-kpis{grid-template-columns:1fr}.rr-hero{padding:18px}.rr-hero-icon{display:none}.rr-hero h1{font-size:25px!important}.rr-calc table{font-size:11px}.rr-calc th,.rr-calc td{padding:10px 4px}.rr-panel{padding:12px}}
+
+/* V2 — full-width consistent with Comparison page; scoped to residual module */
+section[data-testid="stMain"] .block-container,
+section[data-testid="stMain"] [data-testid="stMainBlockContainer"],
+[data-testid="stMainBlockContainer"] {
+  width:100% !important;
+  max-width:none !important;
+  padding-left:2rem !important;
+  padding-right:2rem !important;
+  padding-top:2rem !important;
+}
+.rr-hero{width:100%;min-height:148px;padding:27px 32px;margin-bottom:22px;
+ background:linear-gradient(115deg,#102b55 0%,#194782 58%,#2365b4 100%)}
+.rr-hero::before{background:repeating-linear-gradient(32deg,transparent 0 90px,rgba(108,181,255,.09) 91px,transparent 92px)}
+.rr-hero h1{font-size:31px!important}
+.rr-hero-icon{width:78px;height:78px}
+.rr-kpis{margin:22px 0 25px;gap:14px}
+.rr-kpi{min-height:104px}
+.rr-panel{height:auto;min-height:365px;overflow:visible;padding:21px}
+.rr-graph{display:flex;flex-direction:column}
+.rr-step-image{display:block;width:100%;height:auto;max-height:300px;object-fit:contain;flex:1;margin:8px auto 0}
+.rr-calc table{margin-top:19px}
+.rr-conclusion{min-height:220px}
+.rr-accept-result{min-height:130px}
+@media(max-width:850px){section[data-testid="stMain"] .block-container,[data-testid="stMainBlockContainer"]{padding-left:1rem!important;padding-right:1rem!important}.rr-kpis{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){.rr-kpis{grid-template-columns:1fr}.rr-hero{padding:20px;min-height:120px}.rr-step-image{max-height:260px}}
+
+/* V3 — final visual refinement: aligned selectors, balanced cards and explanation */
+.rr-hero{margin-bottom:20px!important}
+.rr-field-title{height:47px!important;display:flex!important;align-items:center!important;gap:9px!important;padding:11px 17px!important;background:#f8fbff!important;border:1px solid #d5e5fb!important;border-bottom:0!important;border-radius:13px 13px 0 0!important;line-height:1.25!important}
+.rr-field-symbol{color:#2674d7;font-size:18px;line-height:1}
+[data-testid="stSelectbox"]{padding:0 15px 14px!important;border:1px solid #d5e5fb!important;border-top:0!important;border-radius:0 0 13px 13px!important;background:#f8fbff!important;min-height:69px!important}
+[data-testid="stSelectbox"] [data-baseweb="select"]>div{min-height:44px!important;border-radius:8px!important;background:#f2f6fd!important;border-color:#dbe7f8!important}
+.rr-kpis{margin-top:23px!important;margin-bottom:25px!important;gap:13px!important}
+.rr-kpi{min-height:99px!important;padding:14px 15px!important;gap:12px!important;box-sizing:border-box!important}
+.rr-kpi-icon{width:43px!important;height:43px!important;font-size:23px!important}
+.rr-kpi-label{font-size:11.5px!important;line-height:1.4!important;margin-bottom:6px!important}
+.rr-kpi strong{font-size:27px!important;line-height:1.12!important}
+.rr-panel{min-height:385px!important;box-sizing:border-box!important}
+.rr-step-image{max-height:276px!important;margin-top:6px!important}
+.rr-chart-explain{margin-top:2px;padding:10px 12px;border-radius:8px;background:#f2f7ff;color:#4d6a91;font-size:11.5px;line-height:1.45;display:flex;gap:8px;align-items:flex-start}
+.rr-chart-dot{width:7px;height:7px;background:#2c78e8;border-radius:50%;margin-top:5px;flex:none}
+.rr-calc th{font-size:11px!important;line-height:1.35!important}
+/* Match the heights of the two lower sections while preserving Streamlit input interactivity */
+[data-testid="stColumn"]:has(.rr-accept-title){border:1px solid #d3e3f8;border-radius:14px;background:#fff;box-shadow:0 4px 14px #1b4c8210;padding:18px 20px 20px!important;min-height:246px}
+[data-testid="stColumn"]:has(.rr-conclusion){min-height:246px}
+.rr-accept-title{margin:0 0 14px!important;font-size:18px!important}
+.rr-accept-result{min-height:110px!important;margin-top:13px!important;padding:16px 18px!important}
+.rr-conclusion{margin-top:0!important;min-height:246px!important;display:flex;flex-direction:column;padding:18px 19px!important}
+.rr-conclusion-body{flex:1;min-height:155px!important;padding:17px!important;align-items:center}
+.rr-conclusion-body p{font-size:12.5px!important;line-height:1.65!important}
+@media(max-width:900px){.rr-kpi strong{font-size:24px!important}.rr-kpi-icon{width:38px!important;height:38px!important}}
+@media(max-width:640px){.rr-field-title{height:auto!important;min-height:45px}.rr-panel{min-height:0!important}.rr-conclusion{min-height:0!important}.rr-kpi strong{font-size:25px!important}}
+
+/* V5 — harmonious selector cards and four equal KPI cards */
+.st-key-rr_selector_risk,
+.st-key-rr_selector_measure {
+  box-sizing:border-box !important;
+  width:100% !important;
+  min-height:136px !important;
+  padding:20px 20px 21px !important;
+  border:1px solid #d5e5fb !important;
+  border-radius:14px !important;
+  background:#f8fbff !important;
+  box-shadow:0 4px 13px rgba(18,59,112,.045) !important;
+}
+/* Remove inner Streamlit wrapper outlines, including versions with borders. */
+.st-key-rr_selector_risk [data-testid="stVerticalBlockBorderWrapper"],
+.st-key-rr_selector_measure [data-testid="stVerticalBlockBorderWrapper"],
+.st-key-rr_selector_risk [data-testid="stVerticalBlockBorderWrapper"] > div,
+.st-key-rr_selector_measure [data-testid="stVerticalBlockBorderWrapper"] > div {
+  border:0 !important;
+  box-shadow:none !important;
+  background:transparent !important;
+}
+.st-key-rr_selector_risk .rr-field-title,
+.st-key-rr_selector_measure .rr-field-title {
+  display:flex !important;
+  justify-content:center !important;
+  align-items:center !important;
+  width:100% !important;
+  min-height:26px !important;
+  height:auto !important;
+  margin:0 0 12px !important;
+  padding:0 !important;
+  border:0 !important;
+  border-radius:0 !important;
+  background:transparent !important;
+  text-align:center !important;
+  font-size:14px !important;
+  line-height:1.35 !important;
+}
+.st-key-rr_selector_risk [data-testid="stSelectbox"],
+.st-key-rr_selector_measure [data-testid="stSelectbox"] {
+  border:0 !important;
+  background:transparent !important;
+  border-radius:0 !important;
+  padding:0 !important;
+  margin:0 !important;
+  min-height:0 !important;
+  box-shadow:none !important;
+}
+.st-key-rr_selector_risk [data-testid="stSelectbox"] [data-baseweb="select"] > div,
+.st-key-rr_selector_measure [data-testid="stSelectbox"] [data-baseweb="select"] > div {
+  min-height:48px !important;
+  border:1px solid #dbe7f8 !important;
+  border-radius:9px !important;
+  background:#f2f6fd !important;
+}
+/* Symmetric 4-column KPI grid. */
+.rr-kpis {
+  display:grid !important;
+  grid-template-columns:repeat(4,minmax(0,1fr)) !important;
+  gap:14px !important;
+  margin:23px 0 25px !important;
+  align-items:stretch !important;
+}
+.rr-kpi {
+  box-sizing:border-box !important;
+  width:100% !important;
+  min-width:0 !important;
+  height:112px !important;
+  min-height:112px !important;
+  padding:15px 12px !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  text-align:center !important;
+  border-radius:14px !important;
+  gap:0 !important;
+}
+.rr-kpi-content {
+  width:100% !important;
+  min-width:0 !important;
+  height:100% !important;
+  display:flex !important;
+  flex-direction:column !important;
+  align-items:center !important;
+  justify-content:center !important;
+  gap:9px !important;
+}
+.rr-kpi-label {
+  width:100% !important;
+  margin:0 !important;
+  font-size:11.5px !important;
+  line-height:1.3 !important;
+  text-align:center !important;
+}
+.rr-kpi strong {
+  display:block !important;
+  max-width:100% !important;
+  font-size:27px !important;
+  line-height:1.12 !important;
+  text-align:center !important;
+  white-space:normal !important;
+  overflow-wrap:break-word !important;
+}
+@media(max-width:1050px) {
+  .rr-kpis {grid-template-columns:repeat(2,minmax(0,1fr)) !important;}
+}
+@media(max-width:600px) {
+  .rr-kpis {grid-template-columns:1fr !important;}
+  .st-key-rr_selector_risk,.st-key-rr_selector_measure {min-height:0 !important;padding:15px !important;}
+  .rr-kpi {height:104px !important;min-height:104px !important;}
+}
+
+/* ==========================================
+   CYBERRISK DSS — СИМЕТРИЧНІ БЛОКИ
+   ========================================== */
+
+/* Однакова висота верхніх блоків */
+.rr-panel.rr-graph,
+.rr-panel.rr-calc {
+    min-height: 390px;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+/* Однакова висота нижніх блоків */
+.rr-conclusion {
+    min-height: 260px;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+/* Адаптація для вузьких екранів */
+@media (max-width: 900px) {
+    .rr-panel.rr-graph,
+    .rr-panel.rr-calc,
+    .rr-conclusion {
+        min-height: auto;
+    }
+}
+
+
+/* === CyberRisk DSS: final residual-risk layout (v2) === */
+/* Two equal Streamlit columns; panels stretch to the height of the tallest one. */
+[data-testid="stHorizontalBlock"]:has(.rr-graph):has(.rr-calc),
+[data-testid="stHorizontalBlock"]:has(.rr-accept-title):has(.rr-conclusion) {
+  align-items: stretch !important;
+}
+[data-testid="stHorizontalBlock"]:has(.rr-graph):has(.rr-calc) > [data-testid="stColumn"],
+[data-testid="stHorizontalBlock"]:has(.rr-accept-title):has(.rr-conclusion) > [data-testid="stColumn"] {
+  display: flex !important;
+  flex-direction: column !important;
+  min-width: 0 !important;
+}
+[data-testid="stHorizontalBlock"]:has(.rr-graph):has(.rr-calc) > [data-testid="stColumn"] > [data-testid="stVerticalBlock"],
+[data-testid="stHorizontalBlock"]:has(.rr-accept-title):has(.rr-conclusion) > [data-testid="stColumn"] > [data-testid="stVerticalBlock"] {
+  flex: 1 1 auto !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+/* Upper row: graph and calculation table same outer height. */
+.rr-panel.rr-graph, .rr-panel.rr-calc {
+  box-sizing: border-box !important;
+  height: 100% !important;
+  min-height: 390px !important;
+  width: 100% !important;
+}
+/* Fill the entire left card with a slightly larger diagram. */
+.rr-graph { display: flex !important; flex-direction: column !important; }
+.rr-graph .rr-step-image {
+  display: block !important;
+  width: 100% !important;
+  max-width: none !important;
+  height: auto !important;
+  margin: 10px auto 4px !important;
+  flex: 1 1 auto !important;
+  min-height: 0 !important;
+  object-fit: contain !important;
+}
+.rr-graph .rr-chart-explain { margin-top: auto !important; }
+/* Lower row: conclusion fills the full column height; balance its text. */
+[data-testid="stHorizontalBlock"]:has(.rr-accept-title):has(.rr-conclusion) .rr-conclusion {
+  box-sizing: border-box !important;
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 260px !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+.rr-conclusion-body {
+  flex: 1 1 auto !important;
+  min-height: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 16px !important;
+}
+.rr-conclusion-body p { margin: 0 !important; line-height: 1.65 !important; }
+/* Make the acceptance block match the adjacent conclusion in height. */
+[data-testid="stHorizontalBlock"]:has(.rr-accept-title):has(.rr-conclusion) [data-testid="stColumn"]:first-child .rr-accept-result {
+  flex: 1 1 auto !important;
+  min-height: 110px !important;
+  box-sizing: border-box !important;
+}
+@media (max-width: 900px) {
+  .rr-panel.rr-graph, .rr-panel.rr-calc,
+  .rr-conclusion { min-height: 0 !important; }
+  .rr-graph .rr-step-image { flex: none !important; }
+}
+/* === End final residual-risk layout === */
+
+/* === CYBERRISK RESIDUAL READABILITY START === */
+
+/* 1. Збільшення ступінчастої діаграми */
+.rr-graph .rr-step-image {
+    display: block !important;
+    width: 100% !important;
+    max-width: none !important;
+    height: auto !important;
+    object-fit: contain !important;
+    margin: 6px auto 10px !important;
+}
+
+.rr-graph {
+    overflow: hidden !important;
+}
+
+/* 2. Просторіша таблиця розрахунків */
+.rr-calc table {
+    width: 100% !important;
+    border-collapse: collapse !important;
+}
+
+.rr-calc th {
+    padding-top: 16px !important;
+    padding-bottom: 16px !important;
+}
+
+.rr-calc td {
+    padding-top: 17px !important;
+    padding-bottom: 17px !important;
+    vertical-align: middle !important;
+}
+
+.rr-calc .rr-equation {
+    margin-top: 20px !important;
+    padding: 17px 18px !important;
+    line-height: 1.75 !important;
+}
+
+/* 3. Покращення читабельності висновку */
+.rr-conclusion-body {
+    padding: 20px 22px !important;
+    gap: 18px !important;
+}
+
+.rr-conclusion-body p {
+    font-size: 14px !important;
+    line-height: 1.75 !important;
+    font-weight: 600 !important;
+    overflow-wrap: anywhere !important;
+}
+
+/* Адаптація для вузьких екранів */
+@media (max-width: 900px) {
+    .rr-graph .rr-step-image {
+        width: 100% !important;
+    }
+
+    .rr-conclusion-body p {
+        font-size: 13px !important;
+    }
+
+    .rr-calc th,
+    .rr-calc td {
+        padding-top: 12px !important;
+        padding-bottom: 12px !important;
+    }
+}
+
+/* === CYBERRISK RESIDUAL READABILITY END === */
+
+/* Картка рівня ризику — синій фон */
+.rr-kpis .rr-kpi:last-child {
+    background: linear-gradient(110deg, #112f60 0%, #2463b5 100%) !important;
+    border: 1px solid #285ba0 !important;
+    box-shadow: 0 5px 15px rgba(19, 55, 111, 0.13);
+}
+
+/* Назва картки завжди біла */
+.rr-kpis .rr-kpi:last-child .rr-kpi-label {
+    color: #ffffff !important;
+}
+
+/* Колір рівня залежно від ризику */
+.rr-kpis .rr-kpi:last-child strong {
+    color: var(--rr-level-color, #ffffff) !important;
+}
+
+/* === FINAL: matching lower cards, without nested borders ===
+   Both cards share the same outer height at desktop widths.
+   The blue card is allowed to grow if its conclusion text is longer. */
+@media (min-width: 901px) {
+  [data-testid="stHorizontalBlock"]:has(.rr-accept-title):has(.rr-conclusion)
+  > [data-testid="stColumn"]:first-child {
+    height: 300px !important;
+    min-height: 300px !important;
+    box-sizing: border-box !important;
+  }
+
+  [data-testid="stHorizontalBlock"]:has(.rr-accept-title):has(.rr-conclusion)
+  .rr-conclusion {
+    height: 300px !important;
+    min-height: 300px !important;
+    box-sizing: border-box !important;
+    margin: 0 !important;
+  }
+}
+
+@media (max-width: 900px) {
+  [data-testid="stHorizontalBlock"]:has(.rr-accept-title):has(.rr-conclusion)
+  > [data-testid="stColumn"]:first-child,
+  .rr-conclusion {
+    height: auto !important;
+    min-height: 0 !important;
+  }
+}

@@ -1,0 +1,272 @@
+/* CyberRisk DSS — Вразливості. Стиль узгоджено зі сторінкою Загрози. */
+.stApp [data-testid="stMain"] {background-color:#fff;background-image:linear-gradient(rgba(50,108,182,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(50,108,182,.045) 1px,transparent 1px);background-size:52px 52px;}
+[data-testid="stMainBlockContainer"],[data-testid="stMain"] .block-container,.block-container{max-width:95% !important;width:95% !important;padding-left:1.5rem !important;padding-right:1.5rem !important;padding-top:2rem !important;margin-left:auto !important;margin-right:auto !important;}
+.vu-hero{background:linear-gradient(115deg,#10264a,#20529b);border-radius:16px;padding:28px 36px;color:#fff;display:flex;align-items:center;justify-content:space-between;min-height:166px;margin:0 0 24px;}
+.vu-eyebrow{font-size:10px;font-weight:750;letter-spacing:1.4px;color:#a9d2ff;}
+.vu-hero h1{font-size:clamp(26px,3vw,35px);line-height:1.2;margin:12px 0 10px;color:white;font-weight:750;}
+.vu-hero p{font-size:14px;color:#e2eeff;margin:0;}
+.vu-hero-icon{width:112px;height:112px;flex-shrink:0;color:#9bcaff;opacity:.85;}
+.vu-hero-icon svg{width:100%;height:100%;}
+.vu-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-bottom:28px;}
+.vu-stat{background:#fff;border:1px solid #dce8f8;border-radius:13px;display:flex;align-items:center;gap:15px;padding:21px;box-shadow:0 3px 14px rgba(25,70,132,.035);}
+.vu-stat-icon{width:48px;height:48px;flex-shrink:0;border-radius:12px;background:#eaf2ff;color:#2673e5;display:grid;place-items:center;font-size:24px;}
+.vu-stat span,.vu-stat small{display:block;color:#7287a4;font-size:12px;}
+.vu-stat strong{display:block;color:#16396f;font-size:29px;margin:5px 0;}
+.vu-stat small{font-size:10px;}
+.vu-register-heading{display:flex;align-items:center;gap:16px;margin:34px 0 22px;}
+.vu-register-accent{width:4px;height:48px;flex-shrink:0;background:#2463b8;border-radius:8px;}
+.vu-register-heading h2{margin:0 0 7px;color:#173b73;font-size:23px;font-weight:750;line-height:1.3;letter-spacing:-.35px;}
+.vu-register-heading p{margin:0;color:#7185a2;font-size:13px;line-height:1.5;}
+.vu-table-wrap{border:1px solid #d7e3f4;border-radius:11px;overflow-x:auto;background:#fff;}
+.vu-table{width:100%;border-collapse:collapse;font-size:12px;color:#24466f;}
+.vu-table th{background:#f2f6fc;text-align:left;color:#6781a2;font-weight:700;padding:15px 12px;white-space:nowrap;}
+.vu-table td{padding:16px 12px;border-top:1px solid #e8eef7;vertical-align:middle;color:#24466f;}
+.vu-table tbody tr{transition:background-color .18s ease;}
+.vu-table tbody tr:hover td{background:#f0f6ff;}
+.vu-name{font-weight:700;color:#173b73 !important;}
+.vu-score{color:#2867c8;font-weight:750;margin-right:7px;}
+.vu-level{font-weight:700;font-size:12px;}
+.vu-level.very-low{color:#15803d}.vu-level.low{color:#2563eb}.vu-level.medium{color:#a67c00}.vu-level.high{color:#ea580c}.vu-level.critical{color:#dc2626}.vu-level.unknown{color:#64748b}
+.vu-rule,.vu-bottom-rule{height:1px;background:#dbe7f7;margin:28px 0 22px;}
+.vu-bottom-rule{margin:38px 0 12px;}
+.st-key-vulnerability_action_add button,.st-key-vulnerability_action_edit button,.st-key-vulnerability_action_delete button{background:#173b75 !important;border:1px solid #173b75 !important;color:#fff !important;border-radius:12px !important;min-height:60px !important;font-size:15px !important;font-weight:600 !important;box-shadow:0 4px 12px rgba(23,59,117,.12) !important;transition:background .2s,box-shadow .2s !important;}
+.st-key-vulnerability_action_add button *,.st-key-vulnerability_action_edit button *,.st-key-vulnerability_action_delete button *{color:#fff !important;}
+.st-key-vulnerability_action_add button:hover:not(:disabled),.st-key-vulnerability_action_edit button:hover:not(:disabled),.st-key-vulnerability_action_delete button:hover:not(:disabled){background:#24549b !important;border-color:#24549b !important;box-shadow:0 6px 16px rgba(23,59,117,.2) !important;}
+.st-key-vulnerability_action_add button[kind="primary"],.st-key-vulnerability_action_edit button[kind="primary"],.st-key-vulnerability_action_delete button[kind="primary"]{background:#2053a0 !important;border-color:#2053a0 !important;}
+.st-key-vulnerability_action_add button:disabled,.st-key-vulnerability_action_edit button:disabled,.st-key-vulnerability_action_delete button:disabled{background:#aab9cf !important;border-color:#aab9cf !important;color:#fff !important;opacity:.65;}
+[data-testid="stForm"]{background:#fff;border:1px solid #dce8f8;border-radius:15px;padding:22px;}
+.stFormSubmitButton button[kind="primary"]{width:auto !important;min-width:150px !important;min-height:38px !important;padding:8px 18px !important;background:#1b3f78 !important;color:white !important;border:1px solid #1b3f78 !important;border-radius:8px !important;font-weight:600 !important;}
+.stFormSubmitButton button[kind="primary"]:hover{background:#24569a !important;border-color:#24569a !important;color:white !important;}
+.vu-delete-heading{display:flex;flex-direction:column;gap:5px;margin:18px 0 16px;}
+.vu-delete-heading strong{color:#173b73;font-size:18px;font-weight:700;}
+.vu-delete-heading span{color:#7185a2;font-size:13px;}
+.st-key-vu_confirm_delete button{background:#c62828 !important;color:#fff !important;border:1px solid #c62828 !important;border-radius:8px !important;padding:9px 20px !important;font-weight:600 !important;}
+.st-key-vu_confirm_delete button:hover:not(:disabled){background:#a91f1f !important;border-color:#a91f1f !important;}
+.st-key-vu_confirm_delete button:disabled{background:#e5eaf1 !important;color:#8a98ac !important;border-color:#e5eaf1 !important;opacity:1 !important;}
+div[data-testid="stToast"]{background-color:#e8f7ee !important;border:1px solid #a7e3bb !important;border-left:4px solid #16a34a !important;border-radius:10px !important;color:#166534 !important;box-shadow:0 4px 16px rgba(22,163,74,.10) !important;}
+div[data-testid="stToast"] *{color:#166534 !important;}
+@media(max-width:900px){.vu-stats{grid-template-columns:1fr}.vu-hero{padding:23px}.vu-hero h1{font-size:24px}.vu-hero-icon{width:64px;height:64px}}
+@media(max-width:768px){[data-testid="stMainBlockContainer"],[data-testid="stMain"] .block-container,.block-container{width:100% !important;max-width:100% !important;padding-left:1rem !important;padding-right:1rem !important}.st-key-vulnerability_action_add button,.st-key-vulnerability_action_edit button,.st-key-vulnerability_action_delete button{min-height:56px !important;font-size:12px !important;}}
+
+/* Гарантовано видима іконка банера: SVG як CSS-фон */
+.vu-hero-icon {display:block !important; width:112px !important; height:112px !important; min-width:112px !important; background-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%20fill%3D%22none%22%20stroke%3D%22%239bcaff%22%20stroke-width%3D%222.7%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M32%206%2054%2015v16c0%2014-10%2023-22%2028C20%2054%2010%2045%2010%2031V15L32%206Z%22%2F%3E%3Cpath%20d%3D%22M32%2015%2026%2027%2036%2034%2029%2048%22%2F%3E%3Cpath%20d%3D%22M24%2034%2029%2038%22%2F%3E%3C%2Fsvg%3E");background-position:center;background-repeat:no-repeat;background-size:contain;opacity:1 !important;}
+@media(max-width:900px){.vu-hero-icon{width:64px !important;height:64px !important;min-width:64px !important;}}
+
+/* ============================================================
+   CyberRisk DSS — Вразливості: дизайн реєстру як у «Активи».
+   Верхній банер .vu-hero та його іконка НЕ ЗМІНЮЮТЬСЯ.
+   ============================================================ */
+
+/* Статистичні картки: світлий блакитний фон, чітка рамка та іконки */
+.vu-stats { gap: 12px; margin-bottom: 8px; }
+.vu-stat {
+    padding: 18px 18px;
+    min-height: 96px;
+    background: linear-gradient(110deg, #FFFFFF 0%, #F1F7FF 100%);
+    border: 1px solid #C6DCFF;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(16, 55, 113, .045);
+}
+.vu-stat-icon { background-color: #E5F0FF; background-size: 26px 26px; background-position: center; background-repeat: no-repeat; }
+.vu-icon-total { background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%232267cc%22%20stroke-width%3D%221.8%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Crect%20x%3D%224%22%20y%3D%223%22%20width%3D%2216%22%20height%3D%227%22%20rx%3D%222%22%2F%3E%3Crect%20x%3D%224%22%20y%3D%2214%22%20width%3D%2216%22%20height%3D%227%22%20rx%3D%222%22%2F%3E%3Cpath%20d%3D%22M8%206.5h8M8%2017.5h8%22%2F%3E%3C%2Fsvg%3E"); }
+.vu-icon-assets { background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%232267cc%22%20stroke-width%3D%221.8%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Crect%20x%3D%224%22%20y%3D%224%22%20width%3D%2216%22%20height%3D%226%22%20rx%3D%221.5%22%2F%3E%3Crect%20x%3D%224%22%20y%3D%2214%22%20width%3D%2216%22%20height%3D%226%22%20rx%3D%221.5%22%2F%3E%3Cpath%20d%3D%22M7%207h.01M7%2017h.01M11%207h6M11%2017h6%22%2F%3E%3C%2Fsvg%3E"); }
+.vu-icon-high { background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%232267cc%22%20stroke-width%3D%221.8%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22m12%203%2010%2018H2L12%203Z%22%2F%3E%3Cpath%20d%3D%22M12%209v5M12%2017h.01%22%2F%3E%3C%2Fsvg%3E"); }
+.vu-stat span { color: #254D83; font-size: 12px; font-weight: 700; }
+.vu-stat strong { color: #153A74; font-size: 29px; margin: 3px 0; }
+.vu-stat small { color: #8498B4; font-size: 11px; }
+
+/* Компактний заголовок реєстру — без вертикальної смуги */
+.vu-register-heading {
+    margin: 4px 0 16px;
+    display: block;
+}
+.vu-register-heading h2 {
+    font-size: 21px;
+    font-weight: 750;
+    line-height: 1.3;
+    letter-spacing: -0.25px;
+    margin: 0;
+    color: #133B72;
+}
+
+/* Однакова висота й рамки елементів пошуку / фільтрації */
+.st-key-vu_registry_search [data-baseweb="input"],
+.st-key-vu_registry_severity [data-baseweb="select"] > div,
+.st-key-vu_registry_sort [data-baseweb="select"] > div {
+    background: #F5F9FF !important;
+    border: 1px solid #BBD4FF !important;
+    border-radius: 10px !important;
+    box-shadow: none !important;
+    min-height: 40px !important;
+}
+.st-key-vu_registry_search [data-baseweb="input"] {
+    display: flex !important;
+    align-items: stretch !important;
+    overflow: visible !important;
+}
+.st-key-vu_registry_search [data-baseweb="input"] input {
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    min-height: 38px !important;
+    height: 38px !important;
+    padding: 0 12px !important;
+}
+.st-key-vu_registry_search [data-baseweb="input"]:focus-within,
+.st-key-vu_registry_severity [data-baseweb="select"]:focus-within > div,
+.st-key-vu_registry_sort [data-baseweb="select"]:focus-within > div {
+    border-color: #4886DC !important;
+    box-shadow: 0 0 0 2px rgba(72, 134, 220, .11) !important;
+}
+.st-key-vu_registry_search label,
+.st-key-vu_registry_severity label,
+.st-key-vu_registry_sort label {color: #244677 !important; font-size: 13px !important;}
+
+/* Реєстр: біла картка, синьо-блакитна шапка, бейджі серйозності */
+.vu-table-wrap {
+    width: 100%;
+    background: #FFFFFF;
+    border: 1px solid #BDD5FA;
+    border-radius: 11px;
+    overflow-x: auto;
+    box-shadow: 0 4px 15px rgba(25, 75, 143, .045);
+}
+.vu-table {width: 100%; min-width: 800px; border-collapse: collapse; font-size: 13px; color: #173B70;}
+.vu-table th {
+    background: #E5F0FF;
+    border-bottom: 1px solid #BCD5FB;
+    color: #143C74;
+    font-weight: 750;
+    font-size: 12px;
+    text-align: left;
+    padding: 13px 12px;
+}
+.vu-table td {background: #FFF; border-top: 1px solid #DEEAF8; padding: 14px 12px; vertical-align: middle;}
+.vu-table tbody tr:nth-child(even) td {background: #F4F8FF;}
+.vu-table tbody tr:hover td {background: #EDF5FF;}
+.vu-table th:first-child, .vu-table td:first-child {text-align: center; width: 50px;}
+.vu-table .vu-name {font-weight: 700; color: #123D7B !important;}
+.vu-level-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    white-space: nowrap;
+    font-weight: 700;
+    font-size: 11px;
+    padding: 6px 10px;
+    border: 1px solid transparent;
+    border-radius: 999px;
+}
+.vu-badge-dot {width: 6px; height: 6px; border-radius: 50%; background: currentColor;}
+.vu-level-badge.critical {background:#FEEAEC; color:#BF2F43; border-color:#F7C9D0;}
+.vu-level-badge.high {background:#FFF0DC; color:#A45815; border-color:#FFD9A9;}
+.vu-level-badge.medium {background:#FFF8E2; color:#936900; border-color:#F1DEA5;}
+.vu-level-badge.low {background:#EAF2FF; color:#215DB5; border-color:#C4D9FA;}
+.vu-level-badge.very-low {background:#E9F8EF; color:#147C44; border-color:#B9E2C9;}
+.vu-level-badge.unknown {background:#F1F4F9; color:#66778D; border-color:#DDE5EE;}
+
+/* Кнопки як на сторінці «Активи»: висота 42 px і той самий синій */
+.st-key-vulnerability_action_add button,
+.st-key-vulnerability_action_edit button,
+.st-key-vulnerability_action_delete button {
+    min-height: 43px !important;
+    border-radius: 9px !important;
+    font-size: 14px !important;
+    font-weight: 650 !important;
+    background: #193D79 !important;
+    border-color: #193D79 !important;
+    color: #FFFFFF !important;
+    box-shadow: 0 3px 9px rgba(24, 60, 117, .09) !important;
+}
+.st-key-vulnerability_action_add button:hover:not(:disabled),
+.st-key-vulnerability_action_edit button:hover:not(:disabled),
+.st-key-vulnerability_action_delete button:hover:not(:disabled) {
+    background: #28599F !important;
+    border-color: #28599F !important;
+}
+.vu-rule { margin: 22px 0 20px; }
+.vu-bottom-rule {margin:0 0 14px;}
+
+/* Футер у самому низу короткої сторінки або після вмісту довгої */
+[data-testid="stMainBlockContainer"] {
+    min-height: calc(100dvh - 5rem) !important;
+    display: flex !important;
+    flex-direction: column !important;
+}
+[data-testid="stMainBlockContainer"] > [data-testid="stVerticalBlock"] {
+    flex: 1 1 auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+}
+.st-key-vu_page_footer { margin-top: auto !important; padding-top: 25px !important; }
+.st-key-vu_page_footer .cr-footer {margin-top: 0 !important; text-align: center !important; padding-top: 18px !important; padding-bottom: 8px !important;}
+.st-key-vu_page_footer .cr-footer-brand {justify-content: center !important;}
+
+@media (max-width: 900px) {
+    .vu-stats {grid-template-columns: 1fr;}
+    .vu-table {min-width: 780px;}
+}
+
+
+/* ==============================================================
+   ВРАЗЛИВОСТІ v3 — РАМКА ПОШУКУ ТА ОЦІНКА 4/5
+   Повторюємо перевірений підхід сторінки «Інформаційні активи».
+   Всі інші компоненти, зокрема верхній банер, не змінюємо.
+   ============================================================== */
+
+/* Рамку малюємо на ЗОВНІШНЬОМУ контейнері BaseWeb.
+   Внутрішні елементи не мають власних рамок/висоти, які її закривають. */
+.st-key-vu_registry_search [data-baseweb="input"] {
+    width: 100% !important;
+    height: 42px !important;
+    min-height: 42px !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    align-items: center !important;
+    background: #F5F9FF !important;
+    border: 1px solid #C9DDFC !important;
+    border-radius: 10px !important;
+    box-shadow: none !important;
+    overflow: hidden !important;
+}
+.st-key-vu_registry_search [data-baseweb="input"] > div {
+    min-height: 0 !important;
+    max-height: 100% !important;
+    box-sizing: border-box !important;
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+}
+.st-key-vu_registry_search [data-baseweb="input"] input {
+    height: 100% !important;
+    max-height: 100% !important;
+    min-height: 0 !important;
+    box-sizing: border-box !important;
+    background: transparent !important;
+    border: 0 !important;
+    outline: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    padding: 0 12px !important;
+    color: #173B73 !important;
+}
+.st-key-vu_registry_search [data-baseweb="input"]:focus-within {
+    border-color: #3979CF !important;
+    box-shadow: 0 0 0 2px rgba(57, 121, 207, .10) !important;
+    overflow: visible !important;
+}
+.st-key-vu_registry_search,
+.st-key-vu_registry_search [data-testid="stTextInput"] {
+    overflow: visible !important;
+}
+
+/* У колонці серйозності показуємо числовий бал і статус окремо. */
+.vu-severity-cell { white-space: nowrap; }
+.vu-severity-cell .vu-score {
+    color: #1B5AA8;
+    font-size: 12px;
+    font-weight: 800;
+    margin-right: 9px;
+    white-space: nowrap;
+}
+.vu-severity-cell .vu-level-badge {vertical-align: middle;}

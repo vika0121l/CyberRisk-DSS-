@@ -1,0 +1,47 @@
+
+# Python virtual environments
+.venv/
+venv/
+env/
+
+# Python cache
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Local databases
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+*.sqlite
+*.sqlite3
+*.sqlite-wal
+*.sqlite-shm
+
+# Secrets and environment variables
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+
+# Temporary files and logs
+*.log
+*.tmp
+*.bak
+*.swp
+~$*
+
+# Previous project backups
+app_backup*.py
+cyberrisk_backup*
+
+# Editor and OS files
+.vscode/
+.DS_Store
+Thumbs.db
+# Legacy entry point and development utilities
+/app.py
+/apply_*.py
